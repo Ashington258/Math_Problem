@@ -1,0 +1,136 @@
+$passoptions.latex()$
+\documentclass[ % 设置文档类
+$for(babel-otherlangs)$
+  $babel-otherlangs$,
+$endfor$
+$if(babel-lang)$
+  $babel-lang$,
+$endif$
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$if(papersize)$
+  $papersize$paper,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{$documentclass$}
+$if(beamerarticle)$
+\usepackage{beamerarticle} % 需要首先加载 beamerarticle 宏包
+$endif$
+\usepackage{xcolor} % 加载颜色宏包
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry} % 设置页面几何参数
+$endif$
+\usepackage{amsmath,amssymb} % 加载数学符号宏包
+\usepackage{titlesec} % 添加标题格式包
+\newcommand{\sectionbreak}{\clearpage} % 一级标题后自动分页
+\titleformat{\section}[block]{\centering\Large\bfseries}{\thesection}{1em}{} % 设置一级标题居中
+\usepackage{xeCJK} % 支持中文字体
+\usepackage{fontspec} % 支持英文字体
+\setCJKmainfont{SimSun} % 设置中文字体为宋体
+\setmainfont{Times New Roman} % 设置英文字体为 New Times Roman
+$--
+$-- section numbering
+$--
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$} % 设置章节编号深度
+$else$
+\setcounter{secnumdepth}{-\maxdimen} % 移除章节编号
+$endif$
+$fonts.latex()$
+$font-settings.latex()$
+$common.latex()$
+$for(header-includes)$
+$header-includes$
+$endfor$
+$after-header-includes.latex()$
+$hypersetup.latex()$
+
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$} % 设置文档标题
+$endif$
+$if(subtitle)$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% 添加子标题到 \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{$subtitle$} % 设置文档子标题
+$endif$
+\author{$for(author)$$author$$sep$ \and $endfor$} % 设置文档作者
+\date{$date$} % 设置文档日期
+
+\begin{document}
+$if(has-frontmatter)$
+\frontmatter % 前言部分
+$endif$
+$if(title)$
+\maketitle % 生成标题
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract} % 生成摘要
+$endif$
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$} % 设置目录标题
+$endif$
+{
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$} % 设置目录链接颜色
+$endif$
+\setcounter{tocdepth}{$toc-depth$} % 设置目录深度
+\tableofcontents % 生成目录
+}
+$endif$
+$if(lof)$
+\listoffigures % 生成插图目录
+$endif$
+$if(lot)$
+\listoftables % 生成表格目录
+$endif$
+$if(linestretch)$
+\setstretch{$linestretch$} % 设置行间距
+$endif$
+$if(has-frontmatter)$
+\mainmatter % 正文部分
+$endif$
+$body$ % 文档主体内容
+
+$if(has-frontmatter)$
+\backmatter % 后言部分
+$endif$
+$if(nocite-ids)$
+\nocite{$for(nocite-ids)$$it$$sep$, $endfor$} % 引用未引用的文献
+$endif$
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(has-chapters)$
+\renewcommand\bibname{$biblio-title$} % 设置参考文献标题
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$} % 生成参考文献
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$ % 生成参考文献
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document} % 结束文档
