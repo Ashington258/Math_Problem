@@ -1,7 +1,3 @@
-以下是你提供内容的 Markdown 格式版本，适用于笔记、博客或排版整洁的学术文档：
-
----
-
 # 雅可比矩阵的定义、性质、数学含义与本质
 
 雅可比矩阵（Jacobian Matrix）是多变量微积分中的一个核心工具，用于描述多变量函数的局部线性化行为，广泛应用于隐函数定理、变量变换、优化问题、微分方程和机器学习等领域。本文将详细介绍雅可比矩阵的定义、性质、数学含义、本质，并说明其推导过程，结合题目上下文（如隐函数偏导数和 Hessian 矩阵）进行说明。
@@ -56,23 +52,22 @@ $$
   $$
   \mathbf{f}(\mathbf{x}_0 + \mathbf{h}) \approx \mathbf{f}(\mathbf{x}_0) + J_{\mathbf{f}}(\mathbf{x}_0) \mathbf{h}
   $$
-
 - **矩阵性质**：
+
   - 若 $m = n$，行列式 $\det J_{\mathbf{f}} \ne 0$ 表明局部可逆。
   - 若 $m \ne n$，用于秩分析或求解线性方程组。
-
 - **链式法则**：
+
   $$
   J_{\mathbf{g} \circ \mathbf{f}} = J_{\mathbf{g}}(\mathbf{f}(\mathbf{x})) \cdot J_{\mathbf{f}}(\mathbf{x})
   $$
-
 - **与梯度/Hessian 的关系**：
+
   - 标量函数 $\Rightarrow$ 雅可比矩阵为梯度向量。
   - Hessian 为梯度的雅可比矩阵：
     $$
     H_f = J(\nabla f) = \left[ \frac{\partial^2 f}{\partial x_i \partial x_j} \right]
     $$
-
 - **几何变换**：
 
   $$
@@ -88,25 +83,21 @@ $$
   $$
   \mathbf{f}(\mathbf{x}_0 + \mathbf{h}) - \mathbf{f}(\mathbf{x}_0) \approx J_{\mathbf{f}}(\mathbf{x}_0) \mathbf{h}
   $$
-
 - **变量变换中的体积调整**：
 
   $$
   \int_{\mathbf{f}(D)} g(\mathbf{u}) \, d\mathbf{u} = \int_D g(\mathbf{f}(\mathbf{x})) \left| \det J_{\mathbf{f}}(\mathbf{x}) \right| \, d\mathbf{x}
   $$
-
 - **隐函数定理**：
 
   $$
   J_{\mathbf{y}} \cdot \frac{\partial \mathbf{y}}{\partial \mathbf{x}} = -\frac{\partial \mathbf{F}}{\partial \mathbf{x}}
   $$
-
 - **逆函数定理**：
 
   $$
   \det J_{\mathbf{f}} \ne 0 \Rightarrow \text{函数局部可逆}
   $$
-
 - **微分方程线性化**：
 
   $$
@@ -118,11 +109,8 @@ $$
 ## 4. 雅可比矩阵的本质
 
 - **几何本质**：描述函数在局部如何将输入向量变换到输出空间。
-
 - **代数本质**：雅可比是线性算子，其秩反映函数局部维度。
-
 - **物理本质**：描述状态变化率，用于控制与观测。
-
 - **信息本质**：在机器学习中表示模型输出对输入的敏感性。
 
 ---
@@ -134,7 +122,6 @@ $$
   $$
   \mathbf{f}(\mathbf{x}_0 + \mathbf{h}) \approx \mathbf{f}(\mathbf{x}_0) + J_{\mathbf{f}}(\mathbf{x}_0) \mathbf{h}
   $$
-
 - **一阶全微分**：
 
   $$
@@ -142,7 +129,6 @@ $$
   $$
 
   其中 $d\mathbf{x} = [dx_1, \ldots, dx_n]^T$。
-
 - **雅可比行列式**（若 $m = n$）：
 
   $$
@@ -150,7 +136,6 @@ $$
   $$
 
 ---
-
 
 ## 7. 总结
 

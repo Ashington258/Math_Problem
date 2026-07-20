@@ -54,7 +54,6 @@ f_{yx} & f_{yy}
   ```
 
   因此 $H_f$ 是对称矩阵，特征值为实数，且存在正交特征向量。
-
 - **正定性与曲率**：
 
   - 正定：函数局部极小值（碗状向上）
@@ -63,9 +62,7 @@ f_{yx} & f_{yy}
   - 退化：某些特征值为零
 
   可通过特征值或 Sylvester 判据判断正定性。
-
 - **不变性**：Hessian 的特征值不随坐标变换改变，体现曲率的几何不变性。
-
 - **与梯度的关系**：
 
   ```math
@@ -76,23 +73,20 @@ f_{yx} & f_{yy}
 
 ---
 
-## 3. Hessian 矩阵的数学含义
+## 3. Hessian 数学含义
 
 - **局部曲率**：描述函数在某点附近的二阶行为，函数沿方向 $\mathbf{h}$ 的凹凸性由 $\mathbf{h}^T H_f \mathbf{h}$ 决定。
-
 - **二阶全微分**：
 
   ```math
   d^2 f = \sum_{i=1}^n \sum_{j=1}^n \frac{\partial^2 f}{\partial x_i \partial x_j} dx_i dx_j = \mathbf{dx}^T H_f \mathbf{dx}
   ```
-
 - **极值判定**：
 
   - 若 $\nabla f = \mathbf{0}$ 且：
     - $H_f$ 正定 ⇒ 局部极小值
     - $H_f$ 负定 ⇒ 局部极大值
     - $H_f$ 不定 ⇒ 鞍点
-
 - **优化算法**：在牛顿法中：
 
   ```math
@@ -104,15 +98,12 @@ f_{yx} & f_{yy}
 ## 4. Hessian 矩阵的本质
 
 - **几何本质**：描述函数曲率，特征值和特征向量揭示凹凸方向与程度。
-
 - **代数本质**：Hessian 是实对称矩阵，其谱分解：
 
   ```math
   H_f = Q \Lambda Q^T
   ```
-
 - **物理本质**：在物理中，Hessian 关联稳定性分析（如势能函数的二阶导数矩阵）。
-
 - **信息本质**：在统计学中，Hessian 关联 Fisher 信息矩阵，描述参数估计的不确定性。
 
 ---
@@ -134,19 +125,16 @@ f(\mathbf{x}) \approx f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0)^T (\mathbf{x} - \
   ```math
   df = \nabla f \cdot \mathbf{dx} = \sum_{i=1}^n \frac{\partial f}{\partial x_i} dx_i
   ```
-
 - 二阶全微分：
 
   ```math
   d^2 f = d(df) = \sum_{i=1}^n \sum_{j=1}^n \frac{\partial^2 f}{\partial x_i \partial x_j} dx_i dx_j = \mathbf{dx}^T H_f \mathbf{dx}
   ```
-
 - 泰勒展开的二阶项：
 
   ```math
   \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^n \frac{\partial^2 f}{\partial x_i \partial x_j} h_i h_j = \frac{1}{2} \mathbf{h}^T H_f(\mathbf{x}_0) \mathbf{h}
   ```
-
 - 对称性保证 $H_f$ 是对称矩阵。
 
 ---
@@ -167,15 +155,12 @@ f(\mathbf{x}) \approx f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0)^T (\mathbf{x} - \
   \frac{\partial^2 z}{\partial y \partial x} & \frac{\partial^2 z}{\partial y^2}
   \end{bmatrix}
   ```
-
 - **具体推导**涉及链式法则与复合函数二阶偏导（例如：
 
   ```math
   \frac{\partial^2 z}{\partial x \partial y} = f_{uu} u_x u_y + f_{uv} (u_x v_y + v_x u_y) + \ldots
   ```
-
 - **极值分析**：若 $\frac{\partial z}{\partial x} = 0, \frac{\partial z}{\partial y} = 0$，则需检查 $H_z$ 正定性。
-
 - **雅可比与 Hessian**：雅可比行列式保障变量变换的可行性，Hessian 提供极值判定的二阶信息。
 
 ---
@@ -190,6 +175,6 @@ f(\mathbf{x}) \approx f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0)^T (\mathbf{x} - \
 
 在题目中，Hessian 矩阵通过 $d^2 z$ 描述 $z = f(u, v)$ 的曲率，结合隐函数偏导与雅可比行列式，为极值分析提供强有力工具，是多元微积分的关键结构。
 
---- 
+---
 
 需要我转成 `.md` 文件或继续讲解某部分吗？
