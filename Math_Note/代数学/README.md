@@ -44,10 +44,12 @@ $$
 | 零化度 | $\dim\ker(A)$ | 非负整数 |
 | 转置 / 共轭转置 | $A^{\mathsf T}$ / $A^{H}$ | 同型 |
 | 伴随矩阵 | $A^{*}$ | 同型方阵 |
-| 迹 / 行列式 | $\operatorname{tr}A$ / $\lvert A\rvert$ | 标量 |
+| 迹 / 行列式 | $\operatorname{tr}(A)$ / $\lvert A\rvert$ | 标量 |
 | 范数 / 绝对值 | $\lVert x\rVert$ / $\lvert a\rvert$ | 标量 |
 
 正文优先使用 $\operatorname{Col}$、$\operatorname{Row}$、$\ker$、$\operatorname{rank}$ 和 $\operatorname{tr}$。**不再使用** $C(A)$、$N(A)$、$R(A)$、$r(A)$、$\mathrm{nullity}(A)$、$\mathrm{Col}(A)$ 这类简写。非齐次方程 $Ax=b$ 的所有解称为“解集”，记作 $S_b=x_p+\ker(A)$；它非空时通常是仿射空间，不一定是线性空间。
+
+几条最常碰到的规则：转置一律写 $A^{\mathsf T}$（不用 $A^T$、$A^\top$），共轭转置写 $A^{H}$，伴随矩阵写 $A^{*}$；向量一律斜体（只有零向量 $\mathbf{0}$ 与全 $1$ 向量 $\mathbf 1$ 保留粗体）；证毕符全书统一为 $\square$；行列式在理论叙述中写 $\det A$、把矩阵当单个元素时写 $\lvert A\rvert$。完整的记法规范见 [符号体系](./00_总览/符号体系.md) 第 1 节，写成时按它执行。
 
 ## 文档规范
 
