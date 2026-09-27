@@ -10,11 +10,11 @@
 核心关系：
 
 $$
-\mathbf u+\mathbf v\in V,
+u+v\in V,
 \quad
-\lambda\mathbf v\in V,
+\lambdav\in V,
 \qquad
-T(\alpha\mathbf u+\beta\mathbf v)=\alpha T(\mathbf u)+\beta T(\mathbf v).
+T(\alphau+\betav)=\alpha T(u)+\beta T(v).
 $$
 
 尚未单独成篇的内容：子空间的一般判定、坐标与换基的计算细节。正交与投影归入 [内积与正交化](../06_内积与正交化/README.md)。

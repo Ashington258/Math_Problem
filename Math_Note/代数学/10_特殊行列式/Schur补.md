@@ -235,19 +235,19 @@ U,V\in\mathbb F^{n\times r}.
 于是
 
 \[
-UV^\top\in\mathbb F^{n\times n},
+UV^{\mathsf T}\in\mathbb F^{n\times n},
 \qquad
-V^\top A^{-1}U\in\mathbb F^{r\times r}.
+V^{\mathsf T} A^{-1}U\in\mathbb F^{r\times r}.
 \]
 
 我们要证明
 
 \[
 \boxed{
-\det(A+UV^\top)
+\det(A+UV^{\mathsf T})
 =
 \det A\,
-\det(I_r+V^\top A^{-1}U)
+\det(I_r+V^{\mathsf T} A^{-1}U)
 }.
 \]
 
@@ -259,7 +259,7 @@ V^\top A^{-1}U\in\mathbb F^{r\times r}.
 K=
 \begin{pmatrix}
 A&U\\
--V^\top&I_r
+-V^{\mathsf T}&I_r
 \end{pmatrix}.
 \]
 
@@ -277,17 +277,17 @@ A&U\\
 &=
 \det(I_r)
 \det\left(
-A-U I_r^{-1}(-V^\top)
+A-U I_r^{-1}(-V^{\mathsf T})
 \right)\\
 &=
-\det(A+UV^\top).
+\det(A+UV^{\mathsf T}).
 \end{aligned}
 \]
 
 所以
 
 \[
-\boxed{\det K=\det(A+UV^\top)}.
+\boxed{\det K=\det(A+UV^{\mathsf T})}.
 \]
 
 
@@ -302,12 +302,12 @@ A-U I_r^{-1}(-V^\top)
 &=
 \det A\,
 \det\left(
-I_r-(-V^\top)A^{-1}U
+I_r-(-V^{\mathsf T})A^{-1}U
 \right)\\
 &=
 \det A\,
 \det\left(
-I_r+V^\top A^{-1}U
+I_r+V^{\mathsf T} A^{-1}U
 \right).
 \end{aligned}
 \]
@@ -319,7 +319,7 @@ I_r+V^\top A^{-1}U
 \det K
 =
 \det A\,
-\det(I_r+V^\top A^{-1}U)
+\det(I_r+V^{\mathsf T} A^{-1}U)
 }.
 \]
 
@@ -331,9 +331,9 @@ I_r+V^\top A^{-1}U
 
 \[
 \boxed{
-\det(A+UV^\top)
+\det(A+UV^{\mathsf T})
 =
-\det(I_r+V^\top A^{-1}U)\det A
+\det(I_r+V^{\mathsf T} A^{-1}U)\det A
 }.
 \]
 
@@ -356,24 +356,24 @@ U=u,\qquad V=v,
 这时
 
 \[
-V^\top A^{-1}U=v^\top A^{-1}u
+V^{\mathsf T} A^{-1}U=v^{\mathsf T} A^{-1}u
 \]
 
 是一个标量，因此
 
 \[
-\det(I_1+v^\top A^{-1}u)
+\det(I_1+v^{\mathsf T} A^{-1}u)
 =
-1+v^\top A^{-1}u.
+1+v^{\mathsf T} A^{-1}u.
 \]
 
 于是得到
 
 \[
 \boxed{
-\det(A+uv^\top)
+\det(A+uv^{\mathsf T})
 =
-\det A\left(1+v^\top A^{-1}u\right)
+\det A\left(1+v^{\mathsf T} A^{-1}u\right)
 }.
 \]
 
@@ -382,13 +382,13 @@ V^\top A^{-1}U=v^\top A^{-1}u
 左边是一个 \(n\) 阶行列式：
 
 \[
-\det(A+UV^\top),
+\det(A+UV^{\mathsf T}),
 \]
 
 右边新增的行列式只有 \(r\) 阶：
 
 \[
-\det(I_r+V^\top A^{-1}U).
+\det(I_r+V^{\mathsf T} A^{-1}U).
 \]
 
 当 \(r\ll n\) 时，

@@ -17,7 +17,7 @@ Q^{\mathsf T}Q=I
 \Longrightarrow
 \lvert Q\rvert=\pm 1,
 \qquad
-\operatorname{rank}(A)\le 1\iff A=uv^{\mathsf T}.
+\operatorname{rank}(A)\leq 1\iff A=uv^{\mathsf T}.
 $$
 
 三类矩阵互相咬合：正交矩阵给出保持对称性的那类相似变换，对称矩阵给出可对角化的那类，秩 1 矩阵给出可分解的最小单元。
