@@ -24,7 +24,7 @@ $$
 \to \text{方程组}
 \to \text{秩} \to \text{行列式}
 \to \text{内积与正交化}
-\to \text{谱分解} \to \text{合同与二次型}
+\to \text{矩阵分解} \to \text{合同与二次型}
 \to \text{特殊矩阵}.
 $$
 
