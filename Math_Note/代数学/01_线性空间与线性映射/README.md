@@ -12,9 +12,9 @@
 $$
 u+v\in V,
 \quad
-\lambdav\in V,
+\lambda v\in V,
 \qquad
-T(\alphau+\betav)=\alpha T(u)+\beta T(v).
+T(\alpha u+\beta v)=\alpha T(u)+\beta T(v).
 $$
 
 尚未单独成篇的内容：子空间的一般判定、坐标与换基的计算细节。正交与投影归入 [内积与正交化](../06_内积与正交化/README.md)。
