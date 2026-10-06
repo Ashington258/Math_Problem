@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+output/videos/**/partial_movie_files/
+output/videos/Tex/
+output/videos/texts/
+output/qa/
+output/videos/videos/
