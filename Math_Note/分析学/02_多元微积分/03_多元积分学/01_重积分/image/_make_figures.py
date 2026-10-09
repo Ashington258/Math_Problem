@@ -22,10 +22,11 @@ Outputs (written next to this script):
     fig-overview.png  the four panels stitched horizontally
 
     fig-5-line.png    geometry of ds   (Cartesian / polar / spherical)
-    fig-6-area.png    geometry of dS   (polar sector, sphere patch, cylinder patch)
-    fig-7-volume.png  geometry of dV   (box, cylinder wedge, spherical shell block)
+    fig-6-param.png   geometry of dS   (general parametric surface, tangent plane)
+    fig-7-area.png    geometry of dS   (polar sector, sphere patch, cylinder patch)
+    fig-8-volume.png  geometry of dV   (box, cylinder wedge, spherical shell block)
 
-The three element figures share the colour convention of the coordinate figures:
+The element figures share the colour convention of the coordinate figures:
 blue = first coordinate, red = second (azimuth), green = third.  Every coloured
 edge carries its own label, so the panels survive greyscale printing.
 
@@ -299,7 +300,7 @@ def fig_sph(path):
 
 # ============================================================= element figures
 # Geometry of the infinitesimal elements.  Colour encodes the COORDINATE
-# DIRECTION and carries over to every panel of fig-5/6/7:
+# DIRECTION and carries over to every panel of fig-5/6/7/8:
 #     blue  = 1st coordinate (x, r, r)
 #     red   = 2nd coordinate (y, theta, theta)   [the azimuth]
 #     green = 3rd coordinate (z, z, phi)         [phi = polar angle from +z]
@@ -335,6 +336,23 @@ def letter(ax, s):
 def poly3(ax, pts, **kw):
     p = proj([q[0] for q in pts], [q[1] for q in pts], [q[2] for q in pts])
     ax.add_patch(Polygon(p, closed=True, **kw))
+
+
+def arrow3(ax, a, b, color="black", lw=1.6, head=0.032, zorder=6):
+    """A vector a->b as a projected segment plus a filled triangular head."""
+    pa, pb = xy(a), xy(b)
+    ax.plot([pa[0], pb[0]], [pa[1], pb[1]], color=color, lw=lw,
+            solid_capstyle="round", zorder=zorder)
+    d = pb - pa
+    L = np.hypot(d[0], d[1])
+    if L == 0:
+        return
+    d = d / L
+    n = np.array([-d[1], d[0]])
+    base = pb - head * d
+    ax.add_patch(Polygon([pb, base + 0.55 * head * n, base - 0.55 * head * n],
+                         closed=True, facecolor=color, edgecolor="none",
+                         zorder=zorder))
 
 
 # ---- the three maps, same convention as the panels of fig-overview ---------
@@ -705,6 +723,147 @@ def fig_elem_volume(path):
     save(fig, path)
 
 
+# ------------------------------------------ 6 general parametric surface dS
+def dome(x, y):
+    """A smooth graph surface z = f(x, y): a paraboloid bowl.
+
+    The apex sits at (1.35, 1.30) so the drawn patch (near 0.5, 0.45) lies a
+    full radius away, where the surface is steeply sloped but only gently
+    curved: the tangent parallelogram then hugs the curved patch closely.
+    """
+    return 1.10 - 0.42 * ((x - 1.35) ** 2 + (y - 1.30) ** 2)
+
+
+def F_dome(x, y):
+    return (x, y, dome(x, y))
+
+
+def dome_grad(x, y):
+    """First partials (f_x, f_y) of the dome."""
+    return (-0.84 * (x - 1.35), -0.84 * (y - 1.30))
+
+
+def fig_elem_surface(path):
+    fig, axs = new_row(3)
+
+    # A: the parameter domain -- the elementary rectangle du x dv
+    ax = axs[0]
+    u0, v0, du, dv = 0.30, 0.26, 0.62, 0.50
+    u1, v1 = u0 + du, v0 + dv
+    ax.annotate("", xy=(1.26, 0.0), xytext=(-0.06, 0.0),
+                arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5))
+    ax.annotate("", xy=(0.0, 1.16), xytext=(0.0, -0.06),
+                arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5))
+    ax.text(1.26, -0.03, r"$u$", fontsize=15, ha="left", va="top")
+    ax.text(-0.02, 1.16, r"$v$", fontsize=15, ha="right", va="top")
+    ax.add_patch(Polygon([(u0, v0), (u1, v0), (u1, v1), (u0, v1)],
+                         closed=True, facecolor="0.90", edgecolor="0.30",
+                         lw=1.1, zorder=3))
+    ax.annotate("", xy=(u1, v0), xytext=(u0, v0), zorder=6,
+                arrowprops=dict(arrowstyle="-|>", color=C1C, lw=1.9))
+    ax.annotate("", xy=(u0, v1), xytext=(u0, v0), zorder=6,
+                arrowprops=dict(arrowstyle="-|>", color=C2C, lw=1.9))
+    s = 0.07
+    ax.plot([u0 + s, u0 + s, u0], [v0, v0 + s, v0 + s],
+            color="0.35", lw=1.0, zorder=6)
+    ax.plot([u0], [v0], marker="o", ms=5.0, color="#D62728", zorder=7)
+    ax.text(0.5 * (u0 + u1), v0 - 0.050, r"$\mathrm{d}u$", color=C1C,
+            fontsize=14, ha="center", va="top")
+    ax.text(u0 - 0.040, 0.5 * (v0 + v1), r"$\mathrm{d}v$", color=C2C,
+            fontsize=14, ha="right", va="center")
+    ax.text(0.5 * (u0 + u1), 0.5 * (v0 + v1), r"$\mathrm{d}u\,\mathrm{d}v$",
+            fontsize=13, color="black", ha="center", va="center", zorder=9,
+            bbox=LABELBOX)
+    ax.text(u0 - 0.045, v0 - 0.045, r"$(u,v)$", fontsize=13, ha="right",
+            va="top", zorder=9, bbox=LABELBOX)
+    ax.set_xlim(-0.35, 1.32)
+    ax.set_ylim(-0.12, 1.30)
+    letter(ax, "A")
+
+    # B: the curved patch and its tangent parallelogram (area = dS)
+    ax = axs[1]
+    u0, v0, u1, v1 = 0.50, 0.45, 0.64, 0.59
+    du, dv = u1 - u0, v1 - v0
+    A, B = _grid(u0, u1, v0, v1, 14)
+    for q in _quads(np.stack(F_dome(A, B), -1)):
+        poly3(ax, q, facecolor="0.90", edgecolor="none", zorder=2)
+    for fixed, var in ((v0, 0), (v1, 0), (u0, 1), (u1, 1)):
+        t = np.linspace((u0, v0)[var], (u1, v1)[var], 40)
+        g = (lambda s: F_dome(s, np.full_like(s, fixed))) if var == 0 else \
+            (lambda s: F_dome(np.full_like(s, fixed), s))
+        curve(ax, list(np.stack(g(t), -1)), color="0.30", lw=1.0, zorder=4)
+    soft_curve(ax, F_dome, (u0, v0), 0, (u0 - 0.20, u1 + 0.20))
+    soft_curve(ax, F_dome, (u1, v1), 0, (u0 - 0.20, u1 + 0.20))
+    soft_curve(ax, F_dome, (u0, v0), 1, (v0 - 0.20, v1 + 0.20))
+    soft_curve(ax, F_dome, (u1, v1), 1, (v0 - 0.20, v1 + 0.20))
+
+    P = np.array(_pt(F_dome, u0, v0))
+    fu, fv = dome_grad(u0, v0)
+    Tu = np.array([du, 0.0, fu * du])
+    Tv = np.array([0.0, dv, fv * dv])
+    poly3(ax, [P, P + Tu, P + Tu + Tv, P + Tv], facecolor="none",
+          edgecolor="black", lw=1.3, ls=(0, (5, 3)), zorder=5)
+    arrow3(ax, P, P + Tu, color=C1C, lw=1.9, head=0.023)
+    arrow3(ax, P, P + Tv, color=C2C, lw=1.9, head=0.023)
+    pP, pU, pV = xy(P), xy(P + Tu), xy(P + Tv)
+
+    mu, mv = 0.5 * (pP + pU), 0.5 * (pP + pV)
+    ax.text(mu[0] - 0.075, mu[1] + 0.005, r"$\mathbf{r}_u\,\mathrm{d}u$",
+            color=C1C, fontsize=13, ha="right", va="center", zorder=9,
+            bbox=LABELBOX)
+    ax.text(mv[0] + 0.070, mv[1] + 0.005, r"$\mathbf{r}_v\,\mathrm{d}v$",
+            color=C2C, fontsize=13, ha="left", va="center", zorder=9,
+            bbox=LABELBOX)
+
+    Nh = np.cross(Tu, Tv)
+    Nh = Nh / np.linalg.norm(Nh)
+    pN = xy(P + 0.22 * Nh)
+    arrow3(ax, P, P + 0.22 * Nh, color="black", lw=1.4, head=0.026)
+    ax.text(pN[0] + 0.012, pN[1] + 0.025, r"$\mathbf{r}_u\times\mathbf{r}_v$",
+            fontsize=12, ha="left", va="bottom", zorder=9, bbox=LABELBOX)
+    ax.plot([pP[0]], [pP[1]], marker="o", ms=5.0, color="#D62728", zorder=7)
+    cB = xy(P + 0.5 * Tu + 0.5 * Tv)
+    ax.annotate(r"$\mathrm{d}S$", xy=cB,
+                xytext=(cB[0] + 0.075, cB[1] + 0.115), fontsize=13,
+                ha="center", va="center", zorder=9, bbox=LABELBOX,
+                annotation_clip=False,
+                arrowprops=dict(arrowstyle="-", color="0.55", lw=0.8,
+                                shrinkA=2, shrinkB=3))
+    letter(ax, "B")
+    fit(ax)
+
+    # C: graph surface -- the patch is the shadow dx dy lifted by the tilt
+    ax = axs[2]
+    bx, by, dx, dy = 0.20, 0.20, 0.60, 0.46
+    fx, fy, z0 = 0.55, 0.40, 0.34
+    zt = lambda x, y: z0 + fx * (x - bx) + fy * (y - by)
+    xs = (bx, bx + dx, bx + dx, bx)
+    ys = (by, by, by + dy, by + dy)
+    base = [(x, y, 0.0) for x, y in zip(xs, ys)]
+    top = [(x, y, zt(x, y)) for x, y in zip(xs, ys)]
+    poly3(ax, base, facecolor="0.95", edgecolor="0.40", lw=1.0, zorder=2)
+    for b, t in zip(base, top):
+        seg(ax, b, t, **DASH)
+    poly3(ax, top, facecolor="0.88", edgecolor="0.35", lw=1.1, zorder=3)
+    seg(ax, base[0], base[1], color=C1C, lw=1.9, zorder=6)
+    seg(ax, base[0], base[3], color=C2C, lw=1.9, zorder=6)
+    label_line(ax, base[0], base[1], r"$\mathrm{d}x$", frac=0.5,
+               off=(-0.055, -0.085), fs=14, colour=C1C)
+    label_line(ax, base[0], base[3], r"$\mathrm{d}y$", frac=0.5,
+               off=(0.090, -0.055), fs=14, colour=C2C)
+    cT = xy(np.array(top).mean(axis=0))
+    ax.text(cT[0], cT[1], r"$\mathrm{d}S$", fontsize=15, ha="center",
+            va="center", zorder=9, bbox=LABELBOX)
+    letter(ax, "C")
+    fit(ax, pad=0.11)
+    ax.text(0.5, 0.0,
+            r"$\mathrm{d}S=\sqrt{1+f_x^{2}+f_y^{2}}\;\mathrm{d}x\,\mathrm{d}y$",
+            transform=ax.transAxes, fontsize=12.5, ha="center", va="bottom",
+            zorder=9, bbox=LABELBOX)
+
+    save(fig, path)
+
+
 # ------------------------------------------------------- exact-volume check
 def check_exact():
     """Element volumes: closed form vs leading order, and the O(h) error decay.
@@ -765,12 +924,13 @@ def main():
                   p("fig-overview.png"))
 
     fig_elem_line(p("fig-5-line.png"))
-    fig_elem_area(p("fig-6-area.png"))
-    fig_elem_volume(p("fig-7-volume.png"))
+    fig_elem_surface(p("fig-6-param.png"))
+    fig_elem_area(p("fig-7-area.png"))
+    fig_elem_volume(p("fig-8-volume.png"))
 
     for nm in ("fig-1-rect.png", "fig-2-polar.png", "fig-3-cyl.png",
                "fig-4-sph.png", "fig-overview.png", "fig-5-line.png",
-               "fig-6-area.png", "fig-7-volume.png"):
+               "fig-6-param.png", "fig-7-area.png", "fig-8-volume.png"):
         with Image.open(p(nm)) as im:
             print("%-20s %5d x %4d px   %6.1f x %5.1f mm at 300 dpi"
                   % (nm, im.width, im.height, im.width / 300.0 * 25.4,
