@@ -1,4 +1,4 @@
-# 微分、线性近似及其几何含义
+# 微分与局部线性映射：从切线、切平面到 Jacobian
 
 > **主线**：函数在一点附近能否用一个**线性映射**近似？这个线性映射在一元、多元标量与向量值函数中分别是什么？
 >
@@ -116,6 +116,10 @@ y=f(x_0)+f'(x_0)(x-x_0)
 $$
 就是 $f$ 在 $x_0$ 处的**切线**：$L_{x_0}$ 是切线对应的函数，图像才是切线。$L_{x_0}$ 在整个实数轴上都有定义，但一般只在 $x_0$ 附近近似 $f$。
 
+![一元线性近似：切线与增量分解](image/fig-1-tangent-line.png)
+
+图中曲线 $y=f(x)$ 与其在 $x_0$ 处的切线 $L_{x_0}$（蓝）相切。$x_0+\Delta x$ 处的竖直方向被切成两段：绿段是线性主部 $\mathrm dy=f'(x_0)\Delta x$，红段是余项；两段之和正是真实增量 $\Delta y=f(x_0+\Delta x)-f(x_0)$，即 $\Delta y=\mathrm dy+o(\lvert\Delta x\rvert)$。黑虚线给出基准水平线与两条竖直辅助线。
+
 > **例（一元线性近似）** 取 $f(x)=\sqrt{x}$，$x_0=4$。由 $f(4)=2$，$f'(x)=\dfrac{1}{2\sqrt{x}}$，$f'(4)=\dfrac14$，得
 > $$
 > \sqrt{4+h}\approx 2+\frac{h}{4}.
@@ -230,6 +234,10 @@ L_{\mathbf x_0}(\mathbf x)=f(\mathbf x_0)+Df(\mathbf x_0)[\mathbf x-\mathbf x_0]
 =f(\mathbf x_0)+\sum_{i=1}^{n}\frac{\partial f}{\partial x_i}(\mathbf x_0)(x_i-x_{0i}).
 $$
 它的图像就是 $f$ 的图形在 $\mathbf x_0$ 处的**切超平面**：$n=1$ 时是切线，$n=2$ 时是切平面。这个线性函数在整个 $\mathbb R^n$ 上都有定义，但通常只在 $\mathbf x_0$ 附近近似 $f$。
+
+![二元标量函数：曲面与切平面](image/fig-2-tangent-plane.png)
+
+图中曲面 $z=f(x,y)$（浅灰网格）与它在 $\mathbf x_0$ 处的切平面（灰底虚线框，为看清只画出一小块）相切于红点 $(\mathbf x_0,f(\mathbf x_0))$；曲面凹向下方，故切平面在相切点之外位于曲面**之上**。蓝色箭头是定义域 $\mathbb R^2$ 中的梯度 $\nabla f(\mathbf x_0)$，它决定切平面朝哪个方向倾斜、倾斜多少。黑色虚线是 $\mathbf x_0$ 到定义域平面的垂线。
 
 > **例（多元标量函数与切平面）** 取 $f(x,y)=x^2+xy+y^2$，则
 > $$
@@ -421,6 +429,10 @@ $$
 \end{aligned}
 $$
 即 $\lvert\det J_{\mathbf g}(\mathbf u)\rvert$ 是局部体积的缩放因子：$n=1$ 时是长度缩放因子，$n=2$ 时是面积缩放因子，一般 $n$ 时是体积缩放因子。
+
+![线性化把面积放大 |det J| 倍](image/fig-3-jacobian-area.png)
+
+图中 $uv$ 平面上的小方块（左边，面积 $\mathrm du\,\mathrm dv$）经线性映射 $J_{\mathbf g}(\mathbf u)$ 映成 $xy$ 平面上的平行四边形（右边，灰底）：两条边分别被映成 $J_{\mathbf g}\mathrm du$（蓝）与 $J_{\mathbf g}\mathrm dv$（红），而面积被放大 $\lvert\det J_{\mathbf g}\rvert$ 倍。$n$ 维时同一句话读作“体积被放大 $\lvert\det J_{\mathbf g}\rvert$ 倍”。
 
 ### 5.3 多元积分的换元法
 
