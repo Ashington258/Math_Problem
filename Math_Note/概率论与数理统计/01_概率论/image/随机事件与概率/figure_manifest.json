@@ -1,0 +1,42 @@
+{
+  "versions": {
+    "python": "3.13.13",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "source": "exact finite probability models; no observations",
+  "figures": [
+    {
+      "name": "01_event_operations",
+      "width_mm": 176.8991640000147,
+      "height_mm": 113.8924708890375,
+      "png_dpi": 600
+    },
+    {
+      "name": "02_conditioning",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89678925213832,
+      "png_dpi": 600
+    },
+    {
+      "name": "03_bayes_factory",
+      "width_mm": 176.8991640000147,
+      "height_mm": 76.8994213000511,
+      "png_dpi": 600
+    }
+  ],
+  "factory_counts": {
+    "A_total": 7000,
+    "A_defect": 70,
+    "B_total": 3000,
+    "B_defect": 90,
+    "total_defect": 160
+  },
+  "probabilities": {
+    "A_prior": 0.7,
+    "B_prior": 0.3,
+    "defect": 0.016,
+    "A_given_defect": 0.4375,
+    "B_given_defect": 0.5625
+  }
+}
