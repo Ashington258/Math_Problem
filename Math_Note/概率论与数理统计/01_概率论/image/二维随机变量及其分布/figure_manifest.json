@@ -1,0 +1,71 @@
+{
+  "versions": {
+    "python": "3.13.13",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "font": "Microsoft YaHei",
+  "source": "analytic distributions; no observations",
+  "figures": [
+    {
+      "name": "01_discrete_joint",
+      "width_mm": 176.81372249897498,
+      "height_mm": 79.92443226671055,
+      "png_dpi": 600
+    },
+    {
+      "name": "02_triangle_pdf_cdf",
+      "width_mm": 176.83450542685136,
+      "height_mm": 74.98221041628,
+      "png_dpi": 600
+    },
+    {
+      "name": "03_marginal_conditional",
+      "width_mm": 176.8991640000147,
+      "height_mm": 80.89868802651083,
+      "png_dpi": 600
+    },
+    {
+      "name": "04_bivariate_normal",
+      "width_mm": 176.8276885482872,
+      "height_mm": 59.00297262373999,
+      "png_dpi": 600
+    },
+    {
+      "name": "05_normal_conditional",
+      "width_mm": 176.8991640000147,
+      "height_mm": 80.89897024873305,
+      "png_dpi": 600
+    },
+    {
+      "name": "06_sum_uniform",
+      "width_mm": 176.8991640000147,
+      "height_mm": 80.89897024873305,
+      "png_dpi": 600
+    },
+    {
+      "name": "07_linear_transform",
+      "width_mm": 176.8991640000147,
+      "height_mm": 92.61283013249805,
+      "png_dpi": 600
+    },
+    {
+      "name": "08_multinomial",
+      "width_mm": 175.2992761728233,
+      "height_mm": 80.89897024873305,
+      "png_dpi": 600
+    },
+    {
+      "name": "09_marginal_line",
+      "width_mm": 176.8991640000147,
+      "height_mm": 75.89996247287138,
+      "png_dpi": 600
+    },
+    {
+      "name": "10_marginal_area",
+      "width_mm": 176.8991640000147,
+      "height_mm": 75.89996247287138,
+      "png_dpi": 600
+    }
+  ]
+}
