@@ -1,0 +1,84 @@
+{
+  "versions": {
+    "python": "3.13.13",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "font": "Microsoft YaHei",
+  "source": "analytic PMF/PDF/CDF; no observations or error bars",
+  "figures": [
+    {
+      "name": "01_pdf_cdf_relation",
+      "width_mm": 176.8991640000147,
+      "height_mm": 143.89649653467055,
+      "png_dpi": 600
+    },
+    {
+      "name": "02_linear_density",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "03_coins",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "04_bernoulli",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "05_binomial",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "06_poisson",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "07_geometric",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "08_hypergeometric",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "09_uniform",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "10_exponential",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    },
+    {
+      "name": "11_normal_parameters",
+      "width_mm": 176.8991640000147,
+      "height_mm": 143.89649653467055,
+      "png_dpi": 600
+    },
+    {
+      "name": "12_normal_example",
+      "width_mm": 176.8991640000147,
+      "height_mm": 74.89928669091054,
+      "png_dpi": 600
+    }
+  ]
+}
