@@ -1,0 +1,44 @@
+[
+  {
+    "name": "01_weighted_mean",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "png_dpi": 600
+  },
+  {
+    "name": "02_location_spread",
+    "width_mm": 178.0,
+    "height_mm": 88.0,
+    "png_dpi": 600
+  },
+  {
+    "name": "03_same_moments",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "png_dpi": 600
+  },
+  {
+    "name": "04_covariance_direction",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "png_dpi": 600
+  },
+  {
+    "name": "05_uncorrelated_dependence",
+    "width_mm": 178.0,
+    "height_mm": 90.0,
+    "png_dpi": 600
+  },
+  {
+    "name": "06_total_variance",
+    "width_mm": 178.0,
+    "height_mm": 90.0,
+    "png_dpi": 600
+  },
+  {
+    "name": "07_continuous_expectation",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "png_dpi": 600
+  }
+]
