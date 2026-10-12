@@ -233,23 +233,131 @@ def normal_conditional():
     save(fig, axs, '05_normal_conditional')
 
 
-def sum_uniform():
+def linear_sum_pdf(z):
+    if z <= 0 or z >= 2:
+        return 0.
+    return z*(2-z) if z <= 1 else (2-z)**2
+
+
+def linear_sum_cdf(z):
+    if z <= 0:
+        return 0.
+    if z <= 1:
+        return z*z-z**3/3
+    if z < 2:
+        return 1-(2-z)**3/3
+    return 1.
+
+
+def sum_linear_density():
+    """Convolution for f(x,y)=2-x-y on the unit square: the path x+y=z is a segment."""
+    fig, axs = plt.subplots(1,3, figsize=ss.figsize('double', height_mm=79), layout='constrained')
+    for ax, z, note in zip(axs[:2], [.6, 1.4], ['$0<z\\leq1$：$0<x<z$', '$1<z<2$：$z-1<x<1$']):
+        ax.add_patch(patches.Rectangle((0,0), 1, 1, facecolor=BLUE, alpha=.13, edgecolor='.45', lw=.8))
+        lo, hi = max(0., z-1), min(1., z)
+        ax.plot([lo,hi], [z-lo,z-hi], color=ORANGE, lw=2.4, label='$x+y=z$')
+        ax.plot([lo,hi], [z-lo,z-hi], 'o', mfc='white', mec=ORANGE, ms=4, ls='none')
+        ax.annotate('沿线 $f=2-z$', ((lo+hi)/2, z-(lo+hi)/2), xytext=(0,9),
+                    textcoords='offset points', ha='center', fontsize=8)
+        ax.text(.04, .93, note, transform=ax.transAxes, fontsize=8)
+        ax.legend(loc='lower right')
+        ax.set(xlabel='$x$（无量纲）', ylabel='$y$（无量纲）', xlim=(-.15,1.15), ylim=(-.15,1.15),
+               aspect='equal', xticks=[0,.5,1], yticks=[0,.5,1])
+    z = np.linspace(-.2,2.2,1201)
+    f = np.where(z<=0, 0., np.where(z<=1, z*(2-z), np.where(z<2, (2-z)**2, 0.)))
+    axs[2].plot(z, f, color=BLUE)
+    axs[2].plot([1,1], [0,1], ':', color='.45', lw=.9)
+    for z0 in [.6, 1.4]:
+        axs[2].plot(z0, linear_sum_pdf(z0), 'o', mfc='white', mec=ORANGE, ms=4)
+        axs[2].annotate(f'{linear_sum_pdf(z0):.4f}', (z0, linear_sum_pdf(z0)), xytext=(6,6),
+                        textcoords='offset points', fontsize=8)
+    density_labels(axs[2], '和 $z=x+y$（无量纲）')
+    axs[2].set(xlim=(-.2,2.2), ylim=(0,1.12))
+    axs[2].text(.5, .93, '分段点 $z=1$', transform=axs[2].transAxes, fontsize=8)
+    save(fig, axs, '06_sum_linear_density')
+
+
+def exp_sum_pdf(z):
+    if z <= 0:
+        return 0.
+    return 1-math.exp(-z) if z <= 1 else (math.e-1)*math.exp(-z)
+
+
+def exp_sum_cdf(z):
+    if z <= 0:
+        return 0.
+    return z-1+math.exp(-z) if z <= 1 else 1-(math.e-1)*math.exp(-z)
+
+
+def sum_exponential():
+    """Distribution-function method for U(0,1) + Exp(1): the edge x=1 cuts the region."""
+    fig, axs = plt.subplots(1,3, figsize=ss.figsize('double', height_mm=88), layout='constrained')
+    ylim = (-.25, 2.3)
+    for ax, z, note in zip(axs[:2], [.6, 1.8], ['$0<z\\leq1$：$x$ 取 $0$ 到 $z$', '$z>1$：$x$ 取满 $(0,1)$']):
+        ax.add_patch(patches.Rectangle((0,0), 1, ylim[1], facecolor=BLUE, alpha=.13, edgecolor='none'))
+        corners = [(0,0),(z,0),(0,z)] if z <= 1 else [(0,0),(1,0),(1,z-1),(0,z)]
+        ax.add_patch(patches.Polygon(corners, fill=False, edgecolor=ORANGE, lw=1.8, hatch='///'))
+        xs = np.array([max(0., z-ylim[1]), min(1., z)])
+        ax.plot(xs, z-xs, color=ORANGE, lw=1.6, label='$x+y=z$')
+        ax.plot([1,1], [0,ylim[1]], ':', color='.45', lw=.9)
+        ax.text(.04, .93, note, transform=ax.transAxes, fontsize=8)
+        ax.legend(loc='lower right')
+        ax.set(xlabel='$x$（无量纲）', ylabel='$y$（无量纲）',
+               xlim=(-.25,1.55), ylim=ylim, aspect='equal', xticks=[0,.5,1], yticks=[0,1,2])
+    z = np.linspace(-.2,3.2,1201)
+    f = np.where(z<=0, 0., np.where(z<=1, 1-np.exp(-z), (math.e-1)*np.exp(-z)))
+    axs[2].plot(z, f, color=BLUE)
+    axs[2].plot([1,1], [0,exp_sum_pdf(1)], ':', color='.45', lw=.9)
+    for z0 in [.6, 1.8]:
+        axs[2].plot(z0, exp_sum_pdf(z0), 'o', mfc='white', mec=ORANGE, ms=4)
+        axs[2].annotate(f'{exp_sum_pdf(z0):.4f}', (z0, exp_sum_pdf(z0)), xytext=(6,6),
+                        textcoords='offset points', fontsize=8)
+    density_labels(axs[2], '和 $z=x+y$（无量纲）')
+    axs[2].set(xlim=(-.2,3.2), ylim=(0,.78))
+    axs[2].text(.43, .93, '分段点 $z=1$', transform=axs[2].transAxes, fontsize=8)
+    save(fig, axs, '11_sum_exponential')
+
+
+def mixed_sum_pdf(z):
+    if z <= 0 or z >= 3 or 1 <= z <= 2:
+        return 0.
+    return z if z < 1 else z-2
+
+
+def mixed_sum_cdf(z):
+    if z <= 0:
+        return 0.
+    if z <= 1:
+        return z*z/2
+    if z <= 2:
+        return .5
+    if z <= 3:
+        return (1+(z-2)**2)/2
+    return 1.
+
+
+def mixed_sum():
+    """Discrete X in {0,2} plus continuous Y: f_Z is two shifted half copies of f_Y."""
     fig, axs = pair()
-    z = np.linspace(-.2,2.2,1001)
-    f = np.where((z>0)&(z<=1),z,np.where((z>1)&(z<2),2-z,0))
-    u = np.clip(z,0,2)
-    F = np.where(u<=1,u*u/2,1-(2-u)**2/2)
-    axs[0].plot(z,f,color=BLUE)
-    v = np.linspace(.5,1.5,501)
-    axs[0].fill_between(v,np.minimum(v,2-v),alpha=.25,color=ORANGE,linewidth=0)
-    axs[0].text(.04,.9,'阴影面积 = 0.7500',transform=axs[0].transAxes,fontsize=8)
-    axs[1].plot(z,F,color=BLUE)
-    axs[1].plot([.5,1.5],[.125,.875],'o',color=ORANGE,ls='none')
-    density_labels(axs[0],'和 $z=x+y$（无量纲）')
-    axs[1].set(xlabel='和 $z=x+y$（无量纲）',ylabel='累计概率 $F_Z(z)$（无量纲）',ylim=(0,1.055))
-    for ax in axs:
-        ax.set_xlim(-.2,2.2)
-    save(fig, axs, '06_sum_uniform')
+    fig.set_size_inches(ss.figsize('double', height_mm=86))
+    z = np.linspace(-.2, 3.2, 1401)
+    axs[0].plot(z, [mixed_sum_pdf(t) for t in z], color=BLUE, label='$f_Z(z)$')
+    y = np.linspace(0, 1, 401)
+    axs[0].plot(y, 2*y, '--', color=GREEN, label='$f_Y(y)=2y$')
+    axs[0].plot(y+2, 2*y, '--', color=GREEN, label='$f_Y(z-2)$')
+    axs[0].text(1.05, 1.45, '$f_Z=\\frac{1}{2}f_Y(z)+\\frac{1}{2}f_Y(z-2)$', fontsize=8)
+    axs[0].text(1.5, .55, '$(1,2)$ 内 $f_Z=0$', ha='center', fontsize=8)
+    axs[0].legend(loc='upper center', fontsize=7, ncol=3)
+    density_labels(axs[0], '和 $z=x+y$（无量纲）')
+    axs[0].set(xlim=(-.2,3.2), ylim=(0,2.3), xticks=[0,1,2,3])
+    axs[1].plot(z, [mixed_sum_cdf(t) for t in z], color=BLUE)
+    axs[1].plot([1,2], [.5,.5], color=ORANGE, lw=2.4)
+    axs[1].plot([1,2], [.5,.5], 'o', mfc='white', mec=ORANGE, ms=4, ls='none')
+    axs[1].text(.5, .80, '平台 $1/2$：$(1,2)$ 内无新增概率', transform=axs[1].transAxes,
+                ha='center', fontsize=8)
+    axs[1].set(xlabel='和 $z=x+y$（无量纲）', ylabel='累计概率 $F_Z(z)$（无量纲）',
+               xlim=(-.2,3.2), ylim=(0,1.08), xticks=[0,1,2,3])
+    save(fig, axs, '12_mixed_sum')
 
 
 def linear_transform():
@@ -308,7 +416,9 @@ def tables():
                 triangle_marginals=[dict(t=t,pdf_x=2*(1-t),pdf_y=2*t,cdf_x=2*t-t*t,cdf_y=t*t) for t in [.25,.5,.75]],
                 multinomial=multinomial_matrix().tolist(),
                 normal_conditionals=[dict(y=y,mean=.8*y,variance=.36,std=.6) for y in [-1,0,1]],
-                uniform_sum=[dict(z=z,pdf=min(z,2-z),cdf=z*z/2 if z<=1 else 1-(2-z)**2/2) for z in [0,.5,1,1.5,2]])
+                linear_sum=[dict(z=z,pdf=linear_sum_pdf(z),cdf=linear_sum_cdf(z)) for z in [0,.5,1,1.5,2]],
+                mixed_sum=[dict(z=z,pdf=mixed_sum_pdf(z),cdf=mixed_sum_cdf(z)) for z in [0,.5,1,1.5,2,2.5,3]],
+                exponential_sum=[dict(z=z,pdf=exp_sum_pdf(z),cdf=exp_sum_cdf(z)) for z in [0,.5,1,1.5,2,3]])
     (OUT/'numerical_tables.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     with (OUT/'numerical_tables.csv').open('w',encoding='utf-8-sig',newline='') as stream:
         writer=csv.writer(stream)
@@ -328,6 +438,27 @@ def tables():
     assert np.isclose(triangle_cdf(.5,.75),.5)
     assert np.all(np.diff(np.array(cdf),axis=0)>=-1e-12)
     assert np.all(np.diff(np.array(cdf),axis=1)>=-1e-12)
+    # The mixed discrete-continuous sum has a flat 1/2 stretch on (1,2) and mass 1.
+    assert math.isclose(mixed_sum_cdf(1), .5, rel_tol=1e-12)
+    assert math.isclose(mixed_sum_cdf(2), .5, rel_tol=1e-12)
+    assert math.isclose(mixed_sum_cdf(3)-mixed_sum_cdf(0), 1, rel_tol=1e-12)
+    assert math.isclose(1/3+4/3, 1+2/3, rel_tol=1e-12)
+    for z in [.5,1.5,2.5]:
+        h = 1e-6
+        assert math.isclose((mixed_sum_cdf(z+h)-mixed_sum_cdf(z-h))/(2*h), mixed_sum_pdf(z), abs_tol=1e-6)
+    # The linear-density sum meets at z=1, has total mass 1 and cdf'=pdf on both branches.
+    assert math.isclose(linear_sum_pdf(1), (2-1)**2, rel_tol=1e-12)
+    assert math.isclose(linear_sum_cdf(2)-linear_sum_cdf(0), 1, rel_tol=1e-12)
+    for z in [.5,1.5]:
+        h = 1e-6
+        assert math.isclose((linear_sum_cdf(z+h)-linear_sum_cdf(z-h))/(2*h), linear_sum_pdf(z), rel_tol=1e-5)
+    # The exponential-sum density is continuous at z=1, integrates to 1 and has mean 1.5.
+    assert math.isclose(exp_sum_pdf(1), (math.e-1)*math.exp(-1), rel_tol=1e-12)
+    assert math.isclose(math.exp(-1)+(math.e-1)*math.exp(-1), 1, rel_tol=1e-12)
+    assert math.isclose(.5-(1-2*math.exp(-1))+2*(1-math.exp(-1)), 1.5, rel_tol=1e-12)
+    for z in [.4,1.3,2.5]:
+        h = 1e-6
+        assert math.isclose((exp_sum_cdf(z+h)-exp_sum_cdf(z-h))/(2*h), exp_sum_pdf(z), rel_tol=1e-5)
 
 
 def main():
@@ -337,11 +468,13 @@ def main():
     marginals_conditionals()
     normal_contours()
     normal_conditional()
-    sum_uniform()
+    sum_linear_density()
     linear_transform()
     multinomial()
     marginal_line()
     marginal_area()
+    sum_exponential()
+    mixed_sum()
     tables()
     meta=dict(versions=dict(python=platform.python_version(),numpy=np.__version__,matplotlib=matplotlib.__version__),
               font=FONT,source='analytic distributions; no observations',figures=FIGURES)

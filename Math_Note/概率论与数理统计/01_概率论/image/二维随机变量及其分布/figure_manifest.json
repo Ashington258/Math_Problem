@@ -38,9 +38,9 @@
       "png_dpi": 600
     },
     {
-      "name": "06_sum_uniform",
+      "name": "06_sum_linear_density",
       "width_mm": 176.8991640000147,
-      "height_mm": 80.89897024873305,
+      "height_mm": 77.89992640872276,
       "png_dpi": 600
     },
     {
@@ -65,6 +65,18 @@
       "name": "10_marginal_area",
       "width_mm": 176.8991640000147,
       "height_mm": 75.89996247287138,
+      "png_dpi": 600
+    },
+    {
+      "name": "11_sum_exponential",
+      "width_mm": 176.8991640000147,
+      "height_mm": 86.89705792871833,
+      "png_dpi": 600
+    },
+    {
+      "name": "12_mixed_sum",
+      "width_mm": 176.8991640000147,
+      "height_mm": 84.897695368735,
       "png_dpi": 600
     }
   ]
