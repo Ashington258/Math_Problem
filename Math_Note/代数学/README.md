@@ -42,8 +42,9 @@ $$
 | 左零空间 | $\ker(A^{\mathsf T})$ | $\mathbb F^m$ |
 | 秩 | $\operatorname{rank}(A)$ | 非负整数 |
 | 零化度 | $\dim\ker(A)$ | 非负整数 |
-| 转置 / 共轭转置 | $A^{\mathsf T}$ / $A^{H}$ | 同型 |
+| 转置 / 共轭转置 | $A^{\mathsf T}$ / $A^{H}$ | $\mathbb F^{n\times m}$ |
 | 伴随矩阵 | $A^{*}$ | 同型方阵 |
+| 惯性 | $\operatorname{In}(A)=(i_+(A),i_-(A),i_0(A))$ | 实对称 / Hermitian 矩阵的非负整数三元组 |
 | 迹 / 行列式 | $\operatorname{tr}(A)$ / $\lvert A\rvert$ | 标量 |
 | 范数 / 绝对值 | $\lVert x\rVert$ / $\lvert a\rvert$ | 标量 |
 
