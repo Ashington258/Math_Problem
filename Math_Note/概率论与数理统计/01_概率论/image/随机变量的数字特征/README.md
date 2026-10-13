@@ -1,6 +1,6 @@
 # 随机变量的数字特征配图
 
-配套 [随机变量的数字特征](../../随机变量的数字特征.md#numerical-characteristics)。全部图形按分布公式生成，未模拟观测样本。
+配套 [随机变量的数字特征](../../04_随机变量的数字特征.md#numerical-characteristics)。全部图形按分布公式生成，未模拟观测样本。
 
 | 图 | 内容 |
 | --- | --- |
@@ -25,4 +25,4 @@ python plot_characteristics.py
 
 `figure_manifest.json` 记录实际尺寸，`preview-*.png` 为检查用总览，带 `-gray` 的文件用于灰度可读性检查。脚本核验离散矩、连续矩、零协方差、混合分布方差及椭圆公式。
 
-[返回配套笔记](../../随机变量的数字特征.md#numerical-characteristics)
+[返回配套笔记](../../04_随机变量的数字特征.md#numerical-characteristics)
