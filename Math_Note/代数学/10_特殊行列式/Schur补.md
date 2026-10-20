@@ -18,7 +18,13 @@ $$
 
 普通高斯消元利用某个非零元素消去其他元素；Schur 补则是利用一个可逆矩阵块，消去另一个矩阵块。
 
-假设 $D$ 可逆。左乘分块初等矩阵
+假设 $D$ 可逆。由 $BD^{-1}D=B$，作分块行变换
+
+$$
+R_1\longleftarrow R_1-BD^{-1}R_2,
+$$
+
+消去上方的 $B$，化为分块下三角矩阵；对应左乘分块初等矩阵
 
 $$
 L=
@@ -106,7 +112,13 @@ $$
 
 ### 1.2 如果 $A$ 可逆
 
-同理，左乘
+由 $CA^{-1}A=C$，作分块行变换
+
+$$
+R_2\longleftarrow R_2-CA^{-1}R_1,
+$$
+
+消去下方的 $C$，化为分块上三角矩阵；对应左乘
 
 $$
 \begin{pmatrix}
@@ -134,6 +146,24 @@ A&B\\
 0&D-CA^{-1}B
 \end{pmatrix}.
 \end{aligned}
+$$
+
+再作分块列变换 $C_2\longleftarrow C_2-C_1A^{-1}B$，即右乘下列矩阵，得到分块对角形式：
+
+$$
+\begin{pmatrix}
+A&B\\
+0&D-CA^{-1}B
+\end{pmatrix}
+\begin{pmatrix}
+I&-A^{-1}B\\
+0&I
+\end{pmatrix}
+=
+\begin{pmatrix}
+A&0\\
+0&D-CA^{-1}B
+\end{pmatrix}.
 $$
 
 所以
