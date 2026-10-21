@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const katex = require(path.resolve(process.argv[2]));
-const note = path.resolve(__dirname, '../../切向量与切线.md');
+const note = path.resolve(__dirname, '../../切向量与切空间.md');
 const text = fs.readFileSync(note, 'utf8');
 let count = 0;
 const formula = /\$\$([\s\S]*?)\$\$|(?<![\\$])\$([^$\n]+)\$/g;
