@@ -1,0 +1,158 @@
+[
+  {
+    "name": "fig-01-partial-derivatives",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-02-direction-derivative",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-03-gradient-tangent-plane",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-04-gradient-level-surface",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-05-total-differential",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-06-direction-counterexample",
+    "pixel_size": [
+      4204,
+      2031
+    ],
+    "size_mm": [
+      178.0000000000147,
+      86.00000000001582
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-07-flux-geometry",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-08-divergence",
+    "pixel_size": [
+      4204,
+      3921
+    ],
+    "size_mm": [
+      178.0000000000147,
+      166.00000000001333
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-09-circulation-geometry",
+    "pixel_size": [
+      4204,
+      2385
+    ],
+    "size_mm": [
+      178.0000000000147,
+      100.9999999999911
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-10-curl",
+    "pixel_size": [
+      4204,
+      4133
+    ],
+    "size_mm": [
+      178.0000000000147,
+      175.00000000000554
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-11-vortex-domain",
+    "pixel_size": [
+      4204,
+      2031
+    ],
+    "size_mm": [
+      178.0000000000147,
+      86.00000000001582
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-12-jacobian-decomposition",
+    "pixel_size": [
+      4204,
+      1937
+    ],
+    "size_mm": [
+      178.0000000000147,
+      82.00000000000361
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-13-physical-meaning",
+    "pixel_size": [
+      4204,
+      2031
+    ],
+    "size_mm": [
+      178.0000000000147,
+      86.00000000001582
+    ],
+    "dpi": 600
+  }
+]
