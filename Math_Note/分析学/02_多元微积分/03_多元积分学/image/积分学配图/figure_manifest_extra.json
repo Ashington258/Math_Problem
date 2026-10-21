@@ -1,0 +1,86 @@
+[
+  {
+    "stem": "fig-09-riemann-sum",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "dpi": 600,
+    "caption": "区域分割与高度乘底面积的黎曼和；非负函数的体积解释。"
+  },
+  {
+    "stem": "fig-10-radial-example",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "圆盘径向积分：同心环面积权重 2pi*r 与函数 r^2 的乘积。"
+  },
+  {
+    "stem": "fig-11-volume-slices",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "dpi": 600,
+    "caption": "四面体的竖直线段与平面投影；高度积分再累积投影面积。"
+  },
+  {
+    "stem": "fig-12-tangent-component",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "有向位移与切向量的关系；法向分量不贡献功。"
+  },
+  {
+    "stem": "fig-13-surface-element",
+    "width_mm": 178.0,
+    "height_mm": 84.0,
+    "dpi": 600,
+    "caption": "参数矩形对应切平行四边形；叉积的模表示面积，方向表示法向。"
+  },
+  {
+    "stem": "fig-14-green-orientation",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "Green 正向边界：外逆内顺；例题中的椭圆边界与区域面积。"
+  },
+  {
+    "stem": "fig-15-gauss-sphere",
+    "width_mm": 178.0,
+    "height_mm": 84.0,
+    "dpi": 600,
+    "caption": "单位球上 F·n=1；内部常散度的积分等于向外通量 4pi。"
+  },
+  {
+    "stem": "fig-16-cap-closure",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "dpi": 600,
+    "caption": "上半球通量计算：补入向下定向的底面，闭面总通量为零。"
+  },
+  {
+    "stem": "fig-17-continuity",
+    "width_mm": 178.0,
+    "height_mm": 64.0,
+    "dpi": 600,
+    "caption": "无内部源的固定控制体：流入 8 kg/s、流出 3 kg/s，存量增加 5 kg/s。"
+  },
+  {
+    "stem": "fig-18-gradient-example",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "dpi": 600,
+    "caption": "势 f=x^2+y^2 下的直线与折线路径，积分均为端点势差 5。"
+  },
+  {
+    "stem": "fig-19-field-comparison",
+    "width_mm": 178.0,
+    "height_mm": 84.0,
+    "dpi": 600,
+    "caption": "二维径向场与旋转场，区分散度与旋度；箭长按统一比例缩放。"
+  },
+  {
+    "stem": "fig-20-ellipse-arc-chord",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "椭圆长弧与补弦：奇部抵消，偶部给出弦上积分 -1/4。"
+  }
+]

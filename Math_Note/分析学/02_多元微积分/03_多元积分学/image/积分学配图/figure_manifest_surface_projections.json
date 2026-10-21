@@ -1,0 +1,16 @@
+[
+  {
+    "stem": "fig-21-surface-coordinate-projections",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "同一面元沿 x、y、z 轴投影到 yz、zx、xy 平面；所选法向三分量均为正。"
+  },
+  {
+    "stem": "fig-22-surface-normal-projection",
+    "width_mm": 178.0,
+    "height_mm": 88.0,
+    "dpi": 600,
+    "caption": "A 为面元的法向定向，箭头仅示单位法向；B 为场与法向所在截面中的正交分解。"
+  }
+]

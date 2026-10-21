@@ -1,0 +1,58 @@
+[
+  {
+    "stem": "fig-01-slicing",
+    "width_mm": 178.0,
+    "height_mm": 78.0,
+    "dpi": 600,
+    "caption": "同一三角形区域的竖直、水平切片，换序只改变描述。"
+  },
+  {
+    "stem": "fig-02-polar-element",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "参数矩形映成环形扇区，面积按局部 Jacobian r 缩放。"
+  },
+  {
+    "stem": "fig-03-curve-direction",
+    "width_mm": 178.0,
+    "height_mm": 79.0,
+    "dpi": 600,
+    "caption": "单位圆反向后，弧长不变，旋转场的功积分变号。"
+  },
+  {
+    "stem": "fig-04-surface-flux",
+    "width_mm": 178.0,
+    "height_mm": 88.0,
+    "dpi": 600,
+    "caption": "单位正方形上的斜面面积为 sqrt(3)，竖直场通量为 1。"
+  },
+  {
+    "stem": "fig-05-internal-cancellation",
+    "width_mm": 178.0,
+    "height_mm": 70.0,
+    "dpi": 600,
+    "caption": "共享边的走向相反，共享面的外法向相反，内部贡献相消。"
+  },
+  {
+    "stem": "fig-06-stokes-surfaces",
+    "width_mm": 178.0,
+    "height_mm": 86.0,
+    "dpi": 600,
+    "caption": "同一边界可由圆盘或上半球跨接，旋度通量均为 2pi。"
+  },
+  {
+    "stem": "fig-07-gauss-hole",
+    "width_mm": 178.0,
+    "height_mm": 80.0,
+    "dpi": 600,
+    "caption": "球体包含奇点时不能直接套 Gauss；球壳内外边界通量抵消。"
+  },
+  {
+    "stem": "fig-08-potential-paths",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "有势时不同路径给出同一端点差；穿孔平面上的无旋场可能有非零环流。"
+  }
+]

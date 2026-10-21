@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Unified figures for the note:
-    "弧长、面积与体积元素在常用坐标系下的表示"
+    "积分元素 — 常用坐标系下的标量微元"
 
 Convention (math style):
     polar       (r, theta),      theta from +x axis, CCW
