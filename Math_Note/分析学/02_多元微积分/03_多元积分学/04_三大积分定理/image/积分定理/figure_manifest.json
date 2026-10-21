@@ -1,0 +1,74 @@
+[
+  {
+    "name": "fig-01-domains-boundaries",
+    "size_mm": [
+      178.0000000000147,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-02-internal-cancellation",
+    "size_mm": [
+      180.38273555418667,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-03-green-flux-circulation",
+    "size_mm": [
+      178.0000000000147,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-04-green-orientation",
+    "size_mm": [
+      178.0000000000147,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-05-stokes-surfaces",
+    "size_mm": [
+      179.85851099367164,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-06-stokes-tilted-disk",
+    "size_mm": [
+      178.0000000000147,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-07-gauss-ball",
+    "size_mm": [
+      178.0000000000147,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-08-gauss-surface-closure",
+    "size_mm": [
+      179.21428310061137,
+      104.00000000000027
+    ],
+    "dpi": 600
+  },
+  {
+    "name": "fig-09-singularity-shell",
+    "size_mm": [
+      178.0000000000147,
+      104.00000000000027
+    ],
+    "dpi": 600
+  }
+]
