@@ -1,0 +1,83 @@
+[
+  {
+    "file": "fig-01-line-elements",
+    "size_mm": [
+      178.0,
+      87.0
+    ],
+    "dpi": 600,
+    "description": "弧长、弦位移、切向方向，以及参数到弧长的速率变换。"
+  },
+  {
+    "file": "fig-02-scalar-accumulation",
+    "size_mm": [
+      178.0,
+      88.0
+    ],
+    "dpi": 600,
+    "description": "半圆细线的密度加权与弧长参数下的黎曼和。"
+  },
+  {
+    "file": "fig-03-two-projections",
+    "size_mm": [
+      178.0,
+      87.0
+    ],
+    "dpi": 600,
+    "description": "坐标分解与正交切向投影；投影向量长度由点积精确计算。"
+  },
+  {
+    "file": "fig-04-reversal",
+    "size_mm": [
+      178.0,
+      86.0
+    ],
+    "dpi": 600,
+    "description": "同一四分之一圆反向行进：弧长不变，恒力场的功反号。"
+  },
+  {
+    "file": "fig-05-potential",
+    "size_mm": [
+      178.0,
+      94.0
+    ],
+    "dpi": 600,
+    "description": "势函数例题：等势线、梯度场、不同路径与相同的端点势差。"
+  },
+  {
+    "file": "fig-06-curl-topology",
+    "size_mm": [
+      178.0,
+      91.0
+    ],
+    "dpi": 600,
+    "description": "可收缩闭路与穿孔场：局部无旋不能排除绕孔的全局环量。"
+  },
+  {
+    "file": "fig-07-green-orientation",
+    "size_mm": [
+      178.0,
+      91.0
+    ],
+    "dpi": 600,
+    "description": "环域的正向外、内边界及其有符号环量贡献。"
+  },
+  {
+    "file": "fig-08-green-cancellation",
+    "size_mm": [
+      178.0,
+      91.0
+    ],
+    "dpi": 600,
+    "description": "微小矩形的环量密度与区域分割后的内部边界相消。"
+  },
+  {
+    "file": "fig-09-worked-example",
+    "size_mm": [
+      178.0,
+      173.0
+    ],
+    "dpi": 600,
+    "description": "非保守场例题：路径、功密度、正向闭合边界、旋度及竖切片积分。"
+  }
+]
