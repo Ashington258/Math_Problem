@@ -85,7 +85,7 @@ def weighted_mean():
     for xx,val in zip(x,x*p):
         axs[1].text(xx,val+.035,f"{val:g}",ha="center",fontsize=8)
     foot(axs[0],r"$\sum_k p_k=1$")
-    foot(axs[1],r"$E(X)=5/4,\quad D(X)=19/16$")
+    foot(axs[1],r"$\mathbb{E}[X]=5/4,\quad \operatorname{Var}(X)=19/16$")
     save(fig,"01_weighted_mean")
 
 
@@ -101,8 +101,8 @@ def location_spread():
         ax.set(xlim=(-4.5,4.5),ylim=(0,.88),xlabel="取值 $x$（无量纲）",ylabel="密度 $f(x)$（无量纲）")
         ax.set_xticks([-4,-2,0,2,4]);ax.set_yticks([0,.4,.8])
         ax.legend(loc="upper right")
-    foot(axs[0],r"$D(X)=0.49$：中心位置改变")
-    foot(axs[1],r"$E(X)=0$：分散尺度改变")
+    foot(axs[0],r"$\operatorname{Var}(X)=0.49$：中心位置改变")
+    foot(axs[1],r"$\mathbb{E}[X]=0$：分散尺度改变")
     save(fig,"02_location_spread")
 
 
@@ -115,7 +115,7 @@ def same_moments():
     axs[1].plot(x,normpdf(x),color=ORANGE,ls="--")
     axs[1].set(xlim=(-4,4),ylim=(0,.5),xlabel="取值 $x$（无量纲）",ylabel="概率密度（无量纲）")
     note(axs[1],.75,.40,r"$N(0,1)$")
-    for ax in axs: foot(ax,r"$E(X)=0,\quad D(X)=1$")
+    for ax in axs: foot(ax,r"$\mathbb{E}[X]=0,\quad \operatorname{Var}(X)=1$")
     save(fig,"03_same_moments")
 
 
@@ -144,7 +144,7 @@ def uncorrelated_dependence():
     x=np.linspace(-1,1,1001); y=x*x; g=x*(x*x-1/3)
     axs[0].plot(x,y,color=BLUE)
     axs[0].axhline(1/3,color=GRAY,ls="--",lw=.9)
-    note(axs[0],-.92,.40,r"$E(Y)=1/3$")
+    note(axs[0],-.92,.40,r"$\mathbb{E}[Y]=1/3$")
     note(axs[0],-.36,.86,r"$Y=X^2$")
     axs[0].set(xlim=(-1.08,1.08),ylim=(-.03,1.1),xlabel="取值 $x$（无量纲）",ylabel="取值 $y$（无量纲）")
     axs[1].plot(x,g,color=GRAY,lw=1.2)
@@ -168,14 +168,14 @@ def total_variance():
     axs[0].axvline(3,color=GRAY,ls=":",lw=.8)
     axs[0].set(xlim=(-2.5,8.5),ylim=(0,.33),xlabel="取值 $x$（无量纲）",ylabel="密度（无量纲）")
     axs[0].legend(loc="upper center")
-    note(axs[0],3.2,.07,r"$E(X)=3$")
+    note(axs[0],3.2,.07,r"$\mathbb{E}[X]=3$")
     vals=[1,4,5]
     bars=axs[1].bar([0,1,2],vals,width=.58,color=[BLUE,ORANGE,"0.5"],edgecolor="black",lw=.7)
     for bar,hatch in zip(bars,["","///","xx"]):bar.set_hatch(hatch)
     for i,v in enumerate(vals):axs[1].text(i,v+.16,str(v),ha="center",fontsize=9)
     axs[1].set(ylim=(0,6),xticks=[0,1,2],xticklabels=["组内","组间","总体"],ylabel="方差（无量纲平方）")
     foot(axs[0],r"$X\mid G=0\sim N(1,1),\quad X\mid G=1\sim N(5,1)$")
-    foot(axs[1],r"$D(X)=E[D(X\mid G)]+D[E(X\mid G)]$")
+    foot(axs[1],r"$\operatorname{Var}(X)=\mathbb{E}[\operatorname{Var}(X\mid G)]+\operatorname{Var}[\mathbb{E}[X\mid G]]$")
     save(fig,"06_total_variance")
 
 
@@ -192,7 +192,7 @@ def continuous_expectation():
     note(axs[0],.4,.50,r"$\int_0^2 f_X(x)\,dx=1$")
     note(axs[1],.1,1.90,r"$\int_0^2 x f_X(x)\,dx=4/3$")
     foot(axs[0],r"$f_X(x)=x/2,\quad 0<x<2$")
-    foot(axs[1],r"$E(X)=4/3,\quad D(X)=2/9$")
+    foot(axs[1],r"$\mathbb{E}[X]=4/3,\quad \operatorname{Var}(X)=2/9$")
     save(fig,"07_continuous_expectation")
 
 

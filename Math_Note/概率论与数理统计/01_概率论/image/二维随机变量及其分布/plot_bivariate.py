@@ -227,7 +227,7 @@ def normal_conditional():
     y = np.linspace(-2,2,401)
     axs[1].fill_between(y,rho*y-sigma,rho*y+sigma,alpha=.2,color=BLUE,linewidth=0,
                         label='条件均值 ± 1 条件标准差')
-    axs[1].plot(y,rho*y,color=BLUE,label=r'$E(X\mid Y=y)=0.8y$')
+    axs[1].plot(y,rho*y,color=BLUE,label=r'$\mathbb{E}[X\mid Y=y]=0.8y$')
     axs[1].set(xlabel='给定的 $y$（无量纲）',ylabel='$X$ 的条件位置（无量纲）',xlim=(-2,2))
     axs[1].legend(loc='upper left',fontsize=7)
     save(fig, axs, '05_normal_conditional')
