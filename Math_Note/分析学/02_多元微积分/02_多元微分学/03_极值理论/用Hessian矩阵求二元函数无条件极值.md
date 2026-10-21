@@ -2,7 +2,9 @@
 
 > **主线**：驻点 $\nabla f=\mathbf 0$ $\longrightarrow$ 二阶 Taylor 项 $\longrightarrow$ Hessian 正定性 $\longrightarrow$ 局部极值判别；当二阶判别失效（$D=0$）时回到函数增量符号的定义。
 >
-> 二阶 Taylor 展开、Hessian 与二次型正定性的来源见 [微分与局部线性映射：从切线、切平面到 Jacobian](../../../01_微积分/02_微分/微分与局部线性映射：从切线、切平面到Jacobian.md)。
+> 二阶 Taylor 展开、Hessian 与二次型正定性的来源见 [微分与局部线性映射](../../../01_微积分/02_微分/微分与局部线性映射.md)；一般 $n$ 元的谱分解与 Sylvester 判据推导见 [二阶判别法](二阶判别法.md)。
+>
+> 记法遵循 [符号规范](../符号规范.md)：梯度写 $\nabla f$，位移向量写 $\mathbf h$，转置写 $A^T$。
 
 ## 1 基本思想与判别法
 
