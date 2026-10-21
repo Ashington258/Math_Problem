@@ -18,9 +18,39 @@
 | 分节 | 内容 | 状态 |
 | --- | --- | --- |
 | [01_概率论](01_概率论/README.md) | 随机事件与概率、一维与二维分布、随机变量的数字特征 | 进行中 |
-| 02_数理统计 | 抽样分布、参数估计、假设检验 | 待补充 |
+| [02_数理统计](02_数理统计/README.md) | 抽样分布、参数估计、假设检验、回归与方差分析 | 进行中 |
 
-已补充 [随机变量的数字特征](01_概率论/04_随机变量的数字特征.md#numerical-characteristics)。`01_概率论` 后续待补：大数定律与中心极限定理。
+已补充 [随机变量的数字特征](01_概率论/04_随机变量的数字特征.md#numerical-characteristics) 与 [数理统计](02_数理统计/01_数理统计.md#mathematical-statistics)。公式汇总见 [概率论速查](01_概率论/概率论速查.md)。`01_概率论` 后续待补：大数定律与中心极限定理。
+
+## 符号约定
+
+本区统一采用国际文献与标准中的记号（参见 Wikipedia *Notation in probability and statistics*、ISO 3534-1）。中文教材常见的 $E(X)$、$D(X)$ 在本区写作 $\mathbb{E}[X]$、$\operatorname{Var}(X)$。
+
+| 概念 | 本区记号 | 别名 / 说明 |
+| --- | --- | --- |
+| 概率 | $P(A)$ | 理论叙述中也用 $\mathbb{P}(A)$；$\Pr(A)$ 见于应用文献 |
+| 期望 | $\mathbb{E}[X]$ | 也写作 $\mathrm{E}(X)$ |
+| 方差、标准差 | $\operatorname{Var}(X)$、$\sigma_X$ | ISO 3534-1 用 $V(X)$；$\sigma_X^2=\operatorname{Var}(X)$ |
+| 协方差、相关系数 | $\operatorname{Cov}(X,Y)$、$\rho_{X,Y}$ | $\rho$ 为标准化后的线性联系 |
+| 分布关系、独立性 | $X\sim F$、$X\perp\!\!\!\perp Y$ | $\perp\!\!\!\perp$ 表示相互独立 |
+| 分布函数、密度、分布律 | $F_X(x)$、$f_X(x)$、$p_k$ | PMF 也写作 $f(x)$ |
+| 标准正态 | $\varphi(z)$、$\Phi(z)$ | 分别为密度与分布函数 |
+| 随机向量、实现值 | $\boldsymbol X$、$\boldsymbol x$ | 粗体表示向量 |
+
+分布记号与参数约定：
+
+| 分布 | 本区记号 | 参数约定 |
+| --- | --- | --- |
+| 伯努利 | $\operatorname{Bernoulli}(p)$ | 取值 $\{0,1\}$，成功记为 $1$ |
+| 二项 | $\operatorname{Binomial}(n,p)$，简记 $B(n,p)$ | $n$ 次独立重复试验的成功次数 |
+| 泊松 | $\operatorname{Poisson}(\lambda)$ | 单位时间或区域内的平均次数，$\lambda>0$ |
+| 几何 | $\operatorname{Geom}(p)$ | **支持集 $\{1,2,\ldots\}$**（计数包含首次成功），$\mathbb{E}[X]=1/p$；若约定为首次成功前的失败次数，支持集为 $\{0,1,\ldots\}$，$\mathbb{E}[X]=(1-p)/p$ |
+| 超几何 | $\operatorname{Hypergeometric}(N,K,n)$，简记 $H(N,K,n)$ | $N$ 总体、$K$ 目标类、$n$ 抽取数，$K$ 表示成功数 |
+| 均匀 | $U(a,b)$ | 连续型，$a<b$ |
+| 指数 | $\operatorname{Exp}(\lambda)$ | **速率参数**，$\mathbb{E}[X]=1/\lambda$；尺度参数为 $\theta=1/\lambda$ |
+| 正态 | $N(\mu,\sigma^2)$ | **第二参数是方差**，不是标准差 |
+
+使用其它资料时先核对三处约定：几何分布从 $0$ 还是从 $1$ 起算、指数分布用速率还是尺度、正态分布第二参数是方差还是标准差。
 
 ## 与其它分支的接口
 
