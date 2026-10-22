@@ -1,0 +1,16 @@
+[
+  {
+    "stem": "fig-25-cone-coordinate-projections",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "A、B 为 yz、zx 投影，分别按 x、y 的正负分片；B 横轴 x、纵轴 z。C 为向下定向的圆环投影。"
+  },
+  {
+    "stem": "fig-26-cone-normal-projection",
+    "width_mm": 178.0,
+    "height_mm": 94.0,
+    "dpi": 600,
+    "caption": "A 为无底盖的圆锥截段及圆环投影；B 为 y=0、x>0 截面内 H 的实际法向、切向分解，向量同比缩放。"
+  }
+]

@@ -1,6 +1,6 @@
 # 积分学配图
 
-为总速查及五篇积分学笔记配套的 **22 幅数学示意图**，包含原理图、例题图及反例图。图形由公式或明确的几何对象生成；几何坐标无量纲，角度以弧度计，控制体示例的质量流率以 kg/s 计。空间图使用正交投影，法向与边界走向由几何条件确定。
+为总速查及五篇积分学笔记配套的 **26 幅数学示意图**，包含原理图、例题图及反例图。图形由公式或明确的几何对象生成；几何坐标无量纲，角度以弧度计，控制体示例的质量流率以 kg/s 计。空间图使用正交投影，法向与边界走向由几何条件确定。
 
 积分定理正文已改用 [9 组专题重绘图](../../04_三大积分定理/image/积分定理/README.md)。下表涉及积分定理的旧图作为历史配图保留，其他文章的共享引用仍有效。
 
@@ -30,6 +30,10 @@
 | fig-20-ellipse-arc-chord | 椭圆弧补弦成闭路，弦上被积函数的奇偶分解 | 曲线积分例题 3 |
 | fig-21-surface-coordinate-projections | 面元沿三个坐标轴的投影与有向投影面积 | 曲面积分：坐标投影视角 |
 | fig-22-surface-normal-projection | 面元的法向定向与场的法向、切向分解 | 曲面积分：法向投影视角 |
+| fig-23-cylinder-coordinate-projections | 圆柱面沿三个坐标轴的投影区域、分片与定向符号 | 曲面积分：圆柱面例题 |
+| fig-24-cylinder-normal-projection | 圆柱外法向、侧面场分解与两底通量符号 | 曲面积分：圆柱面例题 |
+| fig-25-cone-coordinate-projections | 圆锥截段的三个投影区域与下侧定向符号 | 曲面积分：圆锥面例题 |
+| fig-26-cone-normal-projection | 圆锥下侧法向、母线切向与场的法向分解 | 曲面积分：圆锥面例题 |
 
 ## 重现
 
@@ -40,6 +44,8 @@ python -m pip install -r requirements.txt
 python make_figures.py
 python make_principle_figures.py
 python make_surface_projection_figures.py
+python make_cylinder_flux_figures.py
+python make_cone_flux_figures.py
 ```
 
 已有依赖时可直接运行绘图脚本。`sci_style.py` 为所调用 sci-plot 技能的样式模块副本，脚本不依赖用户机器上的技能路径。
@@ -47,5 +53,9 @@ python make_surface_projection_figures.py
 输出采用 **178 mm 双栏宽度、8 pt 基础字体、600 dpi PNG 与矢量 PDF**，统一 DejaVu Sans 字体和 Okabe–Ito 配色。虚实线、直接标注与箭头方向提供颜色以外的信息。PNG 用于笔记内嵌，PDF 用于排版和无损缩放。
 
 新增投影图可单独运行 `make_surface_projection_figures.py` 重现，导出尺寸见 `figure_manifest_surface_projections.json`。面元均放大示意；坐标投影图用阴影线区分投影面元，法向分解图用虚线区分切向部分。脚本校验投影面积、方向余弦与向量的正交分解。
+
+圆柱面例题配图可单独运行 `make_cylinder_flux_figures.py` 重现，尺寸见 `figure_manifest_cylinder_flux.json`。投影坐标均除以 $R$；场分解示例取 $R=1,z=0$，箭头按实际场计算，法向箭头仅示方向。实线场箭头、虚线法向及直接标注共同区分符号与分量。
+
+圆锥面例题配图可单独运行 `make_cone_flux_figures.py` 重现，尺寸见 `figure_manifest_cone_flux.json`。圆锥只取 $1\le r=z\le2$ 的侧面，不含底盖。两个侧向投影均为梯形，水平投影为圆环；法向分解图按公式验证母线切向、单位法向及场的正交分解。
 
 `figure_manifest.json` 与 `figure_manifest_extra.json` 分别记录基础图及新增图的实际导出尺寸。`preview-*.png` 为检查用总览，带 `-gray` 的文件用于灰度可读性检查。脚本验证投影、面积、四面体体积、径向积分、球面通量、端点势差及椭圆弧补弦等图文对应关系。

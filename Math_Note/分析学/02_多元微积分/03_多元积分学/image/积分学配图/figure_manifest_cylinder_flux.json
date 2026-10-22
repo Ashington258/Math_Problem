@@ -1,0 +1,16 @@
+[
+  {
+    "stem": "fig-23-cylinder-coordinate-projections",
+    "width_mm": 178.0,
+    "height_mm": 82.0,
+    "dpi": 600,
+    "caption": "坐标以 R 归一化；左右半柱面重叠投到 D_x，y 向场分量为零，两底重叠投到 D_z 并相消。"
+  },
+  {
+    "stem": "fig-24-cylinder-normal-projection",
+    "width_mm": 178.0,
+    "height_mm": 92.0,
+    "dpi": 600,
+    "caption": "A 为圆柱三片的外法向；B 为 R=1、z=0 侧面截面的实际场分解；C 仅画两底的竖直场分量。"
+  }
+]
