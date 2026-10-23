@@ -43,7 +43,7 @@ def figure(n=2, height=86):
 
 def plane(ax, lim=1.5):
     ax.set(xlim=(-lim, lim), ylim=(-lim, lim), aspect="equal",
-           xlabel=r"$x$ (dimensionless)", ylabel=r"$y$ (dimensionless)")
+           xlabel='$x$ (dimensionless)', ylabel='$y$ (dimensionless)')
 
 
 def footer(ax, label):
@@ -73,21 +73,21 @@ def contours(ax):
                     colors="0.6", linewidths=.8)
     ax.clabel(cs, fontsize=7, fmt="%g")
     ax.set(xlim=(-.2, 1.95), ylim=(-.5, 1.5), aspect="equal",
-           xlabel=r"$x$ (dimensionless)", ylabel=r"$y$ (dimensionless)")
+           xlabel='$x$ (dimensionless)', ylabel='$y$ (dimensionless)')
     ax.plot(1, .5, "ko", ms=4)
-    ax.annotate(r"$\mathbf{a}=(1,1/2)^T$", (1, .5), xytext=(9, -18), textcoords="offset points")
+    ax.annotate('$\\mathbf{a}=(1,1/2)^T$', (1, .5), xytext=(9, -18), textcoords="offset points")
 
 
 def counterexample():
     fig, (a, b) = figure()
     t = np.linspace(.001, .4, 400)
-    a.plot(t, np.zeros_like(t), color="black", ls=":", label=r"$q(t,0)=0$")
-    a.plot(t, t/(1+t*t), color=BLUE, ls="--", label=r"$q(t,t)$")
-    a.plot(t, np.full_like(t, .5), color=RED, label=r"$q(t,t^2)=1/2$")
+    a.plot(t, np.zeros_like(t), color="black", ls=":", label='$q(t,0)=0$')
+    a.plot(t, t/(1+t*t), color=BLUE, ls="--", label='$q(t,t)$')
+    a.plot(t, np.full_like(t, .5), color=RED, label='$q(t,t^2)=1/2$')
     a.plot(0, .5, "o", mfc="white", mec=RED, ms=5)
     a.plot(0, 0, "ko", ms=4)
-    a.set(xlim=(-.015, .4), ylim=(-.03, .86), xlabel=r"$t$ (dimensionless)",
-          ylabel=r"$q$ along path (dimensionless)")
+    a.set(xlim=(-.015, .4), ylim=(-.03, .86), xlabel='$t$ (dimensionless)',
+          ylabel='$q$ along path (dimensionless)')
     a.legend(loc="upper left", fontsize=7)
     footer(a, "Curved approach: discontinuity")
     t = np.linspace(-.25, .25, 401)
@@ -96,9 +96,9 @@ def counterexample():
         b.plot(t, t*u*u*v/(t*t*u**4+v*v), color=color, ls=ls,
                label=rf"$\theta={angle}^\circ$")
     b.plot(0, 0, "ko", ms=4)
-    b.set(xlabel=r"$t$ (dimensionless)", ylabel=r"Difference quotient (dimensionless)")
+    b.set(xlabel='$t$ (dimensionless)', ylabel=r"Difference quotient (dimensionless)")
     b.legend(fontsize=7)
-    footer(b, r"Each fixed direction: $D_{\mathbf{u}}q(\mathbf{0})=0$")
+    footer(b, 'Each fixed direction: $D_{\\mathbf{u}}q(\\mathbf{0})=0$')
     save(fig, "fig-06-direction-counterexample")
 
 
@@ -148,11 +148,11 @@ def vortex():
     a.text(.06, -.16, "excluded", fontsize=7,
            bbox=dict(facecolor="white", edgecolor="none", pad=1))
     plane(a)
-    footer(a, r"$\mathbf{F}=\mathbf{e}_\theta/r:\quad \nabla\times\mathbf{F}=\mathbf{0}\ (r>0)$")
+    footer(a, '$\\mathbf{F}=\\mathbf{e}_\\theta/r:\\quad \\nabla\\times\\mathbf{F}=\\mathbf{0}\\ (r>0)$')
     r = np.linspace(.05, 1.5, 200)
-    b.plot(r, np.full_like(r, 2*np.pi), color=BLUE, label=r"$\mathbf{F}=\mathbf{e}_\theta/r$")
-    b.plot(r, 2*np.pi*r*r, color=RED, ls="--", label=r"$\mathbf{v}=r\,\mathbf{e}_\theta$")
-    b.set(xlim=(0, 1.5), ylim=(0, 15.5), xlabel=r"Radius $R$ (dimensionless)",
+    b.plot(r, np.full_like(r, 2*np.pi), color=BLUE, label='$\\mathbf{F}=\\mathbf{e}_\\theta/r$')
+    b.plot(r, 2*np.pi*r*r, color=RED, ls="--", label='$\\mathbf{v}=r\\,\\mathbf{e}_\\theta$')
+    b.set(xlim=(0, 1.5), ylim=(0, 15.5), xlabel='Radius $R$ (dimensionless)',
           ylabel=r"Circulation (dimensionless)")
     b.legend(fontsize=7)
     footer(b, "Global circulation around the origin")
@@ -168,7 +168,7 @@ def decomposition():
     maps = [np.eye(2)*np.exp(t),
             np.array([[np.cos(t), -np.sin(t)], [np.sin(t), np.cos(t)]]),
             np.diag([np.exp(t), np.exp(-t)])]
-    captions = [r"$A=I$: dilation", r"$A^T=-A$: rotation", r"$A=\operatorname{diag}(1,-1)$: strain"]
+    captions = ['$A=I$: dilation', '$A^T=-A$: rotation', '$A=\\operatorname{diag}(1,-1)$: strain']
     for ax, matrix, caption in zip(axs, maps, captions):
         plane(ax, 1.65)
         ax.plot(*initial, color=GRAY, ls="--", lw=1.1)
@@ -199,17 +199,17 @@ def physical():
     a.plot(*p, "ko", ms=4)
     arrow(a, p, (.12, 0), BLUE)
     arrow(a, p, (.88, 0), RED, "--")
-    a.text(-.36, .13, r"$\nabla T$", color=BLUE)
-    a.text(.76, .14, r"$\mathbf{q}$", color=RED)
-    footer(a, r"$T=e^{-(x^2+y^2)},\quad \mathbf{q}=-\nabla T$")
+    a.text(-.36, .13, '$\\nabla T$', color=BLUE)
+    a.text(.76, .14, '$\\mathbf{q}$', color=RED)
+    footer(a, '$T=e^{-(x^2+y^2)},\\quad \\mathbf{q}=-\\nabla T$')
     t = np.linspace(0, .7, 160)
-    b.plot(t, np.exp(2*t), color=BLUE, label=r"Area $A/A_0$")
-    b.plot(t, np.exp(-2*t), color=RED, ls="--", label=r"Density $\rho/\rho_0$")
+    b.plot(t, np.exp(2*t), color=BLUE, label='Area $A/A_0$')
+    b.plot(t, np.exp(-2*t), color=RED, ls="--", label='Density $\\rho/\\rho_0$')
     b.plot(t, np.ones_like(t), color="black", ls=":", label="Mass ratio")
-    b.set(xlim=(0, .7), ylim=(0, 4.5), xlabel=r"$t$ (dimensionless)",
+    b.set(xlim=(0, .7), ylim=(0, 4.5), xlabel='$t$ (dimensionless)',
           ylabel="Normalized ratio (dimensionless)")
     b.legend(fontsize=7)
-    footer(b, r"$\mathbf{v}=(x,y)^T,\quad \nabla\cdot\mathbf{v}=2$")
+    footer(b, '$\\mathbf{v}=(x,y)^T,\\quad \\nabla\\cdot\\mathbf{v}=2$')
     save(fig, "fig-13-physical-meaning")
 
 

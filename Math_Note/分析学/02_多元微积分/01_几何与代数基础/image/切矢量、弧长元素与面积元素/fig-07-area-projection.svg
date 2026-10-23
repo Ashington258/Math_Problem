@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="507.446929pt" height="320.360315pt" viewBox="0 0 507.446929 320.360315" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-23T21:58:22.323610</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 320.360315 
+L 507.446929 320.360315 
+L 507.446929 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="patch_2">
+   <path d="M 31.033701 242.725039 
+L 234.221102 242.725039 
+L 234.221102 39.537638 
+L 31.033701 39.537638 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="pane3d_1">
+   <g id="patch_3">
+    <path d="M 60.922125 210.459566 
+L 118.184797 171.731069 
+L 118.184797 42.111308 
+L 60.922125 80.839806 
+" style="fill: none; opacity: 0.5; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+  </g>
+  <g id="pane3d_2">
+   <g id="patch_4">
+    <path d="M 118.184797 171.731069 
+L 209.82423 195.93132 
+L 209.82423 66.31156 
+L 118.184797 42.111308 
+" style="fill: none; opacity: 0.5; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+  </g>
+  <g id="pane3d_3">
+   <g id="patch_5">
+    <path d="M 60.922125 210.459566 
+L 152.561557 234.659817 
+L 209.82423 195.93132 
+L 118.184797 171.731069 
+" style="fill: none; opacity: 0.5; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+  </g>
+  <g id="axis3d_1">
+   <g id="line2d_1">
+    <path d="M 60.922125 210.459566 
+L 152.561557 234.659817 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="xtick_1">
+    <g id="line2d_2">
+     <path d="M 77.551891 214.420371 
+L 76.177587 215.349855 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_1">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="73.306102" y="231.143811" transform="rotate(-0 73.306102 231.143811)">0.0</text>
+    </g>
+   </g>
+   <g id="xtick_2">
+    <g id="line2d_3">
+     <path d="M 109.89522 222.961636 
+L 108.520916 223.89112 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="105.649431" y="239.685076" transform="rotate(-0 105.649431 239.685076)">0.6</text>
+    </g>
+   </g>
+   <g id="xtick_3">
+    <g id="line2d_4">
+     <path d="M 142.238549 231.502901 
+L 140.864245 232.432385 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="137.99276" y="248.226341" transform="rotate(-0 137.99276 248.226341)">1.2</text>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- $x$（无量纲） -->
+    <g transform="translate(77.324829 249.85464) rotate(-345.206973)">
+     <text>
+      <tspan x="0" y="-0.171875" style="font-style: italic; font-size: 7px; font-family: 'Arial'">x</tspan>
+      <tspan x="3.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">（</tspan>
+      <tspan x="10.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">无</tspan>
+      <tspan x="17.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">量</tspan>
+      <tspan x="24.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">纲</tspan>
+      <tspan x="31.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">）</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axis3d_2">
+   <g id="line2d_5">
+    <path d="M 209.82423 195.93132 
+L 152.561557 234.659817 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="xtick_4">
+    <g id="line2d_6">
+     <path d="M 161.933619 227.631775 
+L 164.132965 228.212581 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="168.728301" y="243.278006" transform="rotate(-0 168.728301 243.278006)">0.0</text>
+    </g>
+   </g>
+   <g id="xtick_5">
+    <g id="line2d_7">
+     <path d="M 182.143974 213.962893 
+L 184.343321 214.543699 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="188.938656" y="229.609124" transform="rotate(-0 188.938656 229.609124)">0.6</text>
+    </g>
+   </g>
+   <g id="xtick_6">
+    <g id="line2d_8">
+     <path d="M 202.354329 200.294012 
+L 204.553676 200.874818 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="209.149011" y="215.940243" transform="rotate(-0 209.149011 215.940243)">1.2</text>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- $y$（无量纲） -->
+    <g transform="translate(182.850398 255.397243) rotate(-34.071692)">
+     <text>
+      <tspan x="0" y="-0.171875" style="font-style: italic; font-size: 7px; font-family: 'Arial'">y</tspan>
+      <tspan x="3.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">（</tspan>
+      <tspan x="10.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">无</tspan>
+      <tspan x="17.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">量</tspan>
+      <tspan x="24.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">纲</tspan>
+      <tspan x="31.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">）</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axis3d_3">
+   <g id="line2d_9">
+    <path d="M 209.82423 195.93132 
+L 209.82423 66.31156 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="xtick_7">
+    <g id="line2d_10">
+     <path d="M 209.091114 187.096401 
+L 211.290461 187.677207 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="219.673483" y="191.607096" transform="rotate(-0 219.673483 191.607096)">0.0</text>
+    </g>
+   </g>
+   <g id="xtick_8">
+    <g id="line2d_11">
+     <path d="M 209.091114 141.009375 
+L 211.290461 141.590181 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="219.673483" y="145.52007" transform="rotate(-0 219.673483 145.52007)">0.8</text>
+    </g>
+   </g>
+   <g id="xtick_9">
+    <g id="line2d_12">
+     <path d="M 209.091114 94.922349 
+L 211.290461 95.503155 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 6.5px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="219.673483" y="99.433044" transform="rotate(-0 219.673483 99.433044)">1.6</text>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- $z$（无量纲） -->
+    <g transform="translate(240.017992 147.625774) rotate(-90)">
+     <text>
+      <tspan x="0" y="-0.171875" style="font-style: italic; font-size: 7px; font-family: 'Arial'">z</tspan>
+      <tspan x="3.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">（</tspan>
+      <tspan x="10.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">无</tspan>
+      <tspan x="17.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">量</tspan>
+      <tspan x="24.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">纲</tspan>
+      <tspan x="31.5" y="-0.171875" style="font-size: 7px; font-family: 'Microsoft YaHei'">）</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_1">
+   <g id="Poly3DCollection_1">
+    <defs>
+     <path id="m126746a1e3" d="M 87.198967 -121.105874 
+L 141.104515 -106.870432 
+L 174.78844 -129.651902 
+L 120.882892 -143.887343 
+z
+" style="stroke: #e69f00; stroke-width: 1.1"/>
+    </defs>
+    <g clip-path="url(#p352e766b31)">
+     <use xlink:href="#m126746a1e3" x="0" y="320.360315" style="fill: #f6dba3; fill-opacity: 0.6; stroke: #e69f00; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 87.198967 199.254441 
+L 87.198967 164.689171 
+" clip-path="url(#p352e766b31)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.8"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 141.104515 213.489883 
+L 141.104515 150.120222 
+" clip-path="url(#p352e766b31)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.8"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 174.78844 190.708413 
+L 174.78844 98.534362 
+" clip-path="url(#p352e766b31)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.8"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 120.882892 176.472972 
+L 120.882892 113.103311 
+" clip-path="url(#p352e766b31)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.8"/>
+   </g>
+   <g id="Poly3DCollection_2">
+    <defs>
+     <path id="mda9c08c3cd" d="M 87.198967 -155.671144 
+L 141.104515 -170.240093 
+L 174.78844 -221.825953 
+L 120.882892 -207.257004 
+z
+" style="stroke: #0072b2; stroke-width: 1.1"/>
+    </defs>
+    <g clip-path="url(#p352e766b31)">
+     <use xlink:href="#mda9c08c3cd" x="0" y="320.360315" style="fill: #a9cfe4; fill-opacity: 0.6; stroke: #0072b2; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <!-- $\mathbf{n}$ -->
+    <g transform="translate(163.105512 96.43011)">
+     <text>
+      <tspan x="0" y="-0.234375" style="font-weight: 700; font-size: 9px; font-family: 'Arial'">n</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_14">
+    <!-- $\mathrm{d}S$ -->
+    <g style="fill: #0072b2" transform="translate(67.607433 102.525732)">
+     <text>
+      <tspan x="0" y="-0.171875" style="font-size: 8px; font-family: 'Arial'; fill: #0072b2">d</tspan>
+      <tspan x="4.449219" y="-0.171875" style="font-style: italic; font-size: 8px; font-family: 'Arial'; fill: #0072b2">S</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_15">
+    <!-- $\mathrm{d}A_{xy}$ -->
+    <g style="fill: #805800" transform="translate(94.021795 204.119433)">
+     <text>
+      <tspan x="0" y="-0.265625" style="font-size: 8px; font-family: 'Arial'; fill: #805800">d</tspan>
+      <tspan x="4.449219" y="-0.265625" style="font-style: italic; font-size: 8px; font-family: 'Arial'; fill: #805800">A</tspan>
+      <tspan x="9.785156" y="0.98125" style="font-style: italic; font-size: 5.6px; font-family: 'Arial'; fill: #805800">x</tspan>
+      <tspan x="12.585156" y="0.98125" style="font-style: italic; font-size: 5.6px; font-family: 'Arial'; fill: #805800">y</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 129.723701 130.065083 
+Q 121.159602 119.635227 113.872599 110.760693 
+" clip-path="url(#p352e766b31)" style="fill: none; stroke-dasharray: 11.52,2.88,1.8,2.88; stroke-dashoffset: 0; stroke: #202020; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 114.865285 115.121264 
+L 113.872599 110.760693 
+L 117.956667 112.582887 
+z
+" clip-path="url(#p352e766b31)" style="fill: #202020; stroke-dasharray: 11.52,2.88,1.8,2.88; stroke-dashoffset: 0; stroke: #202020; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 319.491392 230.025827 
+L 460.421679 230.025827 
+L 460.421679 64.936063 
+L 319.491392 64.936063 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 319.491392 217.946088 
+L 460.421679 217.946088 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke: #dbdbdb; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 347.67745 230.025827 
+L 347.67745 64.936063 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke: #dbdbdb; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_10">
+     <g id="line2d_19">
+      <defs>
+       <path id="mdfdb8a41d0" d="M 0 0 
+L 0 3 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdfdb8a41d0" x="347.67745" y="230.025827" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="347.67745" y="242.209909" transform="rotate(-0 347.67745 242.209909)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mdfdb8a41d0" x="387.943246" y="230.025827" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="387.943246" y="242.209909" transform="rotate(-0 387.943246 242.209909)">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#mdfdb8a41d0" x="428.209042" y="230.025827" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="428.209042" y="242.209909" transform="rotate(-0 428.209042 242.209909)">1.0</text>
+     </g>
+    </g>
+    <g id="text_19">
+     <!-- $s=(x+y)/\sqrt{2}$（无量纲） -->
+     <g transform="translate(346.156535 256.783835)">
+      <text>
+       <tspan x="0" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">s</tspan>
+       <tspan x="5.332813" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">=</tspan>
+       <tspan x="11.3375" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">(</tspan>
+       <tspan x="14.001563" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">x</tspan>
+       <tspan x="19.334375" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">+</tspan>
+       <tspan x="25.339062" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">y</tspan>
+       <tspan x="29.339062" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">)</tspan>
+       <tspan x="32.003125" y="-0.285625" style="font-style: italic; font-size: 8px; font-family: 'Arial'">/</tspan>
+       <tspan x="42.085156" y="-0.75" style="font-style: italic; font-size: 8px; font-family: 'Arial'">2</tspan>
+       <tspan x="34.225781" y="-8.23875" style="font-size: 6.868293px; font-family: 'cmex10'">p</tspan>
+       <tspan x="47.534375" y="-0.285625" style="font-size: 8px; font-family: 'Microsoft YaHei'">（</tspan>
+       <tspan x="55.534375" y="-0.285625" style="font-size: 8px; font-family: 'Microsoft YaHei'">无</tspan>
+       <tspan x="63.534375" y="-0.285625" style="font-size: 8px; font-family: 'Microsoft YaHei'">量</tspan>
+       <tspan x="71.534375" y="-0.285625" style="font-size: 8px; font-family: 'Microsoft YaHei'">纲</tspan>
+       <tspan x="79.534375" y="-0.285625" style="font-size: 8px; font-family: 'Microsoft YaHei'">）</tspan>
+      </text>
+      <rect x="41.085156" y="-9.5" width="6.449219" height="0.5"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_22">
+      <defs>
+       <path id="mfbfdd61c8c" d="M 0 0 
+L -3 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mfbfdd61c8c" x="319.491392" y="217.946088" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="312.991392" y="220.788129" transform="rotate(-0 312.991392 220.788129)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#mfbfdd61c8c" x="319.491392" y="177.680292" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="312.991392" y="180.522333" transform="rotate(-0 312.991392 180.522333)">0.5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#mfbfdd61c8c" x="319.491392" y="137.414496" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="312.991392" y="140.256537" transform="rotate(-0 312.991392 140.256537)">1.0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#mfbfdd61c8c" x="319.491392" y="97.1487" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="312.991392" y="99.990741" transform="rotate(-0 312.991392 99.990741)">1.5</text>
+     </g>
+    </g>
+    <g id="text_24">
+     <!-- $z$（无量纲） -->
+     <g transform="translate(297.068892 169.480945) rotate(-90)">
+      <text>
+       <tspan x="0" y="-0.34375" style="font-style: italic; font-size: 8px; font-family: 'Arial'">z</tspan>
+       <tspan x="4" y="-0.34375" style="font-size: 8px; font-family: 'Microsoft YaHei'">（</tspan>
+       <tspan x="12" y="-0.34375" style="font-size: 8px; font-family: 'Microsoft YaHei'">无</tspan>
+       <tspan x="20" y="-0.34375" style="font-size: 8px; font-family: 'Microsoft YaHei'">量</tspan>
+       <tspan x="28" y="-0.34375" style="font-size: 8px; font-family: 'Microsoft YaHei'">纲</tspan>
+       <tspan x="36" y="-0.34375" style="font-size: 8px; font-family: 'Microsoft YaHei'">）</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 387.943246 115.787464 
+C 385.33593 115.787464 382.744132 116.189441 380.259306 116.979211 
+C 377.774481 117.768981 375.426205 118.937144 373.297341 120.442478 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke: #666666; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_26">
+    <path d="M 327.544552 183.863241 
+L 328.8054 182.971687 
+L 330.066248 182.080133 
+L 331.327096 181.188579 
+L 332.587944 180.297024 
+L 333.848792 179.40547 
+L 335.109641 178.513916 
+L 336.370489 177.622361 
+L 337.631337 176.730807 
+L 338.892185 175.839253 
+L 340.153033 174.947699 
+L 341.413881 174.056144 
+L 342.674729 173.16459 
+L 343.935578 172.273036 
+L 345.196426 171.381481 
+L 346.457274 170.489927 
+L 347.718122 169.598373 
+L 348.97897 168.706819 
+L 350.239818 167.815264 
+L 351.500667 166.92371 
+L 352.761515 166.032156 
+L 354.022363 165.140601 
+L 355.283211 164.249047 
+L 356.544059 163.357493 
+L 357.804907 162.465939 
+L 359.065756 161.574384 
+L 360.326604 160.68283 
+L 361.587452 159.791276 
+L 362.8483 158.899721 
+L 364.109148 158.008167 
+L 365.369996 157.116613 
+L 366.630844 156.225059 
+L 367.891693 155.333504 
+L 369.152541 154.44195 
+L 370.413389 153.550396 
+L 371.674237 152.658842 
+L 372.935085 151.767287 
+L 374.195933 150.875733 
+L 375.456782 149.984179 
+L 376.71763 149.092624 
+L 377.978478 148.20107 
+L 379.239326 147.309516 
+L 380.500174 146.417962 
+L 381.761022 145.526407 
+L 383.021871 144.634853 
+L 384.282719 143.743299 
+L 385.543567 142.851744 
+L 386.804415 141.96019 
+L 388.065263 141.068636 
+L 389.326111 140.177082 
+L 390.58696 139.285527 
+L 391.847808 138.393973 
+L 393.108656 137.502419 
+L 394.369504 136.610864 
+L 395.630352 135.71931 
+L 396.8912 134.827756 
+L 398.152048 133.936202 
+L 399.412897 133.044647 
+L 400.673745 132.153093 
+L 401.934593 131.261539 
+L 403.195441 130.369984 
+L 404.456289 129.47843 
+L 405.717137 128.586876 
+L 406.977986 127.695322 
+L 408.238834 126.803767 
+L 409.499682 125.912213 
+L 410.76053 125.020659 
+L 412.021378 124.129104 
+L 413.282226 123.23755 
+L 414.543075 122.345996 
+L 415.803923 121.454442 
+L 417.064771 120.562887 
+L 418.325619 119.671333 
+L 419.586467 118.779779 
+L 420.847315 117.888224 
+L 422.108163 116.99667 
+L 423.369012 116.105116 
+L 424.62986 115.213562 
+L 425.890708 114.322007 
+L 427.151556 113.430453 
+L 428.412404 112.538899 
+L 429.673252 111.647344 
+L 430.934101 110.75579 
+L 432.194949 109.864236 
+L 433.455797 108.972682 
+L 434.716645 108.081127 
+L 435.977493 107.189573 
+L 437.238341 106.298019 
+L 438.49919 105.406464 
+L 439.760038 104.51491 
+L 441.020886 103.623356 
+L 442.281734 102.731802 
+L 443.542582 101.840247 
+L 444.80343 100.948693 
+L 446.064279 100.057139 
+L 447.325127 99.165585 
+L 448.585975 98.27403 
+L 449.846823 97.382476 
+L 451.107671 96.490922 
+L 452.368519 95.599367 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke: #0072b2; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_27">
+    <path d="M 347.67745 217.946088 
+L 428.209042 217.946088 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #e69f00; stroke-width: 2"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 347.67745 217.946088 
+L 347.67745 169.627133 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke-dasharray: 0.9,1.485; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.9"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 428.209042 217.946088 
+L 428.209042 112.682698 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke-dasharray: 0.9,1.485; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 319.491392 230.025827 
+L 319.491392 64.936063 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 319.491392 230.025827 
+L 460.421679 230.025827 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_25">
+    <!-- $\theta$ -->
+    <g transform="translate(373.447559 108.942278)">
+     <text>
+      <tspan x="0" y="-0.421875" style="font-style: italic; font-size: 9px; font-family: 'Arial'">θ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_26">
+    <!-- $\mathbf{k}$ -->
+    <g style="fill: #666666" transform="translate(408.076144 86.679593)">
+     <text>
+      <tspan x="0" y="-0.265625" style="font-weight: 700; font-size: 8px; font-family: 'Arial'; fill: #666666">k</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_27">
+    <!-- $\mathbf{n}$ -->
+    <g transform="translate(345.261502 90.706172)">
+     <text>
+      <tspan x="0" y="-0.75" style="font-weight: 700; font-size: 8px; font-family: 'Arial'">n</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="patch_11">
+    <path d="M 387.943246 141.154915 
+Q 371.670018 118.141096 356.558685 96.770444 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke-dasharray: 11.52,2.88,1.8,2.88; stroke-dashoffset: 0; stroke: #202020; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 357.302734 101.6332 
+L 356.558685 96.770444 
+L 360.895319 99.092859 
+z
+" clip-path="url(#p3f9bcc9be9)" style="fill: #202020; stroke-dasharray: 11.52,2.88,1.8,2.88; stroke-dashoffset: 0; stroke: #202020; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 387.943246 141.154915 
+Q 387.943246 112.968858 387.943246 86.124442 
+" clip-path="url(#p3f9bcc9be9)" style="fill: none; stroke: #666666; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 385.743246 90.524442 
+L 387.943246 86.124442 
+L 390.143246 90.524442 
+z
+" clip-path="url(#p3f9bcc9be9)" style="fill: #666666; stroke: #666666; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="patch_13">
+   <path d="M 1.44 318.920315 
+L 506.006929 318.920315 
+L 506.006929 1.44 
+L 1.44 1.44 
+L 1.44 318.920315 
+z
+" style="fill: none"/>
+  </g>
+  <g id="text_28">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="19.099843" y="17.314016" transform="rotate(-0 19.099843 17.314016)">A</text>
+  </g>
+  <g id="text_29">
+   <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="39.28252" y="17.314016" transform="rotate(-0 39.28252 17.314016)">空间中：曲面片与正交投影</text>
+  </g>
+  <g id="text_30">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="271.383307" y="17.314016" transform="rotate(-0 271.383307 17.314016)">B</text>
+  </g>
+  <g id="text_31">
+   <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="291.565984" y="17.314016" transform="rotate(-0 291.565984 17.314016)">沿最陡方向的竖直截面</text>
+  </g>
+  <g id="text_32">
+   <!-- $\mathrm{d}A_{xy}=|\mathbf{n}\cdot\mathbf{k}|\,\mathrm{d}S=\sqrt{2/3}\,\mathrm{d}S$ -->
+   <g transform="translate(202.738465 274.473071)">
+    <text>
+     <tspan x="0" y="-0.100625" style="font-size: 9px; font-family: 'Arial'">d</tspan>
+     <tspan x="47.715357" y="-0.100625" style="font-size: 9px; font-family: 'Arial'">d</tspan>
+     <tspan x="90.879737" y="-0.100625" style="font-size: 9px; font-family: 'Arial'">d</tspan>
+     <tspan x="5.005371" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">A</tspan>
+     <tspan x="19.041309" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">=</tspan>
+     <tspan x="25.796582" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">|</tspan>
+     <tspan x="44.12793" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">|</tspan>
+     <tspan x="52.720728" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">S</tspan>
+     <tspan x="60.223072" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">=</tspan>
+     <tspan x="75.99397" y="0.109375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">2</tspan>
+     <tspan x="80.999341" y="0.109375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">/</tspan>
+     <tspan x="83.49983" y="0.109375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">3</tspan>
+     <tspan x="95.885109" y="-0.100625" style="font-style: italic; font-size: 9px; font-family: 'Arial'">S</tspan>
+     <tspan x="11.008301" y="1.300937" style="font-style: italic; font-size: 6.3px; font-family: 'Arial'">x</tspan>
+     <tspan x="14.158301" y="1.300937" style="font-style: italic; font-size: 6.3px; font-family: 'Arial'">y</tspan>
+     <tspan x="28.134473" y="-0.100625" style="font-weight: 700; font-size: 9px; font-family: 'Arial'">n</tspan>
+     <tspan x="39.122559" y="-0.100625" style="font-weight: 700; font-size: 9px; font-family: 'Arial'">k</tspan>
+     <tspan x="35.131445" y="-0.100625" style="font-size: 9px; font-family: 'cmsy10'">¢</tspan>
+     <tspan x="66.978345" y="-9.1475" style="font-size: 7.892909px; font-family: 'cmex10'">p</tspan>
+    </text>
+    <rect x="74.86897" y="-10.4375" width="14.76123" height="0.5625"/>
+   </g>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="253.723465" y="304.633701" transform="rotate(-0 253.723465 304.633701)">截面取沿最陡方向的竖直平面，包含真实单位法向量；面积投影因子由三维内积给出。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p352e766b31">
+   <rect x="31.033701" y="39.537638" width="203.187402" height="203.187402"/>
+  </clipPath>
+  <clipPath id="p3f9bcc9be9">
+   <rect x="319.491392" y="64.936063" width="140.930286" height="165.089764"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -37,13 +37,13 @@ def figure(kinds=("2d","3d"),height=104):
             for axis in (ax.xaxis,ax.yaxis,ax.zaxis):
                 axis.pane.fill=False; axis.pane.set_edgecolor("white")
                 axis.set_major_locator(MaxNLocator(3))
-            ax.set_xlabel(r"$x$ (dim.)",labelpad=0)
-            ax.set_ylabel(r"$y$ (dim.)",labelpad=0)
-            ax.set_zlabel(r"$z$ (dim.)",labelpad=0)
+            ax.set_xlabel('$x$ (dim.)',labelpad=0)
+            ax.set_ylabel('$y$ (dim.)',labelpad=0)
+            ax.set_zlabel('$z$ (dim.)',labelpad=0)
             ax.tick_params(labelsize=7,pad=0)
         else:
             ax.minorticks_off()
-            ax.set_xlabel(r"$x$ (dim.)"); ax.set_ylabel(r"$y$ (dim.)")
+            ax.set_xlabel('$x$ (dim.)'); ax.set_ylabel('$y$ (dim.)')
             ax.xaxis.set_major_locator(MaxNLocator(4)); ax.yaxis.set_major_locator(MaxNLocator(4))
         pos=ax.get_position(original=True)
         fig.text(pos.x0,.93,"AB"[i],fontsize=10,weight="bold")
@@ -114,13 +114,13 @@ def save(fig,name):
 def domains():
     fig,(a,b)=figure()
     circle(a,fill=True)
-    a.text(0,0,r"$D\subset\mathbb{R}^2$",ha="center",fontsize=10)
-    a.text(.7,.95,r"$C=\partial D$",fontsize=8)
+    a.text(0,0,'$D\\subset\\mathbb{R}^2$',ha="center",fontsize=10)
+    a.text(.7,.95,'$C=\\partial D$',fontsize=8)
     plane(a)
     footer(a,"Area domain: boundary is a curve")
     ball(b); space(b)
-    b.text(0,0,0,r"$\Omega\subset\mathbb{R}^3$",fontsize=10)
-    vector(b,[.8,0,.6],[.3,0,.2],RED,label=r"$\partial\Omega$")
+    b.text(0,0,0,'$\\Omega\\subset\\mathbb{R}^3$',fontsize=10)
+    vector(b,[.8,0,.6],[.3,0,.2],RED,label='$\\partial\\Omega$')
     footer(b,"Volume domain: boundary is a surface")
     save(fig,"fig-01-domains-boundaries")
 
@@ -138,7 +138,7 @@ def cancellation():
     arrow(a,(0,1.8),(0,1.2)); arrow(a,(0,.8),(0,.2))
     a.text(.25,1.1,"Cell loops cancel\non shared edges",fontsize=8)
     a.set(xlim=(-.3,2.3),ylim=(-.3,2.3),aspect="equal")
-    footer(a,r"$\int_e F\cdot dr+\int_{-e}F\cdot dr=0$")
+    footer(a,'$\\int_e \\mathbf{F}\\cdot \\mathrm{d}\\mathbf{r}+\\int_{-e}\\mathbf{F}\\cdot \\mathrm{d}\\mathbf{r}=0$')
     for x0 in [0,1]:
         for x in [x0,x0+1]:
             b.plot([x]*5,[0,1,1,0,0],[0,0,1,1,0],color="0.6",lw=.8)
@@ -146,11 +146,11 @@ def cancellation():
             for z in [0,1]: b.plot([x0,x0+1],[y,y],[z,z],color="0.65",lw=.8)
     face=np.array([[1,0,0],[1,1,0],[1,1,1],[1,0,1]])
     b.add_collection3d(Poly3DCollection([face],fc="0.9",ec=RED,alpha=.5))
-    vector(b,[1,.45,.45],[.6,0,0],RED,label=r"$n_1$")
-    vector(b,[1,.55,.55],[-.6,0,0],RED,label=r"$n_2=-n_1$",ls="--")
+    vector(b,[1,.45,.45],[.6,0,0],RED,label='$\\mathbf{n}_1$')
+    vector(b,[1,.55,.55],[-.6,0,0],RED,label='$\\mathbf{n}_2=-\\mathbf{n}_1$',ls="--")
     b.set(xlim=(-.1,2.2),ylim=(-.1,1.2),zlim=(-.1,1.2))
     b.set_box_aspect((2.3,1.3,1.3))
-    footer(b,r"$F\cdot n_1+F\cdot n_2=0$")
+    footer(b,'$\\mathbf{F}\\cdot \\mathbf{n}_1+\\mathbf{F}\\cdot \\mathbf{n}_2=0$')
     save(fig,"fig-02-internal-cancellation")
 
 
@@ -164,11 +164,11 @@ def green():
         ax.quiver(x[mask],y[mask],u[mask],w[mask],angles="xy",scale_units="xy",scale=2.1,
                   color="0.45",width=.006)
     arrow(a,(1,0),(1.34,0),RED,ls="--")
-    a.text(1.12,.13,r"$n$",color=RED)
-    a.text(-.95,1.18,r"$F=(x/2,y/2)$",fontsize=8)
-    b.text(-.95,1.18,r"$F=(-y/2,x/2)$",fontsize=8)
-    footer(a,r"Normal flux = $\pi$; circulation = 0")
-    footer(b,r"Circulation = $\pi$; normal flux = 0")
+    a.text(1.12,.13,'$\\mathbf{n}$',color=RED)
+    a.text(-.95,1.18,'$\\mathbf{F}=(x/2,y/2)$',fontsize=8)
+    b.text(-.95,1.18,'$\\mathbf{F}=(-y/2,x/2)$',fontsize=8)
+    footer(a,'Normal flux = $\\pi$; circulation = 0')
+    footer(b,'Circulation = $\\pi$; normal flux = 0')
     save(fig,"fig-03-green-flux-circulation")
 
 
@@ -186,11 +186,11 @@ def orientation():
     theta=np.linspace(0,2*np.pi,160); b.plot(np.cos(theta),np.sin(theta),color="0.7",lw=1)
     arrow(b,p,p+.5*tangent,BLUE); arrow(b,p,p+.5*normal,RED,ls="--")
     # The formula below uses a general positively oriented unit tangent (t_x,t_y).
-    b.text(.25,-.35,r"$n=(t_y,-t_x)$",fontsize=9)
-    b.text(1.05,1.06,r"$n$",color=RED)
-    b.text(.18,1.06,r"$t$",color=BLUE)
+    b.text(.25,-.35,'$\\mathbf{n}=(T_y,-T_x)$',fontsize=9)
+    b.text(1.05,1.06,'$\\mathbf{n}$',color=RED)
+    b.text(.18,1.06,'$\\mathbf{T}$',color=BLUE)
     plane(b,1.5)
-    footer(b,r"$F\cdot n\,ds=P\,dy-Q\,dx$")
+    footer(b,'$\\mathbf{F}\\cdot \\mathbf{n}\\,\\mathrm{d}s=P\\,\\mathrm{d}y-Q\\,\\mathrm{d}x$')
     save(fig,"fig-04-green-orientation")
 
 
@@ -206,11 +206,11 @@ def stokes_surfaces():
             pos=np.array([x,y,1-x*x-y*y if curved else 0])
             n=np.array([2*x,2*y,1]) if curved else np.array([0,0,1])
             vector(ax,pos,.3*n/np.linalg.norm(n),RED,ls="--")
-        vector(ax,[0,0,1 if curved else 0],[0,0,.45],"black",label=r"$\mathrm{curl}\,F$")
+        vector(ax,[0,0,1 if curved else 0],[0,0,.45],"black",label='$\\nabla\\times\\mathbf{F}$')
         ax.set(xlim=(-1.35,1.35),ylim=(-1.35,1.35),zlim=(-.25,1.65))
         ax.set_box_aspect((2.7,2.7,1.9))
-    footer(axs[0],r"Disk: $\iint (\mathrm{curl}\,F)\cdot n\,dS=2\pi$")
-    footer(axs[1],r"Cap $z=1-r^2$: same flux $2\pi$")
+    footer(axs[0],'Disk: $\\iint (\\nabla\\times\\mathbf{F})\\cdot \\mathbf{n}\\,\\mathrm{d}S=2\\pi$')
+    footer(axs[1],'Cap $z=1-r^2$: same flux $2\\pi$')
     save(fig,"fig-05-stokes-surfaces")
 
 
@@ -223,15 +223,15 @@ def stokes_tilted():
     for theta in np.linspace(0,2*np.pi,7,endpoint=False):
         point=u*np.cos(theta)+v*np.sin(theta)
         vector(a,point,.22*np.cross(n,point),BLUE)
-    vector(a,[0,0,0],.9*n,RED,label=r"$n$",ls="--")
+    vector(a,[0,0,0],.9*n,RED,label='$\\mathbf{n}$',ls="--")
     space(a)
     a.view_init(elev=24,azim=-20)
-    footer(a,r"$F=n\times r,\quad \mathrm{curl}\,F=2n$")
+    footer(a,'$\\mathbf{F}=\\mathbf{n}\\times \\mathbf{r},\\quad \\nabla\\times\\mathbf{F}=2\\mathbf{n}$')
     b.bar([0,1,2],[2/3]*3,width=.55,color="0.78",edgecolor="black",hatch="//")
-    b.set_xticks([0,1,2],[r"$c_x n_x$",r"$c_y n_y$",r"$c_z n_z$"])
+    b.set_xticks([0,1,2],['$c_x n_x$','$c_y n_y$','$c_z n_z$'])
     b.set(xlabel="Component contribution",ylabel="Projection (dim.)",ylim=(0,1.1))
     b.axhline(2/3,color=RED,lw=.8,ls="--")
-    footer(b,r"$c=\mathrm{curl}\,F:\quad c\cdot n=2$")
+    footer(b,'$\\mathbf{c}=\\nabla\\times\\mathbf{F}:\\quad \\mathbf{c}\\cdot \\mathbf{n}=2$')
     save(fig,"fig-06-stokes-tilted-disk")
 
 
@@ -241,12 +241,12 @@ def gauss_ball():
     a.quiver(*points.T,*(.25*points).T,color=BLUE,linewidth=1.1,arrow_length_ratio=.25)
     a.scatter([0,.3,-.3],[0,.2,-.2],[0,-.2,.2],marker="+",color=RED,s=22)
     space(a,1.45)
-    footer(a,r"$F=r:\quad\mathrm{div}\,F=3,\quad\Phi=4\pi$")
+    footer(a,'$\\mathbf{F}=\\mathbf{r}:\\quad\\nabla\\cdot\\mathbf{F}=3,\\quad\\Phi=4\\pi$')
     z=np.linspace(-1,1,250); integrand=3*np.pi*(1-z*z)
     b.fill_between(z,integrand,color="0.9"); b.plot(z,integrand,color=BLUE)
-    b.set(xlim=(-1,1),ylim=(0,11),xlabel=r"Slice height $z$ (dim.)",
-          ylabel=r"$3\,\mathrm{Area}(D_z)$ (dim.)")
-    footer(b,r"$\int_{-1}^{1}3\pi(1-z^2)\,dz=4\pi$")
+    b.set(xlim=(-1,1),ylim=(0,11),xlabel='Slice height $z$ (dim.)',
+          ylabel='$3\\,\\mathrm{Area}(D_z)$ (dim.)')
+    footer(b,'$\\int_{-1}^{1}3\\pi(1-z^2)\\,\\mathrm{d}z=4\\pi$')
     save(fig,"fig-07-gauss-ball")
 
 
@@ -254,16 +254,16 @@ def gauss_closure():
     fig,axs=figure(("3d","3d"))
     for ax in axs:
         cap(ax,True)
-        vector(ax,[.5,0,.75],[.3,0,.3],RED,label=r"$n_S$",ls="--")
+        vector(ax,[.5,0,.75],[.3,0,.3],RED,label='$n_S$',ls="--")
         ax.set(xlim=(-1.35,1.35),ylim=(-1.35,1.35),zlim=(-.6,1.45))
         ax.set_box_aspect((2.7,2.7,2.05))
     theta=np.linspace(0,2*np.pi,100)
     rim=np.column_stack((np.cos(theta),np.sin(theta),np.zeros_like(theta)))
     axs[1].add_collection3d(Poly3DCollection([rim],fc="0.91",ec=BLUE,alpha=.5))
-    vector(axs[1],[0,0,0],[0,0,-.45],RED,label=r"$n_{S_0}=-e_z$",ls="--")
-    axs[1].text(0,0,.4,r"$\Omega$",fontsize=10)
-    footer(axs[0],r"$S$ has an edge: $\partial S=C$")
-    footer(axs[1],r"$S\cup S_0=\partial\Omega$: closed surface")
+    vector(axs[1],[0,0,0],[0,0,-.45],RED,label='$n_{S_0}=-e_z$',ls="--")
+    axs[1].text(0,0,.4,'$\\Omega$',fontsize=10)
+    footer(axs[0],'$S$ has an edge: $\\partial S=C$')
+    footer(axs[1],'$S\\cup S_0=\\partial\\Omega$: closed surface')
     save(fig,"fig-08-gauss-surface-closure")
 
 
@@ -278,11 +278,11 @@ def singular_shell():
             if hole: arrow(ax,.42*n,.22*n,RED,ls="--")
         ax.plot(0,0,"kx",ms=6,mew=1.4)
         plane(ax)
-        ax.set_xlabel(r"$x$ (dim.)"); ax.set_ylabel(r"$z$ (dim.)")
+        ax.set_xlabel('$x$ (dim.)'); ax.set_ylabel('$z$ (dim.)')
     a.text(-.85,.1,"Undefined at origin",fontsize=8)
     b.text(-.32,-.1,"excluded",fontsize=7)
     footer(a,r"Ball: singularity invalidates Gauss")
-    footer(b,r"Shell: $\Phi_{out}=4\pi,\quad\Phi_{in}=-4\pi$")
+    footer(b,'Shell: $\\Phi_{out}=4\\pi,\\quad\\Phi_{in}=-4\\pi$')
     save(fig,"fig-09-singularity-shell")
 
 

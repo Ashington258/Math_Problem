@@ -15,9 +15,9 @@ def space(ax, lim=1.35):
         axis.pane.set_edgecolor("white")
     ax.set_xticks([-1,0,1]); ax.set_yticks([-1,0,1]); ax.set_zticks([-1,0,1])
     ax.tick_params(labelsize=7,pad=0)
-    ax.set_xlabel(r"$x$ (dim.)",labelpad=0)
-    ax.set_ylabel(r"$y$ (dim.)",labelpad=0)
-    ax.set_zlabel(r"$z$ (dim.)",labelpad=0)
+    ax.set_xlabel('$x$ (dim.)',labelpad=0)
+    ax.set_ylabel('$y$ (dim.)',labelpad=0)
+    ax.set_zlabel('$z$ (dim.)',labelpad=0)
 
 
 def canvas(p,rows,cols,height):
@@ -48,12 +48,12 @@ def vector(ax,origin,value,color,label=None):
 def divergence(p):
     fig,axes=canvas(p,2,3,166)
     modes=["source","sink","uniform"]
-    captions=[r"$\mathbf{F}_2=(x,y)^T,\quad\nabla\cdot\mathbf{F}_2=2$",
-              r"$\mathbf{F}_2=(-x,-y)^T,\quad\nabla\cdot\mathbf{F}_2=-2$",
-              r"$\mathbf{F}_2=(1,0)^T,\quad\nabla\cdot\mathbf{F}_2=0$"]
+    captions=['$\\mathbf{F}_2=(x,y)^T,\\quad\\nabla\\cdot\\mathbf{F}_2=2$',
+              '$\\mathbf{F}_2=(-x,-y)^T,\\quad\\nabla\\cdot\\mathbf{F}_2=-2$',
+              '$\\mathbf{F}_2=(1,0)^T,\\quad\\nabla\\cdot\\mathbf{F}_2=0$']
     for ax,mode,text in zip(axes[:3],modes,captions):
         p.field(ax,mode)
-        ax.set_xlabel(r"$x$ (dim.)"); ax.set_ylabel(r"$y$ (dim.)")
+        ax.set_xlabel('$x$ (dim.)'); ax.set_ylabel('$y$ (dim.)')
         ax.set_xticks([-1,0,1]); ax.set_yticks([-1,0,1])
         ax.add_patch(Rectangle((-.55,-.55),1.1,1.1,fill=False,ec=p.BLUE,ls="--",lw=1))
         caption(ax,text)
@@ -63,9 +63,9 @@ def divergence(p):
     points=.75*directions
     th,ph=np.meshgrid(np.linspace(0,2*np.pi,17),np.linspace(.05,np.pi-.05,11))
     sphere=np.array([np.sin(ph)*np.cos(th),np.sin(ph)*np.sin(th),np.cos(ph)])
-    texts=[r"$\mathbf{F}_3=(x,y,z)^T,\quad\nabla\cdot\mathbf{F}_3=3$",
-           r"$\mathbf{F}_3=(-x,-y,-z)^T,\quad\nabla\cdot\mathbf{F}_3=-3$",
-           r"$\mathbf{F}_3=(1,0,0)^T,\quad\nabla\cdot\mathbf{F}_3=0$"]
+    texts=['$\\mathbf{F}_3=(x,y,z)^T,\\quad\\nabla\\cdot\\mathbf{F}_3=3$',
+           '$\\mathbf{F}_3=(-x,-y,-z)^T,\\quad\\nabla\\cdot\\mathbf{F}_3=-3$',
+           '$\\mathbf{F}_3=(1,0,0)^T,\\quad\\nabla\\cdot\\mathbf{F}_3=0$']
     for ax,mode,text in zip(axes[3:],modes,texts):
         ax.plot_wireframe(*sphere,rstride=2,cstride=2,color="0.82",lw=.45)
         values=points if mode=="source" else -points if mode=="sink" else np.tile([1,0,0],(len(points),1))
@@ -80,9 +80,9 @@ def curl(p):
     p.field(a,"rotation"); p.loop(a)
     p.field(b,"shear"); p.loop(b,color=p.RED)
     for ax in (a,b):
-        ax.set_xlabel(r"$x$ (dim.)"); ax.set_ylabel(r"$y$ (dim.)")
-    caption(a,r"$\mathbf{v}_2=(-y,x)^T:\quad(\nabla\times\mathbf{v}_2)_z=2$")
-    caption(b,r"$\mathbf{v}_2=(y,0)^T:\quad(\nabla\times\mathbf{v}_2)_z=-1$")
+        ax.set_xlabel('$x$ (dim.)'); ax.set_ylabel('$y$ (dim.)')
+    caption(a,'$\\mathbf{v}_2=(-y,x)^T:\\quad(\\nabla\\times\\mathbf{v}_2)_z=2$')
+    caption(b,'$\\mathbf{v}_2=(y,0)^T:\\quad(\\nabla\\times\\mathbf{v}_2)_z=-1$')
     n=np.ones(3)/np.sqrt(3); u=np.array([1,-1,0])/np.sqrt(2); v=np.cross(n,u)
     c.view_init(elev=25,azim=-15)
     theta=np.linspace(0,2*np.pi,160)
@@ -93,8 +93,8 @@ def curl(p):
         pts=h*n[:,None]+.65*(u[:,None]*np.cos(t)+v[:,None]*np.sin(t))
         vel=np.cross(n,pts.T).T
         c.quiver(*pts,*(.35*vel),color=p.BLUE,linewidth=1.1,arrow_length_ratio=.25)
-    vector(c,np.zeros(3),.95*n,p.RED,label=r"$\nabla\times\mathbf{v}_3=2\mathbf{n}$")
-    caption(c,r"$\mathbf{v}_3=\mathbf{n}\times\mathbf{r},\quad \mathbf{n}=(1,1,1)^T/\sqrt{3}$")
+    vector(c,np.zeros(3),.95*n,p.RED,label='$\\nabla\\times\\mathbf{v}_3=2\\mathbf{n}$')
+    caption(c,'$\\mathbf{v}_3=\\mathbf{n}\\times\\mathbf{r},\\quad \\mathbf{n}=(1,1,1)^T/\\sqrt{3}$')
     t=np.linspace(-1.8,1.8,180)
     for phase in [0,2*np.pi/3,4*np.pi/3]:
         xyz=np.array([.65*np.cos(t+phase),.65*np.sin(t+phase),.5*t])
@@ -103,6 +103,6 @@ def curl(p):
         pts=np.array([.65*np.cos(ts+phase),.65*np.sin(ts+phase),.5*ts])
         vel=np.array([-pts[1],pts[0],np.full(3,.5)])
         d.quiver(*pts,*(.3*vel),color=p.BLUE,linewidth=1.1,arrow_length_ratio=.25)
-    vector(d,np.zeros(3),np.array([0,0,.9]),p.RED,label=r"$\nabla\times\mathbf{v}_3=2\mathbf{e}_z$")
-    caption(d,r"$\mathbf{v}_3=(-y,x,1/2)^T$: rotation + translation")
+    vector(d,np.zeros(3),np.array([0,0,.9]),p.RED,label='$\\nabla\\times\\mathbf{v}_3=2\\mathbf{k}$')
+    caption(d,'$\\mathbf{v}_3=(-y,x,1/2)^T$: rotation + translation')
     p.save(fig,"fig-10-curl")

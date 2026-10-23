@@ -10,7 +10,7 @@
 核心结构可概括为：
 
 $$
-\int_{\partial \Omega} \omega = \int_{\Omega} d\omega.
+\int_{\partial \Omega} \omega = \int_{\Omega} \mathrm d\omega.
 $$
 
 在不同维度和不同阶数的微分形式下，它分别产生上述经典积分定理。

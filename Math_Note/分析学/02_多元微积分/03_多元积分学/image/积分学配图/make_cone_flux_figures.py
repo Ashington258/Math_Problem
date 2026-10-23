@@ -29,11 +29,11 @@ def coordinate_projections():
     fig.subplots_adjust(left=.07, right=.98, bottom=.24, top=.83, wspace=.47)
     for ax, horizontal, domain, positive, negative in zip(
         axes[:2], ["y", "x"], ["D_x", "D_y"],
-        [r"$x_+:\quad +P$", r"$y_+:\quad +Q$"],
-        [r"$x_-:\quad -P$", r"$y_-:\quad -Q$"],
+        ['$x_+:\\quad +P$', '$y_+:\\quad +Q$'],
+        ['$x_-:\\quad -P$', '$y_-:\\quad -Q$'],
     ):
         ax.set(xlim=(-2.2, 2.2), ylim=(.25, 2.45), aspect="equal",
-               xlabel=f"${horizontal}$", ylabel="$z$")
+               xlabel=f"${horizontal}$", ylabel='$z$')
         ax.set_xticks([-2, 0, 2])
         ax.set_yticks([1, 2])
         ax.minorticks_off()
@@ -46,20 +46,20 @@ def coordinate_projections():
 
     ax = axes[2]
     ax.set(xlim=(-2.2, 2.2), ylim=(-2.2, 2.2), aspect="equal",
-           xlabel="$x$", ylabel="$y$")
+           xlabel='$x$', ylabel='$y$')
     ax.set_xticks([-2, 0, 2])
     ax.set_yticks([-2, 0, 2])
     ax.minorticks_off()
     ax.add_patch(Wedge((0, 0), 2, 0, 360, width=1,
                        facecolor="#F0F4F6", edgecolor=b.GRAY, lw=1.1, hatch="///"))
-    b.label(ax, (0, 1.53), "$D$", fs=9)
-    b.label(ax, (0, 0), r"$-dA_{xy}$", color=b.ORANGE, fs=8, box=False)
+    b.label(ax, (0, 1.53), '$D$', fs=9)
+    b.label(ax, (0, 0), '$-\\mathrm{d}A_{xy}$', color=b.ORANGE, fs=8, box=False)
 
     panel_letters(fig, axes, [.04, .37, .71])
     for x, formula in zip([.20, .53, .85],
-                          [r"$dy\,dz=\frac{x}{r}\,dA_{xy}$",
-                           r"$dz\,dx=\frac{y}{r}\,dA_{xy}$",
-                           r"$dx\,dy=-dA_{xy}$"]):
+                          ['$\\mathrm{d}y\\,\\mathrm{d}z=\\frac{x}{r}\\,\\mathrm{d}A_{xy}$',
+                           '$\\mathrm{d}z\\,\\mathrm{d}x=\\frac{y}{r}\\,\\mathrm{d}A_{xy}$',
+                           '$\\mathrm{d}x\\,\\mathrm{d}y=-\\mathrm{d}A_{xy}$']):
         fig.text(x, .07, formula, ha="center", fontsize=8)
     b.save(fig, "fig-25-cone-coordinate-projections",
            "A、B 为 yz、zx 投影，分别按 x、y 的正负分片；B 横轴 x、纵轴 z。C 为向下定向的圆环投影。")
@@ -106,18 +106,18 @@ def cone_geometry(ax):
     assert np.isclose(np.linalg.norm(normal), 1)
     assert np.isclose(np.dot(p, normal), 0)
     space_arrow(ax, p, p+.95*normal, color=b.BLUE, lw=1.6, size=9)
-    space_label(ax, p+.95*normal, r"$\mathbf{n}$", offset=(.18, -.06), color=b.BLUE)
-    space_label(ax, [.8, .8*np.sqrt(3), 1.6], r"$\Sigma$",
+    space_label(ax, p+.95*normal, '$\\mathbf{n}$', offset=(.18, -.06), color=b.BLUE)
+    space_label(ax, [.8, .8*np.sqrt(3), 1.6], '$\\Sigma$',
                 offset=(0, .04), color=b.BLUE)
-    space_label(ax, [.8, .8*np.sqrt(3), 0], "$D$",
+    space_label(ax, [.8, .8*np.sqrt(3), 0], '$D$',
                 offset=(0, -.05), color=b.ORANGE)
-    space_label(ax, [-1, 0, 1], "$z=r=1$", offset=(-.36, .18), fs=7)
-    space_label(ax, [-2, 0, 2], "$z=r=2$", offset=(-.23, .14), fs=7)
+    space_label(ax, [-1, 0, 1], '$z=r=1$', offset=(-.36, .18), fs=7)
+    space_label(ax, [-2, 0, 2], '$z=r=2$', offset=(-.23, .14), fs=7)
 
 
 def meridian(ax):
     ax.set(xlim=(.25, 2.85), ylim=(.25, 2.85), aspect="equal",
-           xlabel=r"$r$ (dimensionless)", ylabel=r"$z$ (dimensionless)")
+           xlabel='$r$ (dimensionless)', ylabel='$z$ (dimensionless)')
     ax.set_xticks([1, 2])
     ax.set_yticks([1, 2])
     ax.minorticks_off()
@@ -143,12 +143,12 @@ def meridian(ax):
                        corner+.075*tangent_unit])
     ax.plot(*square.T, color=b.GRAY, lw=.7)
     ax.plot(*p, "o", color="black", ms=3, zorder=21)
-    b.label(ax, (.92, 1.82), r"$\mathbf{G}\parallel\Sigma$", color=b.GRAY, fs=8)
-    b.label(ax, (2.54, 2.01), r"$\mathbf{H}$", color=b.ORANGE)
-    b.label(ax, (1.77, .98), r"$F_n\mathbf{n}$", color=b.BLUE)
-    b.label(ax, (2.48, 1.42), r"$\mathbf{H}_{\rm tan}$", color=b.GRAY, fs=7)
-    b.label(ax, (2.15, .67), r"$\mathbf{n}$", color=b.BLUE)
-    b.label(ax, (2.26, 2.61), "$z=r$", color=b.BLUE, fs=8)
+    b.label(ax, (.92, 1.82), '$\\mathbf{G}\\parallel\\Sigma$', color=b.GRAY, fs=8)
+    b.label(ax, (2.54, 2.01), '$\\mathbf{H}$', color=b.ORANGE)
+    b.label(ax, (1.77, .98), '$F_n\\mathbf{n}$', color=b.BLUE)
+    b.label(ax, (2.48, 1.42), '$\\mathbf{H}_{\\rm tan}$', color=b.GRAY, fs=7)
+    b.label(ax, (2.15, .67), '$\\mathbf{n}$', color=b.BLUE)
+    b.label(ax, (2.26, 2.61), '$z=r$', color=b.BLUE, fs=8)
 
 
 def normal_projection():
@@ -157,9 +157,9 @@ def normal_projection():
     cone_geometry(axes[0])
     meridian(axes[1])
     panel_letters(fig, axes, [.04, .54])
-    fig.text(.26, .075, r"$\mathbf{n}=\frac{1}{\sqrt{2}}(x/r,\,y/r,\,-1)$",
+    fig.text(.26, .075, '$\\mathbf{n}=\\frac{1}{\\sqrt{2}}(x/r,\\,y/r,\\,-1)$',
              ha="center", fontsize=8)
-    fig.text(.76, .075, r"$F_n=r/\sqrt{2},\quad dS=\sqrt{2}\,dA_{xy}$",
+    fig.text(.76, .075, '$F_n=r/\\sqrt{2},\\quad \\mathrm{d}S=\\sqrt{2}\\,\\mathrm{d}A_{xy}$',
              ha="center", fontsize=8)
     b.save(fig, "fig-26-cone-normal-projection",
            "A 为无底盖的圆锥截段及圆环投影；B 为 y=0、x>0 截面内 H 的实际法向、切向分解，向量同比缩放。")

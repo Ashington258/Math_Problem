@@ -172,7 +172,7 @@ def fig_rect(path):
     seg(ax, (x, y, 0), (0, y, 0), **DASH)
     seg(ax, (x, y, z), (0, 0, z), **DASH)
     dot(ax, (x, y, z))
-    tag(ax, (x, y, z), r"$(x,\,y,\,z)$", dx=0.025, dy=0.020, va="bottom")
+    tag(ax, (x, y, z), '$(x,\\,y,\\,z)$', dx=0.025, dy=0.020, va="bottom")
     fit(ax)
     save(fig, path)
 
@@ -190,8 +190,8 @@ def fig_polar(path):
                 arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5))
     ax.annotate("", xy=(0, ya), xytext=(0, -0.05),
                 arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5))
-    ax.text(xa, -0.03, r"$x$", fontsize=15, ha="left", va="top")
-    ax.text(-0.02, ya, r"$y$", fontsize=15, ha="right", va="top")
+    ax.text(xa, -0.03, '$x$', fontsize=15, ha="left", va="top")
+    ax.text(-0.02, ya, '$y$', fontsize=15, ha="right", va="top")
 
     # radius vector
     ax.plot([0, x0], [0, y0], color="#1F3FBF", lw=1.8,
@@ -208,16 +208,16 @@ def fig_polar(path):
     ax.plot(R * np.cos(t), R * np.sin(t), color="#B22222", lw=1.4, zorder=5)
 
     ax.plot([x0], [y0], marker="o", ms=5.5, color="#D62728", zorder=7)
-    ax.text(x0 * 0.55 - 0.05, y0 * 0.55 + 0.03, r"$r$", fontsize=15,
+    ax.text(x0 * 0.55 - 0.05, y0 * 0.55 + 0.03, '$r$', fontsize=15,
             color="#1F3FBF", ha="right", va="bottom")
     ax.text(R * np.cos(0.5 * np.arctan2(y0, x0)) + 0.02,
-            R * np.sin(0.5 * np.arctan2(y0, x0)) - 0.02, r"$\theta$",
+            R * np.sin(0.5 * np.arctan2(y0, x0)) - 0.02, '$\\theta$',
             fontsize=15, color="#B22222", ha="left", va="top")
-    ax.text(x0 * 0.5, -0.045, r"$r\cos\theta$", fontsize=13,
+    ax.text(x0 * 0.5, -0.045, '$r\\cos\\theta$', fontsize=13,
             color="#B22222", ha="center", va="top")
-    ax.text(x0 + 0.025, y0 * 0.5, r"$r\sin\theta$", fontsize=13,
+    ax.text(x0 + 0.025, y0 * 0.5, '$r\\sin\\theta$', fontsize=13,
             color="#B22222", ha="left", va="center", rotation=90)
-    ax.text(x0 + 0.02, y0 + 0.03, r"$(x,\,y)$", fontsize=13, ha="left",
+    ax.text(x0 + 0.02, y0 + 0.03, '$(x,\\,y)$', fontsize=13, ha="left",
             va="bottom")
 
     ax.set_xlim(-0.10, xa + 0.06)
@@ -245,12 +245,12 @@ def fig_cyl(path):
     curve(ax, [(R * np.cos(s), R * np.sin(s), 0) for s in t], **RED)
 
     dot(ax, (x, y, z))
-    tag(ax, (x, y, z), r"$(r,\,\theta,\,z)$", dx=0.025, dy=0.018, va="bottom")
+    tag(ax, (x, y, z), '$(r,\\,\\theta,\\,z)$', dx=0.025, dy=0.018, va="bottom")
     n = perp((0, 0, 0), (x, y, 0))
-    label_s(ax, (0.5 * x, 0.5 * y, 0.0), r"$r$", off=0.085 * n,
+    label_s(ax, (0.5 * x, 0.5 * y, 0.0), '$r$', off=0.085 * n,
             color="#1F3FBF")
     label_s(ax, (R * np.cos(th / 2), R * np.sin(th / 2), 0.0),
-            r"$\theta$", off=(-0.010, 0.055), color="#B22222")
+            '$\\theta$', off=(-0.010, 0.055), color="#B22222")
     fit(ax)
     save(fig, path)
 
@@ -284,15 +284,15 @@ def fig_sph(path):
                for s in t], **RED)
 
     dot(ax, (x, y, z))
-    tag(ax, (x, y, z), r"$(r,\,\theta,\,\varphi)$", dx=0.025, dy=0.018, va="bottom")
+    tag(ax, (x, y, z), '$(r,\\,\\theta,\\,\\varphi)$', dx=0.025, dy=0.018, va="bottom")
     n = perp((0, 0, 0), (x, y, z))
-    label_s(ax, (0.5 * x, 0.5 * y, 0.5 * z), r"$r$", off=0.085 * n,
+    label_s(ax, (0.5 * x, 0.5 * y, 0.5 * z), '$r$', off=0.085 * n,
             color="#1F3FBF")
     label_s(ax, outward((R1 * np.cos(th / 2), R1 * np.sin(th / 2), 0), k=0.085),
-            r"$\theta$", color="#B22222")
+            '$\\theta$', color="#B22222")
     mid = 0.5 * ph
     label_s(ax, (R2 * np.sin(mid) * ux, R2 * np.sin(mid) * uy,
-                 R2 * np.cos(mid)), r"$\varphi$", off=(0.058, 0.032),
+                 R2 * np.cos(mid)), '$\\varphi$', off=(0.058, 0.032),
             color="#B22222")
     fit(ax)
     save(fig, path)
@@ -510,13 +510,13 @@ def fig_elem_line(path):
     d = (0.50, 0.46, 0.50)
     rng = tuple((base[k], base[k] + d[k]) for k in range(3))
     draw_block(ax, F_cart, rng, base,
-               [(0, rng[0], C1C, r"$\mathrm{d}x$", 0.50),
-                (1, rng[1], C2C, r"$\mathrm{d}y$", 0.34),
-                (2, rng[2], C3C, r"$\mathrm{d}z$", 0.50)])
+               [(0, rng[0], C1C, '$\\mathrm{d}x$', 0.50),
+                (1, rng[1], C2C, '$\\mathrm{d}y$', 0.34),
+                (2, rng[2], C3C, '$\\mathrm{d}z$', 0.50)])
     p0 = np.array(base, float)
     p1 = p0 + np.array(d, float)
     seg(ax, p0, p1, color="black", lw=1.9, zorder=7)
-    label_line(ax, p0, p1, r"$\mathrm{d}s$", frac=0.84, off=(0.085, 0.055))
+    label_line(ax, p0, p1, '$\\mathrm{d}s$', frac=0.84, off=(0.085, 0.055))
     letter(ax, "A")
     fit(ax)
 
@@ -546,11 +546,11 @@ def fig_elem_line(path):
             [A[1] - s * er[1], A[1] - s * er[1] + s * et[1], A[1] + s * et[1]],
             color=C2C, lw=1.0, zorder=6)
     ax.plot([P[0]], [P[1]], marker="o", ms=5.0, color="#D62728", zorder=7)
-    ax.text(*((P + A) / 2 - 0.115 * et), r"$\mathrm{d}r$", color=C1C,
+    ax.text(*((P + A) / 2 - 0.115 * et), '$\\mathrm{d}r$', color=C1C,
             fontsize=14, ha="center", va="center")
-    ax.text(*((A + B) / 2 + 0.140 * er), r"$r\,\mathrm{d}\theta$", color=C2C,
+    ax.text(*((A + B) / 2 + 0.140 * er), '$r\\,\\mathrm{d}\\theta$', color=C2C,
             fontsize=14, ha="center", va="center")
-    ax.text(*((P + B) / 2 + 0.20 * (et - er) / np.sqrt(2)), r"$\mathrm{d}s$",
+    ax.text(*((P + B) / 2 + 0.20 * (et - er) / np.sqrt(2)), '$\\mathrm{d}s$',
             color="black", fontsize=15, ha="center", va="center")
     ax.set_xlim(0.52, 1.72)
     ax.set_ylim(0.05, 1.30)
@@ -567,13 +567,13 @@ def fig_elem_line(path):
         tuple(_pt(F_sph, r0 + dr + 0.22, th0, ph0)), **DASH)
     rng = ((r0, r0 + dr), (th0, th0 + dth), (ph0, ph0 + dph))
     draw_block(ax, F_sph, rng, base,
-               [(0, rng[0], C1C, r"$\mathrm{d}r$", 0.85),
-                (1, rng[1], C2C, r"$r\sin\varphi\,\mathrm{d}\theta$", 0.92),
-                (2, rng[2], C3C, r"$r\,\mathrm{d}\varphi$", 0.70)])
+               [(0, rng[0], C1C, '$\\mathrm{d}r$', 0.85),
+                (1, rng[1], C2C, '$r\\sin\\varphi\\,\\mathrm{d}\\theta$', 0.92),
+                (2, rng[2], C3C, '$r\\,\\mathrm{d}\\varphi$', 0.70)])
     q0 = _pt(F_sph, r0, th0, ph0)
     q1 = _pt(F_sph, r0 + dr, th0 + dth, ph0 + dph)
     seg(ax, q0, q1, color="black", lw=1.8, zorder=7)
-    label_line(ax, q0, q1, r"$\mathrm{d}s$", frac=0.86, off=(0.075, 0.055))
+    label_line(ax, q0, q1, '$\\mathrm{d}s$', frac=0.86, off=(0.075, 0.055))
     letter(ax, "C")
     fit(ax)
 
@@ -611,12 +611,12 @@ def fig_elem_area(path):
             [P[1] + s * er[1], P[1] + s * (er[1] + et[1]), P[1] + s * et[1]],
             color=C1C, lw=1.0, zorder=6)
     ax.plot([P[0]], [P[1]], marker="o", ms=5.0, color="#D62728", zorder=7)
-    ax.text(*((P + A) / 2 - 0.115 * et), r"$\mathrm{d}r$", color=C1C,
+    ax.text(*((P + A) / 2 - 0.115 * et), '$\\mathrm{d}r$', color=C1C,
             fontsize=14, ha="center", va="center")
-    ax.text(*((P + C) / 2 + 0.135 * er), r"$r\,\mathrm{d}\theta$", color=C2C,
+    ax.text(*((P + C) / 2 + 0.135 * er), '$r\\,\\mathrm{d}\\theta$', color=C2C,
             fontsize=14, ha="center", va="center")
     mid = 0.25 * (P + A + B + C)
-    ax.annotate(r"$\mathrm{d}r\cdot r\,\mathrm{d}\theta$", xy=mid,
+    ax.annotate('$\\mathrm{d}r\\cdot r\\,\\mathrm{d}\\theta$', xy=mid,
                 xytext=(mid[0] + 0.55, mid[1] + 0.16), fontsize=13,
                 color="black", ha="center", va="center", zorder=9,
                 bbox=LABELBOX,
@@ -641,9 +641,9 @@ def fig_elem_area(path):
     soft_curve(ax, G, (p0, t0 + dt_), 0, (p0 - 0.30 * dp, p0 + 1.30 * dp))
     seg(ax, (0, 0, 0), tuple(R * np.array(_pt(F_sph, R, t0, p0))), **DASH)
     draw_patch(ax, G, ((p0, p0 + dp), (t0, t0 + dt_)),
-               [(0, (p0, p0 + dp), C3C, r"$R\,\mathrm{d}\varphi$", 0.50),
+               [(0, (p0, p0 + dp), C3C, '$R\\,\\mathrm{d}\\varphi$', 0.50),
                 (1, (t0, t0 + dt_), C2C,
-                 r"$R\sin\varphi\,\mathrm{d}\theta$", 0.50)])
+                 '$R\\sin\\varphi\\,\\mathrm{d}\\theta$', 0.50)])
     letter(ax, "B")
     fit(ax)
 
@@ -660,8 +660,8 @@ def fig_elem_area(path):
     seg(ax, (0, 0, z0 - 0.35), (0, 0, z0 + dz + 0.35), **DASH)
     seg(ax, (0, 0, z0), (R2 * np.cos(t0), R2 * np.sin(t0), z0), **DASH)
     draw_patch(ax, G2, ((t0, t0 + dt_), (z0, z0 + dz)),
-               [(0, (t0, t0 + dt_), C2C, r"$R\,\mathrm{d}\theta$", 0.50),
-                (1, (z0, z0 + dz), C3C, r"$\mathrm{d}z$", 0.50)])
+               [(0, (t0, t0 + dt_), C2C, '$R\\,\\mathrm{d}\\theta$', 0.50),
+                (1, (z0, z0 + dz), C3C, '$\\mathrm{d}z$', 0.50)])
     letter(ax, "C")
     fit(ax)
 
@@ -679,9 +679,9 @@ def fig_elem_volume(path):
     d = (0.50, 0.46, 0.50)
     rng = tuple((base[k], base[k] + d[k]) for k in range(3))
     draw_block(ax, F_cart, rng, base,
-               [(0, rng[0], C1C, r"$\mathrm{d}x$", 0.50),
-                (1, rng[1], C2C, r"$\mathrm{d}y$", 0.34),
-                (2, rng[2], C3C, r"$\mathrm{d}z$", 0.50)])
+               [(0, rng[0], C1C, '$\\mathrm{d}x$', 0.50),
+                (1, rng[1], C2C, '$\\mathrm{d}y$', 0.34),
+                (2, rng[2], C3C, '$\\mathrm{d}z$', 0.50)])
     letter(ax, "A")
     fit(ax)
 
@@ -697,9 +697,9 @@ def fig_elem_volume(path):
     seg(ax, (0, 0, z0), (r0 * np.cos(th0), r0 * np.sin(th0), z0), **DASH)
     rng = ((r0, r0 + dr), (th0, th0 + dth), (z0, z0 + dz))
     draw_block(ax, F_cyl, rng, base,
-               [(0, rng[0], C1C, r"$\mathrm{d}r$", 0.50),
-                (1, rng[1], C2C, r"$r\,\mathrm{d}\theta$", 0.50),
-                (2, rng[2], C3C, r"$\mathrm{d}z$", 0.50)])
+               [(0, rng[0], C1C, '$\\mathrm{d}r$', 0.50),
+                (1, rng[1], C2C, '$r\\,\\mathrm{d}\\theta$', 0.50),
+                (2, rng[2], C3C, '$\\mathrm{d}z$', 0.50)])
     letter(ax, "B")
     fit(ax)
 
@@ -714,9 +714,9 @@ def fig_elem_volume(path):
         tuple(_pt(F_sph, r0 + dr + 0.20, th0, ph0)), **DASH)
     rng = ((r0, r0 + dr), (th0, th0 + dth), (ph0, ph0 + dph))
     draw_block(ax, F_sph, rng, base,
-               [(0, rng[0], C1C, r"$\mathrm{d}r$", 0.85),
-                (1, rng[1], C2C, r"$r\sin\varphi\,\mathrm{d}\theta$", 0.92),
-                (2, rng[2], C3C, r"$r\,\mathrm{d}\varphi$", 0.70)])
+               [(0, rng[0], C1C, '$\\mathrm{d}r$', 0.85),
+                (1, rng[1], C2C, '$r\\sin\\varphi\\,\\mathrm{d}\\theta$', 0.92),
+                (2, rng[2], C3C, '$r\\,\\mathrm{d}\\varphi$', 0.70)])
     letter(ax, "C")
     fit(ax)
 
@@ -754,8 +754,8 @@ def fig_elem_surface(path):
                 arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5))
     ax.annotate("", xy=(0.0, 1.16), xytext=(0.0, -0.06),
                 arrowprops=dict(arrowstyle="-|>", color="black", lw=1.5))
-    ax.text(1.26, -0.03, r"$u$", fontsize=15, ha="left", va="top")
-    ax.text(-0.02, 1.16, r"$v$", fontsize=15, ha="right", va="top")
+    ax.text(1.26, -0.03, '$u$', fontsize=15, ha="left", va="top")
+    ax.text(-0.02, 1.16, '$v$', fontsize=15, ha="right", va="top")
     ax.add_patch(Polygon([(u0, v0), (u1, v0), (u1, v1), (u0, v1)],
                          closed=True, facecolor="0.90", edgecolor="0.30",
                          lw=1.1, zorder=3))
@@ -767,14 +767,14 @@ def fig_elem_surface(path):
     ax.plot([u0 + s, u0 + s, u0], [v0, v0 + s, v0 + s],
             color="0.35", lw=1.0, zorder=6)
     ax.plot([u0], [v0], marker="o", ms=5.0, color="#D62728", zorder=7)
-    ax.text(0.5 * (u0 + u1), v0 - 0.050, r"$\mathrm{d}u$", color=C1C,
+    ax.text(0.5 * (u0 + u1), v0 - 0.050, '$\\mathrm{d}u$', color=C1C,
             fontsize=14, ha="center", va="top")
-    ax.text(u0 - 0.040, 0.5 * (v0 + v1), r"$\mathrm{d}v$", color=C2C,
+    ax.text(u0 - 0.040, 0.5 * (v0 + v1), '$\\mathrm{d}v$', color=C2C,
             fontsize=14, ha="right", va="center")
-    ax.text(0.5 * (u0 + u1), 0.5 * (v0 + v1), r"$\mathrm{d}u\,\mathrm{d}v$",
+    ax.text(0.5 * (u0 + u1), 0.5 * (v0 + v1), '$\\mathrm{d}u\\,\\mathrm{d}v$',
             fontsize=13, color="black", ha="center", va="center", zorder=9,
             bbox=LABELBOX)
-    ax.text(u0 - 0.045, v0 - 0.045, r"$(u,v)$", fontsize=13, ha="right",
+    ax.text(u0 - 0.045, v0 - 0.045, '$(u,v)$', fontsize=13, ha="right",
             va="top", zorder=9, bbox=LABELBOX)
     ax.set_xlim(-0.35, 1.32)
     ax.set_ylim(-0.12, 1.30)
@@ -808,10 +808,10 @@ def fig_elem_surface(path):
     pP, pU, pV = xy(P), xy(P + Tu), xy(P + Tv)
 
     mu, mv = 0.5 * (pP + pU), 0.5 * (pP + pV)
-    ax.text(mu[0] - 0.075, mu[1] + 0.005, r"$\mathbf{r}_u\,\mathrm{d}u$",
+    ax.text(mu[0] - 0.075, mu[1] + 0.005, '$\\mathbf{r}_u\\,\\mathrm{d}u$',
             color=C1C, fontsize=13, ha="right", va="center", zorder=9,
             bbox=LABELBOX)
-    ax.text(mv[0] + 0.070, mv[1] + 0.005, r"$\mathbf{r}_v\,\mathrm{d}v$",
+    ax.text(mv[0] + 0.070, mv[1] + 0.005, '$\\mathbf{r}_v\\,\\mathrm{d}v$',
             color=C2C, fontsize=13, ha="left", va="center", zorder=9,
             bbox=LABELBOX)
 
@@ -819,11 +819,11 @@ def fig_elem_surface(path):
     Nh = Nh / np.linalg.norm(Nh)
     pN = xy(P + 0.22 * Nh)
     arrow3(ax, P, P + 0.22 * Nh, color="black", lw=1.4, head=0.026)
-    ax.text(pN[0] + 0.012, pN[1] + 0.025, r"$\mathbf{r}_u\times\mathbf{r}_v$",
+    ax.text(pN[0] + 0.012, pN[1] + 0.025, '$\\mathbf{r}_u\\times\\mathbf{r}_v$',
             fontsize=12, ha="left", va="bottom", zorder=9, bbox=LABELBOX)
     ax.plot([pP[0]], [pP[1]], marker="o", ms=5.0, color="#D62728", zorder=7)
     cB = xy(P + 0.5 * Tu + 0.5 * Tv)
-    ax.annotate(r"$\mathrm{d}S$", xy=cB,
+    ax.annotate('$\\mathrm{d}S$', xy=cB,
                 xytext=(cB[0] + 0.075, cB[1] + 0.115), fontsize=13,
                 ha="center", va="center", zorder=9, bbox=LABELBOX,
                 annotation_clip=False,
@@ -847,17 +847,17 @@ def fig_elem_surface(path):
     poly3(ax, top, facecolor="0.88", edgecolor="0.35", lw=1.1, zorder=3)
     seg(ax, base[0], base[1], color=C1C, lw=1.9, zorder=6)
     seg(ax, base[0], base[3], color=C2C, lw=1.9, zorder=6)
-    label_line(ax, base[0], base[1], r"$\mathrm{d}x$", frac=0.5,
+    label_line(ax, base[0], base[1], '$\\mathrm{d}x$', frac=0.5,
                off=(-0.055, -0.085), fs=14, colour=C1C)
-    label_line(ax, base[0], base[3], r"$\mathrm{d}y$", frac=0.5,
+    label_line(ax, base[0], base[3], '$\\mathrm{d}y$', frac=0.5,
                off=(0.090, -0.055), fs=14, colour=C2C)
     cT = xy(np.array(top).mean(axis=0))
-    ax.text(cT[0], cT[1], r"$\mathrm{d}S$", fontsize=15, ha="center",
+    ax.text(cT[0], cT[1], '$\\mathrm{d}S$', fontsize=15, ha="center",
             va="center", zorder=9, bbox=LABELBOX)
     letter(ax, "C")
     fit(ax, pad=0.11)
     ax.text(0.5, 0.0,
-            r"$\mathrm{d}S=\sqrt{1+f_x^{2}+f_y^{2}}\;\mathrm{d}x\,\mathrm{d}y$",
+            '$\\mathrm{d}S=\\sqrt{1+f_x^{2}+f_y^{2}}\\;\\mathrm{d}x\\,\\mathrm{d}y$',
             transform=ax.transAxes, fontsize=12.5, ha="center", va="bottom",
             zorder=9, bbox=LABELBOX)
 

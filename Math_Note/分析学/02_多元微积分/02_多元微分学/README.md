@@ -50,14 +50,14 @@
 
 ## 符号规范
 
-本部分的向量、算子与微元记号遵循 [符号规范](符号规范.md)，写作与修改时按它执行：
+本部分遵循[全章符号规范](../符号规范.md)，以[《切矢量、弧长元素与面积元素》](../01_几何与代数基础/切矢量、弧长元素与面积元素.md)第 0 节为准：
 
-- 向量一律用粗体正体：$\mathbf F$、$\mathbf r$、$\mathbf n$、$\mathbf T$、$\mathbf e_x$，不用箭头；
-- 算子优先 $\nabla$：$\nabla f$、$\nabla\cdot\mathbf F$、$\nabla\times\mathbf F$、$\Delta f$；不使用 $\operatorname{rot}$；
-- 微元不加 `\mathrm`：$df$、$d\mathbf r$、$ds$、$dS$、$dV$；
-- 区域用曲线 $C$、平面域 $D$、曲面 $S$、体积 $V$ 或 $E$。
+- 位置矢量 $\mathbf r$，切矢量 $\mathbf r'$（曲面为 $\mathbf r_u,\mathbf r_v$），单位切矢量 $\mathbf T$；
+- 曲面法方向 $\mathbf r_u\times\mathbf r_v$ 或 $\nabla F$，单位法向量 $\mathbf n$；
+- 微分号统一直立：$\mathrm df$、$\mathrm d\mathbf r$、$\mathrm ds$、$\mathrm dS$；
+- 矢量弧长元素 $\mathrm d\mathbf s=\mathrm d\mathbf r$，矢量面积元素 $\mathrm d\mathbf S=\mathbf n\,\mathrm dS$。
 
-速查、详解与极值理论各篇均按该规范统一；旧稿中的 `\mathbf{F}`、`\mathrm{d}f`、`\mathbf i,\mathbf j,\mathbf k`、`\mathbf N` 等写法已逐处改写，完整对照见 [符号规范](符号规范.md) 第 4 节。
+正文、速查与当前配图采用同一约定，局部入口见[符号规范](符号规范.md)。
 
 ## 与后续章节的连接
 

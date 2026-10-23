@@ -1,0 +1,38 @@
+[
+  {
+    "stem": "fig-01-slices",
+    "size_mm": [
+      178.0,
+      95.0
+    ],
+    "dpi": 600,
+    "description": "单位四面体的投影切片、水平截面与截面积函数。"
+  },
+  {
+    "stem": "fig-02-order-split",
+    "size_mm": [
+      178.0,
+      95.0
+    ],
+    "dpi": 600,
+    "description": "柱面内、抛物面上方的区域，截面积在 z=1 处分段。"
+  },
+  {
+    "stem": "fig-03-cylindrical",
+    "size_mm": [
+      178.0,
+      95.0
+    ],
+    "dpi": 600,
+    "description": "双抛物面立体的母线区域与径向体积权重。"
+  },
+  {
+    "stem": "fig-04-spherical",
+    "size_mm": [
+      178.0,
+      95.0
+    ],
+    "dpi": 600,
+    "description": "球内圆锥上方区域的子午截面与球坐标参数范围。"
+  }
+]

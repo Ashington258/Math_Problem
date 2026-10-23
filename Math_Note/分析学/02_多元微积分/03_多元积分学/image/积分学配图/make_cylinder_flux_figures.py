@@ -31,26 +31,26 @@ def coordinate_projections():
     fig.subplots_adjust(left=.075, right=.98, bottom=.28, top=.85, wspace=.49)
 
     ax = axes[0]
-    domain_axes(ax, r"$y/R$", r"$z/R$")
-    b.label(ax, (0, .70), r"$D_x$", fs=9)
-    b.label(ax, (0, .24), r"$x_+:\quad +P(x_+)>0$", color=b.BLUE, fs=7)
-    b.label(ax, (0, -.25), r"$x_-:\quad -P(x_-)>0$", color=b.ORANGE, fs=7)
+    domain_axes(ax, '$y/R$', '$z/R$')
+    b.label(ax, (0, .70), '$D_x$', fs=9)
+    b.label(ax, (0, .24), '$x_+:\\quad +P(x_+)>0$', color=b.BLUE, fs=7)
+    b.label(ax, (0, -.25), '$x_-:\\quad -P(x_-)>0$', color=b.ORANGE, fs=7)
     # Both sheets cover the whole rectangle; these labels do not partition it.
-    b.footer(ax, r"$I_x=\pi^2R/2$", y=-.48)
+    b.footer(ax, '$I_x=\\pi^2R/2$', y=-.48)
 
     ax = axes[1]
-    domain_axes(ax, r"$z/R$", r"$x/R$")
-    b.label(ax, (0, .70), r"$D_y$", fs=9)
-    b.label(ax, (0, .15), r"$y_+,\ y_-$", fs=8)
-    b.label(ax, (0, -.35), r"$Q\equiv0$", fs=10)
-    b.footer(ax, r"$I_y=0$", y=-.48)
+    domain_axes(ax, '$z/R$', '$x/R$')
+    b.label(ax, (0, .70), '$D_y$', fs=9)
+    b.label(ax, (0, .15), '$y_+,\\ y_-$', fs=8)
+    b.label(ax, (0, -.35), '$Q\\equiv0$', fs=10)
+    b.footer(ax, '$I_y=0$', y=-.48)
 
     ax = axes[2]
-    domain_axes(ax, r"$x/R$", r"$y/R$", disk=True)
-    b.label(ax, (0, .66), r"$D_z$", fs=9)
-    b.label(ax, (0, .18), r"$S_+:\quad +W$", color=b.BLUE)
-    b.label(ax, (0, -.29), r"$S_-:\quad -W$", color=b.ORANGE)
-    b.footer(ax, r"$I_z=I_++I_-=0$", y=-.48)
+    domain_axes(ax, '$x/R$', '$y/R$', disk=True)
+    b.label(ax, (0, .66), '$D_z$', fs=9)
+    b.label(ax, (0, .18), '$S_+:\\quad +W$', color=b.BLUE)
+    b.label(ax, (0, -.29), '$S_-:\\quad -W$', color=b.ORANGE)
+    b.footer(ax, '$I_z=I_++I_-=0$', y=-.48)
 
     b.save(fig, "fig-23-cylinder-coordinate-projections",
            "坐标以 R 归一化；左右半柱面重叠投到 D_x，y 向场分量为零，两底重叠投到 D_z 并相消。")
@@ -81,22 +81,22 @@ def cylinder(ax):
     ax.add_patch(Polygon(project(top), facecolor="#E5F0F6",
                          edgecolor=b.BLUE, lw=1.2))
     for p, q, name, offset in [
-        ([0, 0, 1], [0, 0, 1.72], r"$(0,0,1)$", (.43, .08)),
-        ([0, 0, -1], [0, 0, -1.72], r"$(0,0,-1)$", (.47, -.04)),
-        (e, 1.55*e, r"$\mathbf{n}_c$", (.13, -.04)),
+        ([0, 0, 1], [0, 0, 1.72], '$(0,0,1)$', (.43, .08)),
+        ([0, 0, -1], [0, 0, -1.72], '$(0,0,-1)$', (.47, -.04)),
+        (e, 1.55*e, '$\\mathbf{n}_c$', (.13, -.04)),
     ]:
         space_arrow(ax, p, q, color=b.BLUE, ls=b.DASH, lw=1.3, size=8)
         space_label(ax, q, name, offset=offset, color=b.BLUE, box=False)
-    space_label(ax, [0, -.5, 1], r"$S_+$", offset=(.0, .10))
-    space_label(ax, [0, -.5, -1], r"$S_-$", offset=(.0, -.18))
-    space_label(ax, [.4, -.8, 0], r"$S_c$", offset=(.0, .03))
-    b.footer(ax, r"$\mathbf{n}_c=(\cos\theta,\sin\theta,0)$", y=-.14)
+    space_label(ax, [0, -.5, 1], '$S_+$', offset=(.0, .10))
+    space_label(ax, [0, -.5, -1], '$S_-$', offset=(.0, -.18))
+    space_label(ax, [.4, -.8, 0], '$S_c$', offset=(.0, .03))
+    b.footer(ax, '$\\mathbf{n}_c=(\\cos\\theta,\\sin\\theta,0)$', y=-.14)
 
 
 def side_decomposition(ax):
     # At z=0 and R=1 the ACTUAL field is (x, 0, 0).
     ax.set(xlim=(-1.18, 2.13), ylim=(-1.17, 1.85), aspect="equal",
-           xlabel=r"$x/R$", ylabel=r"$y/R$")
+           xlabel='$x/R$', ylabel='$y/R$')
     ax.set_xticks([-1, 0, 1])
     ax.set_yticks([-1, 0, 1])
     ax.minorticks_off()
@@ -123,17 +123,17 @@ def side_decomposition(ax):
                        corner+.09*t_unit])
     ax.plot(*square.T, color=b.GRAY, lw=.7)
     ax.plot(*p, "o", color="black", ms=3, zorder=21)
-    b.label(ax, (-.52, .63), "$z=0$", fs=8)
-    b.label(ax, p+field+[.12, -.14], r"$\mathbf{F}$", color=b.ORANGE)
-    b.label(ax, (.76, 1.36), r"$F_n\mathbf{n}$", color=b.BLUE)
-    b.label(ax, p+.72*field+[.36, .18], r"$\mathbf{F}_{\rm tan}$", color=b.GRAY, fs=7)
-    b.label(ax, (1.65, 1.34), r"$\mathbf{n}$", color=b.BLUE)
-    b.footer(ax, r"$F_n=\dfrac{R\cos^2\theta}{R^2+z^2}\geq0$", y=-.38)
+    b.label(ax, (-.52, .63), '$z=0$', fs=8)
+    b.label(ax, p+field+[.12, -.14], '$\\mathbf{F}$', color=b.ORANGE)
+    b.label(ax, (.76, 1.36), '$F_n\\mathbf{n}$', color=b.BLUE)
+    b.label(ax, p+.72*field+[.36, .18], '$\\mathbf{F}_{\\rm tan}$', color=b.GRAY, fs=7)
+    b.label(ax, (1.65, 1.34), '$\\mathbf{n}$', color=b.BLUE)
+    b.footer(ax, '$F_n=\\dfrac{R\\cos^2\\theta}{R^2+z^2}\\geq0$', y=-.38)
 
 
 def cap_components(ax):
     ax.set(xlim=(-1.18, 1.18), ylim=(-1.85, 1.85), aspect="equal",
-           xlabel=r"$x/R$", ylabel=r"$z/R$")
+           xlabel='$x/R$', ylabel='$z/R$')
     ax.set_xticks([-1, 0, 1])
     ax.set_yticks([-1, 0, 1])
     ax.minorticks_off()
@@ -145,13 +145,13 @@ def cap_components(ax):
                 ls=b.DASH, lw=1.2, size=8)
         # W is even in z, so the vertical field points up on BOTH caps.
         b.arrow(ax, (.40, z), (.40, z+.58), color=b.ORANGE, lw=1.8, size=8)
-    b.label(ax, (-.38, 1.73), r"$(0,0,1)$", color=b.BLUE, fs=7, box=False)
-    b.label(ax, (-.38, -1.75), r"$(0,0,-1)$", color=b.BLUE, fs=7, box=False)
-    b.label(ax, (.47, .72), r"$(0,0,W)$", color=b.ORANGE, fs=7, box=False)
-    b.label(ax, (-.38, -.65), r"$(0,0,W)$", color=b.ORANGE, fs=7, box=False)
-    b.label(ax, (0, .42), r"$F_{n,+}=+W$", fs=7)
-    b.label(ax, (0, -.12), r"$F_{n,-}=-W$", fs=7)
-    b.footer(ax, r"$I_\pm=\pm\pi R^2\ln2$", y=-.31)
+    b.label(ax, (-.38, 1.73), '$(0,0,1)$', color=b.BLUE, fs=7, box=False)
+    b.label(ax, (-.38, -1.75), '$(0,0,-1)$', color=b.BLUE, fs=7, box=False)
+    b.label(ax, (.47, .72), '$(0,0,W)$', color=b.ORANGE, fs=7, box=False)
+    b.label(ax, (-.38, -.65), '$(0,0,W)$', color=b.ORANGE, fs=7, box=False)
+    b.label(ax, (0, .42), '$F_{n,+}=+W$', fs=7)
+    b.label(ax, (0, -.12), '$F_{n,-}=-W$', fs=7)
+    b.footer(ax, '$I_\\pm=\\pm\\pi R^2\\ln2$', y=-.31)
 
 
 def normal_projection():

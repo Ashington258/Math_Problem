@@ -29,9 +29,9 @@ def space_label(ax, p, text, offset=(0, 0), **kwargs):
 
 
 def space_axes(ax):
-    for end, name, offset in [([1.25, 0, 0], "$x$", (.08, 0)),
-                              ([0, 1.25, 0], "$y$", (-.08, 0)),
-                              ([0, 0, 1.25], "$z$", (.07, .03))]:
+    for end, name, offset in [([1.25, 0, 0], '$x$', (.08, 0)),
+                              ([0, 1.25, 0], '$y$', (-.08, 0)),
+                              ([0, 0, 1.25], '$z$', (.07, .03))]:
         space_arrow(ax, [0, 0, 0], end, color=b.GRAY, lw=.7, size=6, z=1)
         space_label(ax, end, name, offset, color=b.GRAY, box=False)
 
@@ -75,13 +75,13 @@ def coordinate_projections():
         space_arrow(ax, CENTER, projected.mean(axis=0), color=b.ORANGE,
                       lw=1.3, size=7, ls=b.DASH, z=6)
         space_axes(ax)
-        space_label(ax, PATCH[0], "$dS$", offset=(.02, .15),
+        space_label(ax, PATCH[0], '$\\mathrm{d}S$', offset=(.02, .15),
                       color=b.BLUE, box=False)
         space_label(ax, projected.mean(axis=0), f"$D_{names[i]}$",
                     offset=offsets[i], color=b.ORANGE, box=True)
-        b.footer(ax, "$" + elements[i] + "=n_" + names[i] + r"\,dS$", y=-.12)
-    fig.text(.5, .065, r"$d\mathbf{S}=(dy\,dz,\,dz\,dx,\,dx\,dy)"
-             r"=(n_x,n_y,n_z)\,dS\qquad(n_x,n_y,n_z>0)$",
+        b.footer(ax, '$' + elements[i] + "=n_" + names[i] + '\\,\\mathrm{d}S$', y=-.12)
+    fig.text(.5, .065, '$\\mathrm{d}\\mathbf{S}=(\\mathrm{d}y\\,\\mathrm{d}z,\\,\\mathrm{d}z\\,\\mathrm{d}x,\\,\\mathrm{d}x\\,\\mathrm{d}y)'
+             '=(n_x,n_y,n_z)\\,\\mathrm{d}S\\qquad(n_x,n_y,n_z>0)$',
              ha="center", fontsize=8)
     b.save(fig, "fig-21-surface-coordinate-projections",
            "同一面元沿 x、y、z 轴投影到 yz、zx、xy 平面；所选法向三分量均为正。")
@@ -93,12 +93,12 @@ def normal_projection():
     ax = axes[0]
     b.plane(ax, (-.6, 1.35), (-.55, 1.20), ticks=False)
     surface(ax)
-    space_label(ax, PATCH[3], "$dS$", offset=(-.09, .16), color=b.BLUE)
+    space_label(ax, PATCH[3], '$\\mathrm{d}S$', offset=(-.09, .16), color=b.BLUE)
     end = CENTER + .82 * NORMAL
     space_arrow(ax, CENTER, end, color=b.BLUE, lw=2, size=10)
-    space_label(ax, end, r"$\mathbf{n}$", offset=(.08, .10), color=b.BLUE)
-    space_label(ax, P + U, "$S$", offset=(.12, -.06), color=b.BLUE)
-    b.footer(ax, r"$d\mathbf{S}=\mathbf{n}\,dS$", y=-.15)
+    space_label(ax, end, '$\\mathbf{n}$', offset=(.08, .10), color=b.BLUE)
+    space_label(ax, P + U, '$S$', offset=(.12, -.06), color=b.BLUE)
+    b.footer(ax, '$\\mathrm{d}\\mathbf{S}=\\mathbf{n}\\,\\mathrm{d}S$', y=-.15)
 
     ax = axes[1]
     b.plane(ax, (-1.0, 1.10), (-.72, 1.48), ticks=False)
@@ -128,18 +128,18 @@ def normal_projection():
     theta_f = np.degrees(np.arctan2(field[1], field[0]))
     ax.add_patch(Arc(origin, .65, .65, theta1=theta_n, theta2=theta_f,
                      color=b.GRAY, lw=.8))
-    b.label(ax, (.13, .41), "$\\theta$", color=b.GRAY, box=False)
-    b.label(ax, field + [-.10, .10], r"$\mathbf{F}$", color=b.ORANGE)
-    b.label(ax, (.91, .77), r"$F_n\mathbf{n}$", color=b.BLUE)
-    b.label(ax, (.43, 1.30), r"$\mathbf{F}_{\mathrm{tan}}$", color=b.GRAY)
-    b.label(ax, (.94, 1.24), r"$\mathbf{n}$", color=b.GRAY, box=False)
-    b.label(ax, (.70, -.67), "$S$", color=b.BLUE)
+    b.label(ax, (.13, .41), '$\\theta$', color=b.GRAY, box=False)
+    b.label(ax, field + [-.10, .10], '$\\mathbf{F}$', color=b.ORANGE)
+    b.label(ax, (.91, .77), '$F_n\\mathbf{n}$', color=b.BLUE)
+    b.label(ax, (.43, 1.30), '$\\mathbf{F}_{\\mathrm{tan}}$', color=b.GRAY)
+    b.label(ax, (.94, 1.24), '$\\mathbf{n}$', color=b.GRAY, box=False)
+    b.label(ax, (.70, -.67), '$S$', color=b.BLUE)
     ax.plot(0, 0, "o", color="black", ms=3, zorder=20)
-    b.footer(ax, r"$F_n=\mathbf{F}\cdot\mathbf{n}=\|\mathbf{F}\|\cos\theta$",
+    b.footer(ax, '$F_n=\\mathbf{F}\\cdot\\mathbf{n}=\\|\\mathbf{F}\\|\\cos\\theta$',
              y=-.15)
     fig.text(.5, .065,
-             r"$\mathbf{F}\cdot d\mathbf{S}=(\mathbf{F}\cdot\mathbf{n})\,dS"
-             r"=F_n\,dS$", ha="center", fontsize=8)
+             '$\\mathbf{F}\\cdot \\mathrm{d}\\mathbf{S}=(\\mathbf{F}\\cdot\\mathbf{n})\\,\\mathrm{d}S'
+             '=F_n\\,\\mathrm{d}S$', ha="center", fontsize=8)
     b.save(fig, "fig-22-surface-normal-projection",
            "A 为面元的法向定向，箭头仅示单位法向；B 为场与法向所在截面中的正交分解。")
 
