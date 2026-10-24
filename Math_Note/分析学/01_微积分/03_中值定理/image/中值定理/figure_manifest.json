@@ -1,0 +1,74 @@
+[
+  {
+    "stem": "fig-01-intermediate-values",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "介值定理与零点定理的水平线相交图像。"
+  },
+  {
+    "stem": "fig-02-fermat",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "费马引理的必要条件，以及 x³ 的逆命题反例。"
+  },
+  {
+    "stem": "fig-03-differential-mvt",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "Rolle 的水平切线与 Lagrange 的平行切线。"
+  },
+  {
+    "stem": "fig-04-cauchy",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "柯西中值定理的参数曲线解释与 Rolle 辅助函数。"
+  },
+  {
+    "stem": "fig-05-taylor",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "指数函数的二阶 Taylor 多项式、拉格朗日余项与一致上界。"
+  },
+  {
+    "stem": "fig-06-integral-first",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "积分第一中值定理的等面积矩形与非负权重推广。"
+  },
+  {
+    "stem": "fig-07-integral-second",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "积分第二中值定理：端点加权阶梯与单调函数具有相同加权积分。"
+  },
+  {
+    "stem": "fig-08-darboux",
+    "size_mm": [
+      178.0,
+      92.0
+    ],
+    "dpi": 600,
+    "description": "原函数可导而导函数振荡不连续；两列点趋于 0 时导数分别恒为 ±1。"
+  }
+]
