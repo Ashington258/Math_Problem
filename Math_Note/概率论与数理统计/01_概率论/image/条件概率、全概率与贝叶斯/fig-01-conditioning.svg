@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="504.566929pt" height="302.740157pt" viewBox="0 0 504.566929 302.740157" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-29T16:00:21.059848</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 302.740157 
+L 504.566929 302.740157 
+L 504.566929 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 21.929255 193.32676 
+L 235.399879 193.32676 
+L 235.399879 56.70556 
+L 21.929255 56.70556 
+z
+" clip-path="url(#p6036a7ef05)" style="fill: #f7f8fa; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 98.77868 175.181757 
+C 112.082751 175.181757 124.843714 169.895993 134.251113 160.488593 
+C 143.658512 151.081194 148.944276 138.320232 148.944276 125.01616 
+C 148.944276 111.712088 143.658512 98.951126 134.251113 89.543726 
+C 124.843714 80.136327 112.082751 74.850563 98.77868 74.850563 
+C 85.474608 74.850563 72.713645 80.136327 63.306246 89.543726 
+C 53.898847 98.951126 48.613083 111.712088 48.613083 125.01616 
+C 48.613083 138.320232 53.898847 151.081194 63.306246 160.488593 
+C 72.713645 169.895993 85.474608 175.181757 98.77868 175.181757 
+z
+" clip-path="url(#p6036a7ef05)" style="fill: #e1eff7; stroke: #0072b2; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 158.550454 175.181757 
+C 171.854526 175.181757 184.615488 169.895993 194.022888 160.488593 
+C 203.430287 151.081194 208.716051 138.320232 208.716051 125.01616 
+C 208.716051 111.712088 203.430287 98.951126 194.022888 89.543726 
+C 184.615488 80.136327 171.854526 74.850563 158.550454 74.850563 
+C 145.246383 74.850563 132.48542 80.136327 123.078021 89.543726 
+C 113.670621 98.951126 108.384858 111.712088 108.384858 125.01616 
+C 108.384858 138.320232 113.670621 151.081194 123.078021 160.488593 
+C 132.48542 169.895993 145.246383 175.181757 158.550454 175.181757 
+z
+" clip-path="url(#p6036a7ef05)" style="fill: #f8ebcf; stroke: #a16c12; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 98.77868 175.181757 
+C 112.082751 175.181757 124.843714 169.895993 134.251113 160.488593 
+C 143.658512 151.081194 148.944276 138.320232 148.944276 125.01616 
+C 148.944276 111.712088 143.658512 98.951126 134.251113 89.543726 
+C 124.843714 80.136327 112.082751 74.850563 98.77868 74.850563 
+C 85.474608 74.850563 72.713645 80.136327 63.306246 89.543726 
+C 53.898847 98.951126 48.613083 111.712088 48.613083 125.01616 
+C 48.613083 138.320232 53.898847 151.081194 63.306246 160.488593 
+C 72.713645 169.895993 85.474608 175.181757 98.77868 175.181757 
+z
+" clip-path="url(#p71cd4a4116)" style="fill: url(#h3d09347809); stroke: #0072b2; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 98.77868 175.181757 
+C 112.082751 175.181757 124.843714 169.895993 134.251113 160.488593 
+C 143.658512 151.081194 148.944276 138.320232 148.944276 125.01616 
+C 148.944276 111.712088 143.658512 98.951126 134.251113 89.543726 
+C 124.843714 80.136327 112.082751 74.850563 98.77868 74.850563 
+C 85.474608 74.850563 72.713645 80.136327 63.306246 89.543726 
+C 53.898847 98.951126 48.613083 111.712088 48.613083 125.01616 
+C 48.613083 138.320232 53.898847 151.081194 63.306246 160.488593 
+C 72.713645 169.895993 85.474608 175.181757 98.77868 175.181757 
+L 98.77868 175.181757 
+z
+" clip-path="url(#p6036a7ef05)" style="fill: none; stroke: #0072b2; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 158.550454 175.181757 
+C 171.854526 175.181757 184.615488 169.895993 194.022888 160.488593 
+C 203.430287 151.081194 208.716051 138.320232 208.716051 125.01616 
+C 208.716051 111.712088 203.430287 98.951126 194.022888 89.543726 
+C 184.615488 80.136327 171.854526 74.850563 158.550454 74.850563 
+C 145.246383 74.850563 132.48542 80.136327 123.078021 89.543726 
+C 113.670621 98.951126 108.384858 111.712088 108.384858 125.01616 
+C 108.384858 138.320232 113.670621 151.081194 123.078021 160.488593 
+C 132.48542 169.895993 145.246383 175.181757 158.550454 175.181757 
+L 158.550454 175.181757 
+z
+" clip-path="url(#p6036a7ef05)" style="fill: none; stroke: #a16c12; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <!-- 样本空间 $\Omega$ -->
+    <g transform="translate(21.929255 48.166735)">
+     <text>
+      <tspan x="0" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">样</tspan>
+      <tspan x="9" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">本</tspan>
+      <tspan x="18" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">空</tspan>
+      <tspan x="27" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">间</tspan>
+      <tspan x="36" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'"> </tspan>
+      <tspan x="38.663086" y="-0.453125" style="font-style: italic; font-size: 9px; font-family: 'Arial'">Ω</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_2">
+    <!-- $A$ -->
+    <g style="fill: #0072b2" transform="translate(69.142205 125.01616)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: italic; font-size: 12px; font-family: 'Arial'; fill: #0072b2">A</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_3">
+    <!-- $B$ -->
+    <g style="fill: #805509" transform="translate(180.146929 125.01616)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: italic; font-size: 12px; font-family: 'Arial'; fill: #805509">B</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <g id="patch_8">
+     <path d="M 115.929567 131.790593 
+L 141.399567 131.790593 
+L 141.399567 118.241726 
+L 115.929567 118.241726 
+z
+" style="fill: #ffffff; opacity: 0.85"/>
+    </g>
+    <!-- $A\cap B$ -->
+    <g transform="translate(117.909567 127.529832)">
+     <text>
+      <tspan x="0" y="-0.4375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">A</tspan>
+      <tspan x="7.502344" y="-0.4375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">∩</tspan>
+      <tspan x="15.470508" y="-0.4375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">B</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="128.664567" y="211.471763" transform="rotate(-0 128.664567 211.471763)">完整保留 A、B 及其交集</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_9">
+    <path d="M 269.16705 193.32676 
+L 482.637674 193.32676 
+L 482.637674 56.70556 
+L 269.16705 56.70556 
+z
+" clip-path="url(#p4bf5220a19)" style="fill: #f7f8fa; stroke: #333333; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 346.016475 175.181757 
+C 359.320547 175.181757 372.081509 169.895993 381.488908 160.488593 
+C 390.896308 151.081194 396.182071 138.320232 396.182071 125.01616 
+C 396.182071 111.712088 390.896308 98.951126 381.488908 89.543726 
+C 372.081509 80.136327 359.320547 74.850563 346.016475 74.850563 
+C 332.712403 74.850563 319.951441 80.136327 310.544041 89.543726 
+C 301.136642 98.951126 295.850878 111.712088 295.850878 125.01616 
+C 295.850878 138.320232 301.136642 151.081194 310.544041 160.488593 
+C 319.951441 169.895993 332.712403 175.181757 346.016475 175.181757 
+L 346.016475 175.181757 
+z
+" clip-path="url(#p4bf5220a19)" style="fill: none; stroke-dasharray: 3.33,1.44; stroke-dashoffset: 0; stroke: #cccccc; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 405.78825 175.181757 
+C 419.092321 175.181757 431.853284 169.895993 441.260683 160.488593 
+C 450.668082 151.081194 455.953846 138.320232 455.953846 125.01616 
+C 455.953846 111.712088 450.668082 98.951126 441.260683 89.543726 
+C 431.853284 80.136327 419.092321 74.850563 405.78825 74.850563 
+C 392.484178 74.850563 379.723215 80.136327 370.315816 89.543726 
+C 360.908417 98.951126 355.622653 111.712088 355.622653 125.01616 
+C 355.622653 138.320232 360.908417 151.081194 370.315816 160.488593 
+C 379.723215 169.895993 392.484178 175.181757 405.78825 175.181757 
+z
+" clip-path="url(#p4bf5220a19)" style="fill: #f8ebcf; stroke: #a16c12; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 346.016475 175.181757 
+C 359.320547 175.181757 372.081509 169.895993 381.488908 160.488593 
+C 390.896308 151.081194 396.182071 138.320232 396.182071 125.01616 
+C 396.182071 111.712088 390.896308 98.951126 381.488908 89.543726 
+C 372.081509 80.136327 359.320547 74.850563 346.016475 74.850563 
+C 332.712403 74.850563 319.951441 80.136327 310.544041 89.543726 
+C 301.136642 98.951126 295.850878 111.712088 295.850878 125.01616 
+C 295.850878 138.320232 301.136642 151.081194 310.544041 160.488593 
+C 319.951441 169.895993 332.712403 175.181757 346.016475 175.181757 
+z
+" clip-path="url(#p8666c75076)" style="fill: url(#h3d09347809); stroke: #0072b2; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 405.78825 175.181757 
+C 419.092321 175.181757 431.853284 169.895993 441.260683 160.488593 
+C 450.668082 151.081194 455.953846 138.320232 455.953846 125.01616 
+C 455.953846 111.712088 450.668082 98.951126 441.260683 89.543726 
+C 431.853284 80.136327 419.092321 74.850563 405.78825 74.850563 
+C 392.484178 74.850563 379.723215 80.136327 370.315816 89.543726 
+C 360.908417 98.951126 355.622653 111.712088 355.622653 125.01616 
+C 355.622653 138.320232 360.908417 151.081194 370.315816 160.488593 
+C 379.723215 169.895993 392.484178 175.181757 405.78825 175.181757 
+L 405.78825 175.181757 
+z
+" clip-path="url(#p4bf5220a19)" style="fill: none; stroke: #a16c12; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_6">
+    <!-- 样本空间 $\Omega$ -->
+    <g transform="translate(269.16705 48.166735)">
+     <text>
+      <tspan x="0" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">样</tspan>
+      <tspan x="9" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">本</tspan>
+      <tspan x="18" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">空</tspan>
+      <tspan x="27" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'">间</tspan>
+      <tspan x="36" y="-0.453125" style="font-size: 9px; font-family: 'Microsoft YaHei'"> </tspan>
+      <tspan x="38.663086" y="-0.453125" style="font-style: italic; font-size: 9px; font-family: 'Arial'">Ω</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_7">
+    <!-- $A$ -->
+    <g style="fill: #b2b2b2" transform="translate(316.38 125.01616)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: italic; font-size: 12px; font-family: 'Arial'; fill: #b2b2b2">A</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- $B$ -->
+    <g style="fill: #805509" transform="translate(427.384724 125.01616)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: italic; font-size: 12px; font-family: 'Arial'; fill: #805509">B</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_9">
+    <g id="patch_14">
+     <path d="M 363.167362 131.790593 
+L 388.637362 131.790593 
+L 388.637362 118.241726 
+L 363.167362 118.241726 
+z
+" style="fill: #ffffff; opacity: 0.85"/>
+    </g>
+    <!-- $A\cap B$ -->
+    <g transform="translate(365.147362 127.529832)">
+     <text>
+      <tspan x="0" y="-0.4375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">A</tspan>
+      <tspan x="7.502344" y="-0.4375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">∩</tspan>
+      <tspan x="15.470508" y="-0.4375" style="font-style: italic; font-size: 9px; font-family: 'Arial'">B</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="375.902362" y="211.471763" transform="rotate(-0 375.902362 211.471763)">已知 B：只在 B 内比较交集的概率</text>
+   </g>
+  </g>
+  <g id="patch_15">
+   <path d="M 0 302.740157 
+L 504.566929 302.740157 
+L 504.566929 -0 
+L 0 -0 
+L 0 302.740157 
+z
+" style="fill: none"/>
+  </g>
+  <g id="text_11">
+   <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start" x="20.182677" y="18.164409" transform="rotate(-0 20.182677 18.164409)">(a) 原始样本空间</text>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start" x="267.420472" y="18.164409" transform="rotate(-0 267.420472 18.164409)">(b) 条件事件 B 成为参考范围</text>
+  </g>
+  <g id="text_13">
+   <!-- $P(A\mid B)=\frac{P(A\cap B)}{P(B)}$ -->
+   <g transform="translate(207.238465 251.274331)">
+    <text>
+     <tspan x="0" y="-0.645313" style="font-style: italic; font-size: 13px; font-family: 'Arial'">P</tspan>
+     <tspan x="8.670898" y="-0.645313" style="font-style: italic; font-size: 13px; font-family: 'Arial'">(</tspan>
+     <tspan x="13" y="-0.645313" style="font-style: italic; font-size: 13px; font-family: 'Arial'">A</tspan>
+     <tspan x="29.60166" y="-0.645313" style="font-style: italic; font-size: 13px; font-family: 'Arial'">B</tspan>
+     <tspan x="38.272559" y="-0.645313" style="font-style: italic; font-size: 13px; font-family: 'Arial'">)</tspan>
+     <tspan x="44.76748" y="-0.645313" style="font-style: italic; font-size: 13px; font-family: 'Arial'">=</tspan>
+     <tspan x="23.836719" y="-0.645313" style="font-size: 13px; font-family: 'cmsy10'">j</tspan>
+     <tspan x="55.337598" y="-8.371875" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">P</tspan>
+     <tspan x="61.407227" y="-8.371875" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">(</tspan>
+     <tspan x="63.337598" y="4.540156" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">P</tspan>
+     <tspan x="64.437598" y="-8.371875" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">A</tspan>
+     <tspan x="69.407227" y="4.540156" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">(</tspan>
+     <tspan x="72.023301" y="-8.371875" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">∩</tspan>
+     <tspan x="72.437598" y="4.540156" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">B</tspan>
+     <tspan x="78.507227" y="4.540156" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">)</tspan>
+     <tspan x="80.08" y="-8.371875" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">B</tspan>
+     <tspan x="86.149629" y="-8.371875" style="font-style: italic; font-size: 9.1px; font-family: 'Arial'">)</tspan>
+    </text>
+    <rect x="55.337598" y="-5.832812" width="33.842402" height="0.8125"/>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="252.283465" y="283.062047" transform="rotate(-0 252.283465 283.062047)">斜线交集的概率 ÷ 整个 B 的概率；将 B 的总概率归一化为 1</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6036a7ef05">
+   <rect x="17.659843" y="37.493204" width="222.009449" height="179.315324"/>
+  </clipPath>
+  <clipPath id="p71cd4a4116">
+   <path d="M 158.550454 175.181757 
+C 171.854526 175.181757 184.615488 169.895993 194.022888 160.488593 
+C 203.430287 151.081194 208.716051 138.320232 208.716051 125.01616 
+C 208.716051 111.712088 203.430287 98.951126 194.022888 89.543726 
+C 184.615488 80.136327 171.854526 74.850563 158.550454 74.850563 
+C 145.246383 74.850563 132.48542 80.136327 123.078021 89.543726 
+C 113.670621 98.951126 108.384858 111.712088 108.384858 125.01616 
+C 108.384858 138.320232 113.670621 151.081194 123.078021 160.488593 
+C 132.48542 169.895993 145.246383 175.181757 158.550454 175.181757 
+z
+"/>
+  </clipPath>
+  <clipPath id="p4bf5220a19">
+   <rect x="264.897638" y="37.493204" width="222.009449" height="179.315324"/>
+  </clipPath>
+  <clipPath id="p8666c75076">
+   <path d="M 405.78825 175.181757 
+C 419.092321 175.181757 431.853284 169.895993 441.260683 160.488593 
+C 450.668082 151.081194 455.953846 138.320232 455.953846 125.01616 
+C 455.953846 111.712088 450.668082 98.951126 441.260683 89.543726 
+C 431.853284 80.136327 419.092321 74.850563 405.78825 74.850563 
+C 392.484178 74.850563 379.723215 80.136327 370.315816 89.543726 
+C 360.908417 98.951126 355.622653 111.712088 355.622653 125.01616 
+C 355.622653 138.320232 360.908417 151.081194 370.315816 160.488593 
+C 379.723215 169.895993 392.484178 175.181757 405.78825 175.181757 
+z
+"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="h3d09347809" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#8bbbd6"/>
+   <path d="M -36 36 
+L 36 -36 
+M -32 40 
+L 40 -32 
+M -28 44 
+L 44 -28 
+M -24 48 
+L 48 -24 
+M -20 52 
+L 52 -20 
+M -16 56 
+L 56 -16 
+M -12 60 
+L 60 -12 
+M -8 64 
+L 64 -8 
+M -4 68 
+L 68 -4 
+M 0 72 
+L 72 0 
+M 4 76 
+L 76 4 
+M 8 80 
+L 80 8 
+M 12 84 
+L 84 12 
+M 16 88 
+L 88 16 
+M 20 92 
+L 92 20 
+M 24 96 
+L 96 24 
+M 28 100 
+L 100 28 
+M 32 104 
+L 104 32 
+M 36 108 
+L 108 36 
+" style="fill: #0072b2; stroke: #0072b2; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

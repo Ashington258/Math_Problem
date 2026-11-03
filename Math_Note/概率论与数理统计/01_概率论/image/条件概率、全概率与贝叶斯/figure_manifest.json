@@ -1,0 +1,26 @@
+[
+  {
+    "file": "fig-01-conditioning",
+    "width_mm": 178.0,
+    "height_mm": 106.8,
+    "png_dpi": 600
+  },
+  {
+    "file": "fig-02-partition",
+    "width_mm": 178.0,
+    "height_mm": 129.94,
+    "png_dpi": 600
+  },
+  {
+    "file": "fig-03-total-and-bayes",
+    "width_mm": 178.0,
+    "height_mm": 97.9,
+    "png_dpi": 600
+  },
+  {
+    "file": "fig-04-switching-cdf",
+    "width_mm": 178.0,
+    "height_mm": 104.52,
+    "png_dpi": 600
+  }
+]
