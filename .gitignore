@@ -13,3 +13,10 @@
 临时工作区/曲线积分/image/fig-3-space-and-paths.png
 临时工作区/曲线积分/image/make_figures.py
 临时工作区/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 参考书：受版权保护的大体积 PDF 及其加密容器/口令文件，不入库
+Math_Note/参考书/
